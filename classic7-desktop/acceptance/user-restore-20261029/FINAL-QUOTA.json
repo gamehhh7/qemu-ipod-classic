@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-29T11:30:20.409714+00:00",
+  "user_reported_iTunes_error": 1429,
+  "MBR_unchanged": true,
+  "BPB_unchanged": true,
+  "FAT32": true,
+  "sector_bytes": 4096,
+  "data_partition_bytes": 8589934592,
+  "format_success": false,
+  "other_disk_data_unchanged_not_claimed": true,
+  "observer_stopping_for_quota": true,
+  "user_GUI_not_stopped": true
+}

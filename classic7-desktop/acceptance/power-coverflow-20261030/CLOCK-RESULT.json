@@ -1,0 +1,16 @@
+{
+  "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T053122Z-6668",
+  "trace_rows": 7110,
+  "cap": 32768,
+  "cap_reached": false,
+  "ADC_result_writes": 0,
+  "battery55_values": {
+    "d3": 42
+  },
+  "hold87_values": {
+    "02": 1
+  },
+  "reset_count": 0,
+  "GUI": "fresh visual agent made1center click at05:36:36, no menu transition before timeout; CoverFlow not verified in this run",
+  "terminal": "{\"utc\":\"2026-10-30T05:36:53.9284103Z\",\"kind\":\"owned_processes_stopped\",\"data\":{\"qemu\":8824,\"backend\":31436}}"
+}

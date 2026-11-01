@@ -1,0 +1,37 @@
+{
+  "phase": "R114_QUOTA_STOP_6_PERCENT_KEEP_ORDINARY_SESSION_SLEEP_NOT_ACCEPTED",
+  "updated_utc": "2026-10-30T23:49:33.455074+00:00",
+  "app_pid": 31980,
+  "app_created_hk": "2026-10-31 07:46:13",
+  "qemu_pid": 7664,
+  "qemu_created_hk": "2026-10-31 07:46:16",
+  "backend_pid": 32352,
+  "run": "20261030T234613Z-31980",
+  "engine_sha256": "cd2897323a9fc166d4e5b5bc9e9e66d97497c32be01339be11d6995621488604",
+  "main_sha256": "c59c1b5015327c8ef1809dd34342887d13ff5c8f006388f0b3a011d066437d2c",
+  "argv": "ordinary; default icount; USB off; no debugger/test/autoexit flags",
+  "previous_run": "20261030T233042Z-15088; all15088/30800/2140 verified terminal before new writer",
+  "new_repairs": [
+    "Qmp.Call now sends request ID and matches responses before success/error; timeout late reply cannot become next qom-get return. Regression mock server waits5400ms (timeout5000), sends stale{}, event, then correctbool: PASS. Genuine UI readback locktrue/unlockfalse nowverified R113.",
+    "RTC read was ALREADY dynamic qemu_get_timedate; native regcache zeros were NOT frozen actual clock. Do not repeat earlier false conclusion. Actual missing parts: writes ignored and alarm/SECOND sources absent. New pmu_rtc.inc counter seeded from configured QEMU RTC date, advances on rtc_clock, guest BCD writes commit atSTOP; second/alarm latch INT1 and use existing nIRQ/masks/read-clear. Alarm all-one per-field reset/wildcards per NXP UMrev06 section8.15.",
+    "R109 boot IRAM40000 fix remains intact. No GPIO4 hookup, firmware patch, guest state writes, reset suppression, sleep policy/time reduction or battery changes."
+  ],
+  "tests": {
+    "rtc_component": "PASS leap-day rollover, masked SECOND, alarm weekday wildcard/nIRQ, read-clear, clock write/advance, invalid date rejection",
+    "build": "Only PMU object compiled and canonical engine relinked; not full speed/server rebuild.",
+    "native_live": "R114-RTC-LIVE.txt: rtc_initialized true; epoch1793403976; base1793403976560464000; SECOND80 status, INT1M b0; callbackran. Timer expire-1 observed INSIDE callback before reschedule, not proof of missing timer.",
+    "visual": "Fresh Luna handle790544 HK07:46:55 actualmainmenuMusic, noerror, USBdisconnected, noinput."
+  },
+  "residual_previous_revision": "R113 cleanfrontend naturalSleep truePC22002e74; Enter FIFO8 IRQ23masked. Actual oneHold true->false at07:36:37, PMUunlockedread2; restored thenreturnedlowpower. Enter07:37still8FIFO; noabort/reset. NewRTC version not yetaccepted.",
+  "critical_regression_missing": "R109 IRAMsave/restore actualpath notyetproven; originalfaultafter~1932virtuals. Fullsleep repair NOT COMPLETE. Need naturalidle>30min and actualsave/restore, noreset, ordinarywake/navigation,songs/settings,CoverFlow.",
+  "gdb": "No attached native or guest debugger now; no tracer left. Do not reuse previousPID orcachedimage. Avoid nativeinferiorfunctioncalls. Do not use convenience$ch (nativeCHregister collision); use task-specific variable names. Old affectedruntimeclosed.",
+  "quota_last": "2026-10-31 07:49:41HK actual5hused94%=6%remaining (stop<=8), weekused86%; reset2026-10-31 11:58:14HK; no automatic resume",
+  "stop_state": "All self experiments stopped. No attached debugger, pending input or automation. Luna instructed stop all UI. Ordinary user app31980/qemu7664/backend32352 preserved. No post-RTC natural wake acceptance attempted. Latestlogs no fault/reset/alarm match but not acceptance.",
+  "scheduled_resume": {
+    "authorized_by_user": "2026-10-31 current turn: schedule at quota reset plus one minute",
+    "automation_id": "classic7",
+    "scheduled_hk": "2026-10-31 11:59:14",
+    "kind": "one-shot heartbeat in current chat",
+    "supersedes": "earlier no automatic resume note"
+  }
+}

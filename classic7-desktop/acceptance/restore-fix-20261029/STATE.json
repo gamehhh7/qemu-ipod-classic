@@ -1,0 +1,24 @@
+{
+  "phase": "R99_REAL_CSW_OVERFLOW_ACK_FIX_PREPARED_WAIT_USER_CLOSE",
+  "utc": "2026-10-29T15:42:40.018110+00:00",
+  "active_user_run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261029T152918Z-11948",
+  "active_user_pid": 11948,
+  "actual_failure_chain": [
+    "C696 CBW expects4IN",
+    "actual CSW55534253108a19740400000000: tag matches, residue4, status0",
+    "previous overflow handling did not ACK actual13B packet",
+    "host issues C694 but old CSW pending prevents next OUT arm",
+    "following control descriptor requests still complete; repeated bulk request-local timeout, no lease loss"
+  ],
+  "fix": "ACK only actual valid complete <=MPS native packet using exact nonce; return EOVERFLOW with no overflow packet copied as successful payload; real device completion ISR drains; no guest patch or guessed reply",
+  "runtime_status": "new ACK fix not loaded in current11948; user asked to cancel hung iTunes restore and close simulator because CU activation failed",
+  "DB_separate_fact": "actual imported old scheme1 hash58 matches zeroGUID; currentGUID fails. Corrected normal-integrity file staged iTunesDB.current-device + DATABASE-REPAIR-PLAN.json, NOT applied to user volume. NativeVPD DBVersion3 supports hash58. No firmware/auth-check bypass.",
+  "current_source_sha256": "aadbec8153b4c569af05e5719cccfa08ee20c2c7af169f37244ff44e9a037b10",
+  "external_tasks": "DSH stopped, root all technical, no technical agents",
+  "pending": "User close, then one actual finished app run and real host restore request path, not repeated fixtures",
+  "user_window_not_force_killed": true,
+  "user_authorized": "Diagnose and repair stalled actual iTunes restore; screenshot is PRE-restore cannot-read-content, not current half-progress screen",
+  "pending_user_operation": "Async request accepted: cancel current hung restore in iTunes and close simulator11948. Do not forcekill or start second writer; no actual verification of new ACK fix yet.",
+  "process_control": "CloseMainWindow11948 returnedtrue but did not exit; CU failed to activate captured window; iTunes alias ownerbinding still fails. QueryFullProcessImageName proved canonical11948 and modifiedlab25404.",
+  "no_new_guest": "No runtime started after source ACK change; current11948 still old behavior, ordinary user session untouched after close attempt."
+}

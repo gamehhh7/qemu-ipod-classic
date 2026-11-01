@@ -1,0 +1,16 @@
+{
+  "database_hashing_scheme": 1,
+  "actual_hash58": "80f305d242d1e090f66fbb80ddf51ada8459e083",
+  "read_only": true,
+  "primary_source": "https://github.com/gtkpod/libgpod/blob/main/src/itdb_hash58.c",
+  "GUID_checks": {
+    "0000000000000000": {
+      "computed_hash58": "80f305d242d1e090f66fbb80ddf51ada8459e083",
+      "matches": true
+    },
+    "000A2700214DCAC1": {
+      "computed_hash58": "43b9f7fa76a8a378b7e26e0c05d828460d5ed978",
+      "matches": false
+    }
+  }
+}

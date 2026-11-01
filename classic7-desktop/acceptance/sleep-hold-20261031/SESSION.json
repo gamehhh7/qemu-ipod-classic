@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-30T16:21:22.288013+00:00",
+  "phase": "R107_DEFAULT_WAKE_CAPTURE_LOADED_NOT_A_FIX",
+  "app_pid": 27636,
+  "engine_sha256": "c05722928d6571f516290f9f823e1a7598acde48e0993d35ccdb86d8fdebca53",
+  "main_sha256": "18e48adc0bcc7915179107767f283be0161d71f1b1a5f8bb72d5ab108ac08e12",
+  "argv": [],
+  "max_seconds": null,
+  "sync_performance_work": "stopped per user",
+  "previous_app_closed_by_user": true,
+  "previous_run": "20261030T153427Z-12024",
+  "normal_sleep_required": true,
+  "observer_only": true,
+  "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T162123Z-27636",
+  "qemu_pid": 11440,
+  "backend_pid": 24120,
+  "observer_loaded_verified": "WAKEOBS enabled=1 ordinary_launch=1 in actual qemu.log; native GDB enabled=1 count=0",
+  "baseline": "BASELINE.txt, readonly native attach; detached; code dump saved",
+  "sleep_repair_complete": false,
+  "reboot_evidence": "previous actual run printed CPU_exception_handler followed by SWRCON0xaa5; LR0802dd50 maps to data-abort dispatch in saved runtime code; exact fault PC/VA not yet captured",
+  "preserved": [
+    "original firmware",
+    "natural sleep thresholds",
+    "reset behavior",
+    "I2C CoverFlow correction",
+    "instruction-count clock",
+    "single existing K drive overlay",
+    "original seed",
+    "single rollback package"
+  ],
+  "compiled_parts": [
+    "pmu",
+    "wake_observer"
+  ],
+  "not_recompiled": [
+    "server",
+    "controller",
+    "i2c",
+    "wheel",
+    "frontend"
+  ],
+  "next": "Keep ordinary app27636 running; await real natural sleep and user report; read bounded WAKEFAULT/WAKEIRQ/WAKEPMU; do not repeat restart or optimize sync.",
+  "source_hashes": {
+    "src/usb/wake_observer.c": "aeb50bc06a410aba71c1cfd6ce5822601945f9c03371d0879314aeb72dff63e7",
+    "src/usb/observed_pmu.c": "b689fd3090f2252d3602e5a3a1ca6e59ec7a389e007628a636ad192be70259cf"
+  }
+}

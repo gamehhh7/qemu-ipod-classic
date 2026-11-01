@@ -1,0 +1,21 @@
+{
+  "native_run_authorized": true,
+  "utc": "2026-10-30T04:36:03.9535456Z",
+  "hashes": {
+    "tools\\repair_volume_marker.py": "9953661D5B397F17C446FD5BB91388B982895EA1E548E4E6B1488322E82F7D6E",
+    "storage\\persistent_store.py": "28C17A47B36F994F6BC6CB6BB40CF4E6D34E34AA8D7EB5C7FC3D94CF9B4915D6",
+    "storage\\backend_persistent.py": "59714F88790F6E5149E4531948BED19CA3574D05D8FEE2309476B81A47190ACF",
+    "bin\\iPodClassic7.exe": "58AE3E24B55288A068BF0C0033548A5CFCA122DFC2334A1A1824035F83FB0E77",
+    "engine\\qemu-system-arm-classic7.exe": "56CF87CBA7D13B03B3802E82CACBB33811EEBCFC326B8587558732B0867D21E4"
+  },
+  "review": {
+    "native_firmware_classifier_0808dbdc": true,
+    "no_restore": true,
+    "no_physical_device": true,
+    "seed_readonly": true,
+    "approved": true,
+    "no_guest_patch": true
+  },
+  "bound_seconds": 330,
+  "purpose": "Actual main EXE mount after two reserved FAT marker corrections; language, capacity, music, disk writes then independent restart"
+}

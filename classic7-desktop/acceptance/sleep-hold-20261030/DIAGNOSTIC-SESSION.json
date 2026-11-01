@@ -1,0 +1,9 @@
+{
+  "pid": 31492,
+  "utc": "2026-10-30T09:50:31.321274+00:00",
+  "ordinary_main_exe": true,
+  "automatic_exit": false,
+  "wake_trace": true,
+  "usb_timing": true,
+  "guest_patches": false
+}

@@ -1,0 +1,101 @@
+{
+  "utc": "2026-10-30T05:32:15.713984+00:00",
+  "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T052741Z-31684",
+  "powertrace_rows": 12042,
+  "powertrace_limit": 32768,
+  "cap_reached": false,
+  "ADC_result_register_writes": 8,
+  "ADC55_values": {
+    "d3": 64,
+    "1d": 4
+  },
+  "OOC12_values": {
+    "e1": 124
+  },
+  "resets": [
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.exe: warning: S5L8702: guest asked for a software reset (SWRCON = 0xaa5), next image \"--------\" pc~0x0835d03c lr=0x0820b6f4 sp=0x0bede270"
+  ],
+  "bad_ADC_write_examples": [
+    {
+      "n": "638",
+      "event": "write_register",
+      "addr": "55",
+      "value": "1d",
+      "pointer": "55",
+      "saved": "1b",
+      "pending": "0",
+      "wrote": "1",
+      "usb": "0",
+      "adc1": "1d",
+      "adc2": "00",
+      "adc3": "00",
+      "result1": "d3",
+      "result2": "00",
+      "result3": "80",
+      "vns": "9897927500",
+      "pc_approx": "083608d0",
+      "lr": "08360a54"
+    },
+    {
+      "n": "1011",
+      "event": "write_register",
+      "addr": "57",
+      "value": "57",
+      "pointer": "57",
+      "saved": "1b",
+      "pending": "0",
+      "wrote": "0",
+      "usb": "0",
+      "adc1": "1d",
+      "adc2": "00",
+      "adc3": "00",
+      "result1": "d3",
+      "result2": "00",
+      "result3": "80",
+      "vns": "11272722100",
+      "pc_approx": "083608d0",
+      "lr": "08360a54"
+    },
+    {
+      "n": "2127",
+      "event": "write_register",
+      "addr": "55",
+      "value": "1d",
+      "pointer": "55",
+      "saved": "1b",
+      "pending": "0",
+      "wrote": "1",
+      "usb": "0",
+      "adc1": "00",
+      "adc2": "00",
+      "adc3": "00",
+      "result1": "d3",
+      "result2": "00",
+      "result3": "80",
+      "vns": "14672145400",
+      "pc_approx": "08360a34",
+      "lr": "00000000"
+    },
+    {
+      "n": "3576",
+      "event": "write_register",
+      "addr": "55",
+      "value": "55",
+      "pointer": "55",
+      "saved": "58",
+      "pending": "0",
+      "wrote": "0",
+      "usb": "0",
+      "adc1": "1d",
+      "adc2": "00",
+      "adc3": "00",
+      "result1": "d3",
+      "result2": "00",
+      "result3": "80",
+      "vns": "42487939300",
+      "pc_approx": "083608d0",
+      "lr": "08360a54"
+    }
+  ],
+  "last_trace_vns": "211234679300"
+}

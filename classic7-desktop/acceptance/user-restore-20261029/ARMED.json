@@ -1,0 +1,22 @@
+{
+  "pid": 19596,
+  "utc": "2026-10-29T11:23:03.196571+00:00",
+  "duration_s": 360,
+  "target": {
+    "instance": "USB\\VID_05AC&PID_1261\\000A2700214DCAC1",
+    "status": "OK",
+    "devnode_flags": 25190410,
+    "problem_code": 0,
+    "name": "Apple iPod",
+    "service": "AppleIPod",
+    "class": "USBDevice",
+    "parent_chain": [
+      "USB\\VID_05AC&PID_1261\\000A2700214DCAC1",
+      "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+      "ROOT\\USB\\0000",
+      "HTREE\\ROOT\\0"
+    ],
+    "ude_parent_proven": true
+  },
+  "role": "passive only; user clicks Restore; no simulator/driver/reboot/format actions"
+}

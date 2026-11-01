@@ -1,0 +1,24 @@
+{
+  "hashes": {
+    "storage\\persistent_store.py": "28C17A47B36F994F6BC6CB6BB40CF4E6D34E34AA8D7EB5C7FC3D94CF9B4915D6",
+    "Classic7.cs": "B42E639F39265A7CC341E310C26CE104817A3D7F5CE3FC6032AD3B670B36ADB5",
+    "src\\usb\\observed_i2c.c": "AFAA0E86A885635A2A301A91C8A1DA7FA27893DD08C3626FD4D9E5E995CD70C3",
+    "engine\\qemu-system-arm-classic7.exe": "8DA5A824F00DFBCCA0912555B3D5E76938C870459B79B58671EFD476865D165E",
+    "src\\usb\\observed_pmu.c": "12F7FF614CA9B4D84D4CF90E6F2C4C59E378DC9310BD6861194D48BFD9F7A323",
+    "bin\\iPodClassic7.exe": "18E48ADC0BCC7915179107767F283BE0161D71F1B1A5F8BB72D5AB108AC08E12"
+  },
+  "review": {
+    "seed_readonly": true,
+    "real_low_battery_and_reset_preserved": true,
+    "no_USB": true,
+    "no_guest_patch": true,
+    "no_PMU_overrides": true,
+    "approved": true,
+    "clock_default_compiled": true,
+    "POWERTRACE_off": true
+  },
+  "purpose": "Final actual default EXE no diagnostic environment CoverFlow regression",
+  "utc": "2026-10-30T05:39:51.8113332Z",
+  "native_run_authorized": true,
+  "bound_seconds": 330
+}

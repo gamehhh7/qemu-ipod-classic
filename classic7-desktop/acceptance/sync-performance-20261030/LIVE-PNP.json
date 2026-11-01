@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-30T09:51:16.095219+00:00",
+  "api": "readonly CfgMgr32 present IDs/status/parent chain",
+  "stage": "fast_identity_only",
+  "root_ude": {
+    "instance": "ROOT\\USB\\0000",
+    "status": "OK",
+    "devnode_flags": 25174027,
+    "problem_code": 0,
+    "name": "USBip 3.X Emulated Host Controller",
+    "service": "usbip2_ude",
+    "class": "USB",
+    "parent_chain": [
+      "ROOT\\USB\\0000",
+      "HTREE\\ROOT\\0"
+    ],
+    "ude_parent_proven": true
+  },
+  "virtual_usb": [
+    {
+      "instance": "USB\\VID_05AC&PID_1261\\000A2700214DCAC1",
+      "status": "OK",
+      "devnode_flags": 25190410,
+      "problem_code": 0,
+      "name": "Apple iPod",
+      "service": "AppleIPod",
+      "class": "USBDevice",
+      "parent_chain": [
+        "USB\\VID_05AC&PID_1261\\000A2700214DCAC1",
+        "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+        "ROOT\\USB\\0000",
+        "HTREE\\ROOT\\0"
+      ],
+      "ude_parent_proven": true
+    }
+  ],
+  "virtual_disks": [
+    {
+      "instance": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+      "status": "OK",
+      "devnode_flags": 25174026,
+      "problem_code": 0,
+      "name": "Apple iPod USB Device",
+      "service": "disk",
+      "class": "DiskDrive",
+      "parent_chain": [
+        "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+        "USB\\VID_05AC&PID_1261&MI_00\\3&2E0BF28E&0",
+        "USB\\VID_05AC&PID_1261\\000A2700214DCAC1",
+        "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+        "ROOT\\USB\\0000",
+        "HTREE\\ROOT\\0"
+      ],
+      "ude_parent_proven": true,
+      "pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+      "partitions": [],
+      "geometry_not_queried": true
+    }
+  ],
+  "errors": [],
+  "physical_devices_touched": false,
+  "file_writes": false,
+  "rawdisk_handles": false
+}

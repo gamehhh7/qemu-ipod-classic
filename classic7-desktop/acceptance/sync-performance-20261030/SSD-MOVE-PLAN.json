@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-30T10:22:59.786462+00:00",
+  "requires_user_choice": "Relocate required project userdata to SSD, outside default K project location",
+  "current_overlay": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\userdata\\windows-8g.sqlite3",
+  "current_bytes": 278294528,
+  "target_overlay": "C:\\Users\\hhh\\AppData\\Local\\iPodClassic7\\userdata\\windows-8g.sqlite3",
+  "target_drive": "C NVMe ZHITAI PC005 Active 512GB, free82.8GB observed",
+  "config_file": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\userdata\\windows-disk.json",
+  "new_config": {
+    "format": 1,
+    "overlay_file": "C:\\Users\\hhh\\AppData\\Local\\iPodClassic7\\userdata\\windows-8g.sqlite3",
+    "virtual_sectors_512": 16960096,
+    "zero_from_sector_512": 182880,
+    "data_bytes": 8589934592,
+    "USB_logical_sector_bytes": 4096,
+    "ATA_sector_bytes": 512,
+    "FAT32_sector_bytes": 4096,
+    "cluster_bytes": 32768,
+    "original_seed": "K:\\CodexResources\\2026-10-01\\zcode-delegation\\quota-fallback\\acceptance\\media\\E-revb35-two-songs.img",
+    "firmware_partition": "unchanged readonly base",
+    "original_userdata_preserved": true,
+    "USB_mapping": "unchanged guest firmware"
+  },
+  "sequence": [
+    "Wait no Windows sync writes, safe eject, normal simulator close, verify sole writer exited",
+    "Offline checkpoint and integrity check, move existing SQLite overlay and its lock without creating a second active disk",
+    "Apply only overlay_file path in windows-disk.json, original seed and FAT layout unchanged",
+    "Actual new-backend transfer plus persisted file SHA verification and real sleep/wake/CoverFlow regression"
+  ],
+  "not_yet_moved": true,
+  "throughput_target": 20000000,
+  "target_not_guaranteed": "USB/guest CPU may become next limit after storage flushes improve"
+}

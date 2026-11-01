@@ -1,0 +1,36 @@
+{
+  "check_id": "20261030T170430Z",
+  "phase": "REPRODUCED_ACTUAL_PANIC_RESET",
+  "processes_verified": true,
+  "hashes_verified": true,
+  "quota_5h_remaining": 58,
+  "quota_week_remaining": 35,
+  "prior_fault_count": 0,
+  "prior_hold_edges": 4,
+  "usb": "last actual ready=false, no later usb events; no USB-host child",
+  "last_disk_ipc_wall": 1793377319.9532704,
+  "last_disk_ipc": "E0 blocked, no new disk IPC since00:21:59HK",
+  "before_cpu_pc": "22002e74",
+  "before_cpu_halted": true,
+  "before_wheel_fifo": 0,
+  "before_vic_enable": "00080009",
+  "before_vic_raw": "00010000",
+  "before_sysalv": "03f00001",
+  "evidence": "timestamped native register snapshots and 4MiB code/1MiB kernel/128KiB IRAM saved without guest state writes",
+  "enter_utc": "2026-10-30T17:05:14.9006372Z",
+  "after_enter": {
+    "cpu_pc": "22002e74",
+    "halted": true,
+    "wheel_fifo": 8,
+    "vic_raw": "00810000",
+    "frames_unchanged": 258
+  },
+  "hold_utc": [
+    "2026-10-30T17:05:59.8430248Z",
+    "2026-10-30T17:06:00.5950199Z"
+  ],
+  "fault_evidence": "FIRST-FAULT.txt",
+  "fault_pc": "0835ed00",
+  "fault_va": "22040000",
+  "software_reset": true
+}

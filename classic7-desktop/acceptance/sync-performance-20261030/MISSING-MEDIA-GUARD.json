@@ -1,0 +1,5 @@
+{
+  "missing_existing_media_refused": true,
+  "blank_disk_or_lock_created": false,
+  "message": "Configured virtual disk is missing; refusing to create a replacement: K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\sync-performance-20261030\\missing-media-guard.sqlite3"
+}

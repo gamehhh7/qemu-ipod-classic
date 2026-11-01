@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-30T05:33:29.899309+00:00",
+  "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T053122Z-6668",
+  "trace_rows": 5096,
+  "cap": 32768,
+  "cap_reached": false,
+  "ADC_result_writes": 0,
+  "battery55_values": {
+    "d3": 32
+  },
+  "OOC12_values": {
+    "e1": 47
+  },
+  "reset_count": 0,
+  "last_vns": "91005581268",
+  "status": "causal_validation_live_not_terminal",
+  "comparison": {
+    "standard_host_clock_same_engine_ADC_result_writes": 8,
+    "standard_host_clock_same_engine_resets": 1,
+    "instruction_clock_ADC_result_writes": 0,
+    "instruction_clock_resets": 0
+  }
+}

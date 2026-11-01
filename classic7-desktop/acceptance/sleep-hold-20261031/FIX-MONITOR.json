@@ -1,0 +1,15 @@
+{
+  "automation_id": "classic7",
+  "kind": "heartbeat",
+  "status": "DELETED",
+  "one_time": true,
+  "scheduled_hk": "2026-10-31T01:43:00+08:00",
+  "purpose": "actual natural sleep/wake acceptance of rootcause bootinfoIRAMcapacity correction",
+  "app_pid": 7544,
+  "qemu_pid": 1280,
+  "backend_pid": 30048,
+  "do_not_send_input_until_check": true,
+  "normal_sleep_thresholds_unchanged": true,
+  "acceptance_complete": false,
+  "result": "NORMAL_ENTER_WAKE_FAILED afteractual31minwallidle. OneHoldcycleprocessedPMUanddrainedFIFOwithoutpanic/reset, thenreturnedWFI. ActualclockatHold1455s<priorfault1932s; fullIRAMsavepathnotyetexercised(cacheFFFFFFFF). Rootcontinuesresidualwake andcriticalsavepathvalidation; no automatic repeatedHold."
+}

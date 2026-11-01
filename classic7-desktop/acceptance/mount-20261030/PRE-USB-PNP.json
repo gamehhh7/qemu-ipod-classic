@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-30T05:13:33.391403+00:00",
+  "api": "readonly CfgMgr32 present IDs/status/parent chain",
+  "stage": "fast_identity_only",
+  "root_ude": {
+    "instance": "ROOT\\USB\\0000",
+    "status": "OK",
+    "devnode_flags": 25174027,
+    "problem_code": 0,
+    "name": "USBip 3.X Emulated Host Controller",
+    "service": "usbip2_ude",
+    "class": "USB",
+    "parent_chain": [
+      "ROOT\\USB\\0000",
+      "HTREE\\ROOT\\0"
+    ],
+    "ude_parent_proven": true
+  },
+  "virtual_usb": [],
+  "virtual_disks": [],
+  "errors": [],
+  "physical_devices_touched": false,
+  "file_writes": false,
+  "rawdisk_handles": false
+}

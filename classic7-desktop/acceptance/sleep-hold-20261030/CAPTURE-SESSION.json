@@ -1,0 +1,9 @@
+{
+  "app_pid": 29760,
+  "utc": "2026-10-30T10:43:11.503871+00:00",
+  "overlay": "K original",
+  "wake_fault_and_panic": true,
+  "burst_source_loaded": true,
+  "engine_sha256": "0edd286acd8e7dd9442dddb0fba9ca0dcb89a5a8c6fed0a5d532710019389d35",
+  "main_sha256": "18e48adc0bcc7915179107767f283be0161d71f1b1a5f8bb72d5ab108ac08e12"
+}

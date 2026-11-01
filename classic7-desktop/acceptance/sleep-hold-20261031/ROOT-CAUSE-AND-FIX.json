@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-30T17:12:25.690804+00:00",
+  "phase": "R109_REPRODUCED_FIRST_ABORT_AND_BOOTINFO_FIX_LOADED",
+  "fault": {
+    "pc": "0835ed00",
+    "va": "22040000",
+    "fsr": "00000008",
+    "exception": 4,
+    "r0": "08a65940",
+    "r1": "22040000",
+    "r2": "fffa7fff",
+    "lr": "220005b8",
+    "initial_copy_length": "fffe8000",
+    "source_start": "22000000",
+    "destination_start": "08a25940",
+    "unmodified_firmware_paths": [
+      "220005a0 -> veneer22003478 ->0809bda0",
+      "0809bda0: getter082b18bc - reserved082b1728 ->0835ece8 memcpy",
+      "082b18bc reads SysInfo+e8",
+      "080aa328 uses same size for reverse restore"
+    ]
+  },
+  "root_cause": "Bootloader-handoff model left total internalRAM byte count zero; normal long-idle save subtraction underflows. Not a wheel FIFO overflow or host crash rootcause for reboot.",
+  "fix": {
+    "utc": "2026-10-30T17:11:29.910900+00:00",
+    "phase": "R109_BOOTINFO_IRAM_CAPACITY_FIXED_NATURAL_SLEEP_ACCEPTANCE_PENDING",
+    "app_pid": 7544,
+    "engine_sha256": "543540d54cb105d4aa78741727a4a499627817af6af433bff738d71d1d622786",
+    "main_sha256": "18e48adc0bcc7915179107767f283be0161d71f1b1a5f8bb72d5ab108ac08e12",
+    "change": "boot handoff SysInfo+e8 = actual IRAM0+IRAM1 =0x40000; firmware reserve0x18000 yields legitimate0x28000 save length instead of0xfffe8000",
+    "previous_run": "20261030T162123Z-27636",
+    "previous_children_verified_terminal": true,
+    "argv": [],
+    "autoexit": false,
+    "firmware_modified": false,
+    "guest_runtime_memory_patched": false,
+    "peripheral_irq_forced": false,
+    "original_sleep_behavior_preserved": true,
+    "automation_ipod_2_deleted": true,
+    "qemu_pid": 1280,
+    "backend_pid": 30048,
+    "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T171130Z-7544",
+    "actual_boot_field_verified": "native GDB FIX-SYSINFO-READ.txt: boot-copy+e8 and handoff+e8 both0x40000",
+    "copy_size": 163840,
+    "natural_idle_acceptance": "pending"
+  },
+  "acceptance": {
+    "compilation": "PASS",
+    "link": "PASS",
+    "runtime_boot_field": "PASS 0x40000 in actual guest-copy and boot-handoff",
+    "actual_idle_sleep_wake": "PENDING",
+    "coverflow": "PENDING",
+    "songs_settings": "PENDING"
+  },
+  "repeat_reproduction_automation": "ipod-2 DELETED after first fault captured"
+}

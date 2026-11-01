@@ -1,0 +1,7 @@
+Breakpoint 1 at 0x7ff65b5658b0: file K:/CodexResources/2026-10-28/ipod-classic7-desktop/src/wheel_frontend.c, line 472.
+[Thread 1280.0x35fc (id 10) exited]
+[Switching to thread 5 (Thread 1280.0x2d40)]
+RX word=c006001a fifo=1 guestpc=805f5f4 lr=4e48 cpsr=13
+RX word=c00c001a fifo=1 guestpc=805f5f4 lr=4e48 cpsr=13
+RX word=8000001a fifo=1 guestpc=805f5f4 lr=4e48 cpsr=13
+[Inferior 1 (process 1280) detached]

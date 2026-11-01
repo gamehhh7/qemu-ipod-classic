@@ -1,0 +1,18 @@
+{
+  "environment": {
+    "CLASSIC7_POWER_TRACE": "1",
+    "CLASSIC7_DETERMINISTIC": "1"
+  },
+  "review": {
+    "no_pmu_shortcut": true,
+    "approved": true,
+    "no_USB": true,
+    "no_guest_patch": true,
+    "existing_supported_clock": true
+  },
+  "engine_sha256": "8DA5A824F00DFBCCA0912555B3D5E76938C870459B79B58671EFD476865D165E",
+  "bound_seconds": 330,
+  "purpose": "Actual main app causal clock validation: same I2C fixed engine, instruction-count clock, real CoverFlow repeated navigation",
+  "native_run_authorized": true,
+  "utc": "2026-10-30T05:31:21.9013565Z"
+}

@@ -1,0 +1,62 @@
+{
+  "status": "PARTIAL_DELIVERY_DISPLAY_RESIZE_PERSISTENCE_ACCEPTED_USB_RECONNECT_PENDING",
+  "utc": "2026-10-28T18:33:48.667826+00:00",
+  "exe": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.exe",
+  "exe_sha256": "4e10b93bbd5463b50be66486c9d9d7859f09ca734e07621c5a0605065be57225",
+  "source_sha256": "fa394ffcd4cda7f0b518263f32447820739fbfe784130765a90f15d2705e6589",
+  "engine": "K:\\CodexResources\\2026-10-29\\ipod-usb-atomic-link\\build\\qemu-system-arm-atomic-link.exe",
+  "engine_sha256": "802b68798f348facaffe9a1dfc2fa06f66b1a7e092719359611a88087dda7c87",
+  "display": {
+    "pixel_mapping": "320x240 integer scale;4 sizes, all source and replicated pixels exact",
+    "dpi_live_test": 96,
+    "DPI_manifest": "PerMonitorV2; other monitor DPIs not live-tested",
+    "actual_pointer_resize": "850x900->650x842->560x820, continued ~64Hz synthetic source updates",
+    "rfb_benchmark": {
+      "status": "PASS",
+      "scope": "synthetic60Hz RFB feed to actual desktop display pipeline; NOT real firmware/game FPS",
+      "results": [
+        {
+          "name": "before",
+          "source_frames": 180,
+          "seconds": 6.4689999999973224,
+          "actual_rfb_updates_per_second": 27.825011593766348,
+          "all_client_requests_observed": true
+        },
+        {
+          "name": "after",
+          "source_frames": 180,
+          "seconds": 2.9840000000040163,
+          "actual_rfb_updates_per_second": 60.32171581761318,
+          "all_client_requests_observed": true
+        }
+      ]
+    },
+    "firmware_or_game_fps_60_claimed": false
+  },
+  "persistent_media": {
+    "store_tests": 12,
+    "actual_R3_TCP_checks": 6,
+    "base_policy": "rb; durable exclusive SQLite WAL FULL virtual COW",
+    "windows_usb_volume_claimed": false
+  },
+  "native": {
+    "actual_QOM_fixture_checks": 71,
+    "producer_failure_checks": 6,
+    "desktop_lifecycle_checks": 9,
+    "last_control_requests": 6,
+    "last_actual_pulse_ns": 15722400,
+    "actual_controller_UI_active": true,
+    "early_cable_145s_connected": "fresh LunaLow reviewed actual LCD",
+    "hotplug_repeatability": "NOT accepted; initialization sometimes stays task1, second connected session can leave main menu",
+    "old_UI_state_conclusions": "invalid from wrong pointer; corrected getter literal verified at runtime"
+  },
+  "pending": [
+    "reliable normal hotplug and reconnect UI",
+    "native nonzero endpoints/BOT data",
+    "Windows virtual iPod identity/volume/read-write/persistence acceptance"
+  ],
+  "old_claims_preserved": true,
+  "formal_and_prior_engine_hashes_unchanged": true,
+  "owned_run_processes_gone": true,
+  "nonowned_pid_reuse_observed": []
+}

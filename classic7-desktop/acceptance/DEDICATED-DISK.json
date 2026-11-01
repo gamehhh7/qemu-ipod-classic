@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "overlay_file": "windows-8g.sqlite3",
+  "virtual_sectors_512": 16960096,
+  "zero_from_sector_512": 182880,
+  "data_bytes": 8589934592,
+  "USB_logical_sector_bytes": 4096,
+  "ATA_sector_bytes": 512,
+  "FAT32_sector_bytes": 4096,
+  "cluster_bytes": 32768,
+  "original_seed": "K:\\CodexResources\\2026-10-01\\zcode-delegation\\quota-fallback\\acceptance\\media\\E-revb35-two-songs.img",
+  "firmware_partition": "unchanged readonly base",
+  "original_userdata_preserved": true,
+  "USB_mapping": "unchanged guest firmware",
+  "FAT_sectors": 256,
+  "clusters": 262076,
+  "created": true,
+  "original_seed_write": false,
+  "physical_devices": false,
+  "initialized_metadata_bytes": 29184,
+  "volume_acceptance": "pending actual finished EXE + Windows"
+}

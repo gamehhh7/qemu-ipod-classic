@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-29T19:24:48.029699+00:00",
+  "purpose": "actual finished app after minimal two-sector BPB metadata correction, actual ATA identity/profile and firmware mount/persistence acceptance",
+  "bound_seconds": 330,
+  "argv": [
+    "--connect-usb",
+    "--max-seconds",
+    "330"
+  ],
+  "profile_first_commands": 16,
+  "one_attempt_no_automatic_retry": true,
+  "files": {
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.exe": "92e9a358309e58ca079205dd952873cc82ce48da6ebe4cd1c4d80ddb6df2cde5",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.exe": "56cf87cba7d13b03b3802e82cacbb33811eebcfc326b8587558732b0867d21e4",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\storage\\backend_persistent.py": "9b8bf479489613156b11f5b5199a11d74e3a9c68a8e5515b482eba52ef5f7032",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\storage\\persistent_store.py": "46f5e254c2041958af6255772b9556c58c8e4bde419217feda5afd4df1111cbd",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\host\\frontend\\native_backend.py": "b6b3a4acd4b284664208275202401ac5382522bd0d8e6e43449608deab66349c",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\host\\reset_producer.py": "be93832f1fc4e7811677640809498cab2caef139bfc8bbf69fec91bb535e2e82"
+  },
+  "review": {
+    "approved": true,
+    "native_run_authorized": true,
+    "no_guest_forcing": true,
+    "no_block_mapping_or_payload_rewrite": true,
+    "scope": "physical virtual COW filesystem metadata and standard host acknowledgements; preserves original seed and current files"
+  }
+}

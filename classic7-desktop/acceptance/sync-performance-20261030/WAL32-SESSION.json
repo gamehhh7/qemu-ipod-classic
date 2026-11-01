@@ -1,0 +1,6 @@
+{
+  "app_pid": 6832,
+  "utc": "2026-10-30T10:18:48.332696+00:00",
+  "synchronous": "FULL",
+  "wal_checkpoint_pages": 8192
+}

@@ -1,0 +1,23 @@
+{
+  "old_StopPair_2ms_loop": {
+    "count": 20,
+    "median_s": 0.01600450000114506,
+    "min_s": 0.01381509999919217,
+    "max_s": 0.017542000001412816
+  },
+  "Event_2ms_direct": {
+    "count": 20,
+    "median_s": 0.002122199999575969,
+    "min_s": 0.002010399999562651,
+    "max_s": 0.002998600000864826
+  },
+  "new_125us_highres": {
+    "count": 20,
+    "median_s": 0.0005222000036155805,
+    "min_s": 0.0005154999962542206,
+    "max_s": 0.0006391000060830265
+  },
+  "monotonic_resolution_s": 0.015625,
+  "perf_counter_resolution_s": 1e-07,
+  "cause": "Old StopPair.wait repeats waits until coarse Windows monotonic/GetTickCount64 ticks advance. timeBeginPeriod cannot repair that clock quantization. New bounded short wait returns after the high-resolution timer and rechecks cancellation."
+}

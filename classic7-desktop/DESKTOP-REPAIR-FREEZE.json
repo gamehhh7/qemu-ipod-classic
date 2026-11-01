@@ -1,0 +1,8 @@
+{
+  "exe": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.exe",
+  "sha256": "4e10b93bbd5463b50be66486c9d9d7859f09ca734e07621c5a0605065be57225",
+  "source_sha256": "fa394ffcd4cda7f0b518263f32447820739fbfe784130765a90f15d2705e6589",
+  "manifest_sha256": "dcb109aaad3b13e98c63dd353ea44347e4d1a5a4430731de9cc7c7392bf3956a",
+  "acceptance": "acceptance/REPAIR-20261029.json",
+  "scope": "partial: display/resize/persistent COW delivered; USB hotplug/reconnect/Windows disk pending"
+}
