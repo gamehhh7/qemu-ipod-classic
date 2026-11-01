@@ -62,6 +62,13 @@ void icount_account_warp_timer(void);
 void icount_notify_exit(void);
 
 /*
+ * Classic7 audio-pacing diagnostic (H-R123-ICOUNT-NONIDLE-GAP).
+ * No-op unless CLASSIC7_ICOUNT_GAP=1. Does not change icount policy.
+ * The TCG RR thread calls this immediately before blocking on idle.
+ */
+void icount_classic7_gap_idle_wait(void);
+
+/*
  * CPU Ticks and Clock
  */
 

@@ -111,6 +111,13 @@ static void rr_wait_io_event(void)
 
     while (all_cpu_threads_idle()) {
         rr_stop_kick_timer();
+        if (icount_enabled()) {
+            /*
+             * Latch idle-before-warp so that wait is not charged to exec.
+             * Returns immediately when CLASSIC7_ICOUNT_GAP is unset.
+             */
+            icount_classic7_gap_idle_wait();
+        }
         qemu_cond_wait_iothread(first_cpu->halt_cond);
     }
 

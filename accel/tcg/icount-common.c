@@ -230,6 +230,207 @@ int64_t icount_round(int64_t count)
     return (count + (1 << shift) - 1) >> shift;
 }
 
+/*
+ * Classic7 audio-pacing diagnostic for H-R123-ICOUNT-NONIDLE-GAP.
+ *
+ * Opt-in only: CLASSIC7_ICOUNT_GAP=1. When the variable is unset or "0"
+ * every hook returns after a once-cached check. Sleep stays on by
+ * default, fixed shift is unchanged, and this code never writes guest
+ * state, vm_clock_warp_start, qemu_icount, or qemu_icount_bias.
+ *
+ * Host monotonic time since the previous sample is charged to the bucket
+ * latched then:
+ *   exec    - some CPU is not idle (warp will not arm)
+ *   warp    - all CPUs idle and vm_clock_warp_start > 0
+ *             (a warp was recorded; fixed-shift leaves the field 0
+ *             until then, and -1 means no warp is in progress)
+ *   gap     - all CPUs idle and no warp is recorded
+ *             (wall neither executing nor inside an idle warp)
+ *   stopped - runstate is not running (kept out of the three buckets)
+ *
+ * About every 5s a single stderr line reports nanoseconds in each bucket
+ * since the previous line, plus how often icount_start_warp_timer
+ * returned early for !all_cpu_threads_idle(), for no deadline, or took
+ * the sleep-disabled bias jump.
+ */
+#define C7_GAP_REPORT_NS (5 * NANOSECONDS_PER_SECOND)
+
+enum {
+    C7_EXEC = 0,
+    C7_WARP,
+    C7_GAP,
+    C7_STOPPED,
+    C7_NBUCKET
+};
+
+enum {
+    C7_EV_NONE = 0,
+    C7_EV_NOT_IDLE,
+    C7_EV_NO_DEADLINE,
+    C7_EV_SLEEP_OFF
+};
+
+/* Static storage is unlocked; qemu_spin_init() stores 0. */
+static QemuSpin c7_gap_lock;
+static int c7_gap_on = -1;
+static int c7_latched = C7_STOPPED;
+static int c7_have_sample;
+static int64_t c7_last_ns;
+static int64_t c7_report_ns;
+static int64_t c7_ns[C7_NBUCKET];
+static uint64_t c7_ret_not_idle;
+static uint64_t c7_ret_no_deadline;
+static uint64_t c7_sleep_off;
+
+static bool c7_gap_enabled(void)
+{
+    int v = qatomic_read(&c7_gap_on);
+
+    if (unlikely(v < 0)) {
+        const char *e = getenv("CLASSIC7_ICOUNT_GAP");
+
+        /*
+         * "1" enables. Unset and "0" stay off. Any other non-empty
+         * value also enables so the flag is not spelling-sensitive.
+         */
+        v = (e && e[0] != '\0' && e[0] != '0') ? 1 : 0;
+        qatomic_set(&c7_gap_on, v);
+    }
+    return v == 1;
+}
+
+static int c7_gap_classify(void)
+{
+    unsigned seq;
+    int64_t warp_start;
+
+    if (!runstate_is_running()) {
+        return C7_STOPPED;
+    }
+    /*
+     * Not-idle wins over an armed warp. icount_start_warp_timer refuses
+     * to arm while any CPU is runnable, so that wall time is "exec"
+     * even if a previous warp has not been accounted yet.
+     */
+    if (!all_cpu_threads_idle()) {
+        return C7_EXEC;
+    }
+    do {
+        seq = seqlock_read_begin(&timers_state.vm_clock_seqlock);
+        warp_start = timers_state.vm_clock_warp_start;
+    } while (seqlock_read_retry(&timers_state.vm_clock_seqlock, seq));
+    /*
+     * icount_warp_rt treats only -1 as "no warp". Fixed shift never
+     * stores that sentinel up front (the field is BSS 0), and the
+     * arming path does not replace 0, so 0 is not a recorded warp.
+     * A recorded arming stores the virtual-RT clock, which is > 0.
+     */
+    return warp_start > 0 ? C7_WARP : C7_GAP;
+}
+
+static void c7_gap_report(const int64_t *ns, uint64_t n_not_idle,
+                          uint64_t n_no_deadline, uint64_t n_sleep_off)
+{
+    int64_t wall = ns[C7_EXEC] + ns[C7_WARP] + ns[C7_GAP] + ns[C7_STOPPED];
+    int exec_pct = 0;
+    int warp_pct = 0;
+    int gap_pct = 0;
+
+    if (wall > 0) {
+        exec_pct = (int)((ns[C7_EXEC] * 100) / wall);
+        warp_pct = (int)((ns[C7_WARP] * 100) / wall);
+        gap_pct = (int)((ns[C7_GAP] * 100) / wall);
+    }
+    /* stderr, not error_report: one greppable line, no monitor prefix. */
+    fprintf(stderr,
+            "classic7-icount-gap: wall_ns=%" PRId64
+            " exec_ns=%" PRId64
+            " warp_ns=%" PRId64
+            " gap_ns=%" PRId64
+            " stopped_ns=%" PRId64
+            " exec_pct=%d warp_pct=%d gap_pct=%d"
+            " ret_not_idle=%" PRIu64
+            " ret_no_deadline=%" PRIu64
+            " sleep_off=%" PRIu64
+            " shift=%d sleep=%d\n",
+            wall,
+            ns[C7_EXEC], ns[C7_WARP], ns[C7_GAP], ns[C7_STOPPED],
+            exec_pct, warp_pct, gap_pct,
+            n_not_idle, n_no_deadline, n_sleep_off,
+            (int)qatomic_read(&timers_state.icount_time_shift),
+            icount_sleep ? 1 : 0);
+    fflush(stderr);
+}
+
+/* Charge elapsed host time to the previously latched bucket, then latch. */
+static void c7_gap_sample(int event)
+{
+    int64_t now;
+    int64_t delta;
+    int bucket;
+    int64_t report_ns[C7_NBUCKET];
+    uint64_t n_not_idle = 0;
+    uint64_t n_no_deadline = 0;
+    uint64_t n_sleep_off = 0;
+    bool do_report = false;
+    int i;
+
+    if (!c7_gap_enabled()) {
+        return;
+    }
+
+    bucket = c7_gap_classify();
+    now = get_clock();
+
+    qemu_spin_lock(&c7_gap_lock);
+    /*
+     * c7_have_sample, not a zero timestamp: get_clock() can be 0 and
+     * must still arm the 5s window.
+     */
+    if (c7_have_sample) {
+        delta = now - c7_last_ns;
+        if (delta > 0 && c7_latched >= 0 && c7_latched < C7_NBUCKET) {
+            c7_ns[c7_latched] += delta;
+        }
+    } else {
+        c7_report_ns = now;
+        c7_have_sample = 1;
+    }
+    c7_last_ns = now;
+    c7_latched = bucket;
+    if (event == C7_EV_NOT_IDLE) {
+        c7_ret_not_idle++;
+    } else if (event == C7_EV_NO_DEADLINE) {
+        c7_ret_no_deadline++;
+    } else if (event == C7_EV_SLEEP_OFF) {
+        c7_sleep_off++;
+    }
+    if (c7_have_sample && now - c7_report_ns >= C7_GAP_REPORT_NS) {
+        for (i = 0; i < C7_NBUCKET; i++) {
+            report_ns[i] = c7_ns[i];
+            c7_ns[i] = 0;
+        }
+        n_not_idle = c7_ret_not_idle;
+        n_no_deadline = c7_ret_no_deadline;
+        n_sleep_off = c7_sleep_off;
+        c7_ret_not_idle = 0;
+        c7_ret_no_deadline = 0;
+        c7_sleep_off = 0;
+        c7_report_ns = now;
+        do_report = true;
+    }
+    qemu_spin_unlock(&c7_gap_lock);
+
+    if (do_report) {
+        c7_gap_report(report_ns, n_not_idle, n_no_deadline, n_sleep_off);
+    }
+}
+
+void icount_classic7_gap_idle_wait(void)
+{
+    c7_gap_sample(C7_EV_NONE);
+}
+
 static void icount_warp_rt(void)
 {
     unsigned seq;
@@ -245,6 +446,7 @@ static void icount_warp_rt(void)
     } while (seqlock_read_retry(&timers_state.vm_clock_seqlock, seq));
 
     if (warp_start == -1) {
+        c7_gap_sample(C7_EV_NONE);
         return;
     }
 
@@ -280,6 +482,7 @@ static void icount_warp_rt(void)
     if (qemu_clock_expired(QEMU_CLOCK_VIRTUAL)) {
         qemu_clock_notify(QEMU_CLOCK_VIRTUAL);
     }
+    c7_gap_sample(C7_EV_NONE);
 }
 
 static void icount_timer_cb(void *opaque)
@@ -303,16 +506,19 @@ void icount_start_warp_timer(void)
      * do not fire, so computing the deadline does not make sense.
      */
     if (!runstate_is_running()) {
+        c7_gap_sample(C7_EV_NONE);
         return;
     }
 
     if (replay_mode != REPLAY_MODE_PLAY) {
         if (!all_cpu_threads_idle()) {
+            c7_gap_sample(C7_EV_NOT_IDLE);
             return;
         }
 
         if (qtest_enabled()) {
             /* When testing, qtest commands advance icount.  */
+            c7_gap_sample(C7_EV_NONE);
             return;
         }
 
@@ -329,6 +535,7 @@ void icount_start_warp_timer(void)
             if (replay_has_event()) {
                 qemu_clock_notify(QEMU_CLOCK_VIRTUAL);
             }
+            c7_gap_sample(C7_EV_NONE);
             return;
         }
     }
@@ -343,6 +550,7 @@ void icount_start_warp_timer(void)
             warn_report("icount sleep disabled and no active timers");
             notified = true;
         }
+        c7_gap_sample(C7_EV_NO_DEADLINE);
         return;
     }
 
@@ -369,6 +577,7 @@ void icount_start_warp_timer(void)
             seqlock_write_unlock(&timers_state.vm_clock_seqlock,
                                  &timers_state.vm_clock_lock);
             qemu_clock_notify(QEMU_CLOCK_VIRTUAL);
+            c7_gap_sample(C7_EV_SLEEP_OFF);
         } else {
             /*
              * We do stop VCPUs and only advance QEMU_CLOCK_VIRTUAL after some
@@ -388,15 +597,18 @@ void icount_start_warp_timer(void)
                                  &timers_state.vm_clock_lock);
             timer_mod_anticipate(timers_state.icount_warp_timer,
                                  clock + deadline);
+            c7_gap_sample(C7_EV_NONE);
         }
     } else if (deadline == 0) {
         qemu_clock_notify(QEMU_CLOCK_VIRTUAL);
+        c7_gap_sample(C7_EV_NONE);
     }
 }
 
 void icount_account_warp_timer(void)
 {
     if (!icount_sleep) {
+        c7_gap_sample(C7_EV_NONE);
         return;
     }
 
@@ -405,6 +617,7 @@ void icount_account_warp_timer(void)
      * do not fire, so computing the deadline does not make sense.
      */
     if (!runstate_is_running()) {
+        c7_gap_sample(C7_EV_NONE);
         return;
     }
 
@@ -412,6 +625,7 @@ void icount_account_warp_timer(void)
 
     /* warp clock deterministically in record/replay mode */
     if (!replay_checkpoint(CHECKPOINT_CLOCK_WARP_ACCOUNT)) {
+        c7_gap_sample(C7_EV_NONE);
         return;
     }
 
