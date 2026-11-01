@@ -431,10 +431,568 @@ void icount_classic7_gap_idle_wait(void)
     c7_gap_sample(C7_EV_NONE);
 }
 
+/*
+ * Classic7 warp-efficiency diagnostic for H-R124-WARP-UNDERADVANCE.
+ *
+ * Opt-in: CLASSIC7_ICOUNT_WARP_EFF=1. Unset or "0" returns immediately.
+ * Does not change shift, sleep, warp_start, or bias. K1's
+ * CLASSIC7_ICOUNT_GAP sampler is untouched.
+ *
+ * Each sleep=on warp that records a start timestamp is paired with the
+ * later icount_warp_rt credit:
+ *   deadline_ns     - virtual deadline used when that warp was opened
+ *   slept_wall_ns   - host monotonic time from that open until credit
+ *   bias_advance_ns - amount actually added to qemu_icount_bias
+ *   rt_elapsed_ns   - VIRTUAL_RT advance over the same host window
+ * Positive short_sleep (slept_wall - bias) is under-advance versus the
+ * host. bias_per_rt_x1000 near 1000 with bias_per_sleep_x1000 below that
+ * means VIRTUAL_RT itself lagged the host clock.
+ */
+#define C7_WEFF_REPORT_NS (5 * NANOSECONDS_PER_SECOND)
+#define C7_WEFF_CAP 256
+
+enum {
+    C7W_EARLY_STOPPED = 0,
+    C7W_EARLY_NOT_IDLE,
+    C7W_EARLY_QTEST,
+    C7W_EARLY_REPLAY,
+    C7W_EARLY_NO_DEADLINE,
+    C7W_N_EARLY
+};
+
+typedef struct C7WeffSnap {
+    uint64_t done;
+    int64_t deadline_ns;
+    int64_t slept_wall_ns;
+    int64_t bias_advance_ns;
+    int64_t rt_elapsed_ns;
+    uint64_t n_deadline0;
+    uint64_t n_sleep_off;
+    int64_t sleep_off_bias_ns;
+    uint64_t n_arm;
+    uint64_t n_arm_set;
+    uint64_t n_arm_kept;
+    uint64_t n_arm_lost;
+    uint64_t n_early[C7W_N_EARLY];
+    uint64_t n_account_unpaired;
+    int64_t bias_unpaired_ns;
+    uint64_t n_bias_from_zero;
+    int64_t bias_from_zero_ns;
+    uint64_t n_neg_bias;
+    uint64_t n_runstate_skip;
+    uint64_t n_account_replay_skip;
+    uint64_t n_account_stopped;
+    uint64_t n_rt_inactive;
+    uint64_t n_arm_orphaned;
+    int have_short;
+    int short_n;
+    int64_t dl_min, dl_max, sl_min, sl_max;
+    int64_t dl_samples[C7_WEFF_CAP];
+    int64_t sl_samples[C7_WEFF_CAP];
+} C7WeffSnap;
+
+typedef struct C7Weff {
+    QemuSpin lock;
+    int on;
+    int have_sample;
+    int open;
+    int have_short;
+    int short_n;
+    uint32_t rng;
+    int64_t report_ns;
+    int64_t host0;
+    int64_t arm_rt;
+    int64_t deadline_pending;
+    int64_t deadline_ns;
+    int64_t slept_wall_ns;
+    int64_t bias_advance_ns;
+    int64_t rt_elapsed_ns;
+    int64_t sleep_off_bias_ns;
+    int64_t bias_unpaired_ns;
+    int64_t bias_from_zero_ns;
+    int64_t dl_min, dl_max, sl_min, sl_max;
+    uint64_t done;
+    uint64_t short_seen;
+    uint64_t n_deadline0;
+    uint64_t n_sleep_off;
+    uint64_t n_arm;
+    uint64_t n_arm_set;
+    uint64_t n_arm_kept;
+    uint64_t n_arm_lost;
+    uint64_t n_early[C7W_N_EARLY];
+    uint64_t n_account_unpaired;
+    uint64_t n_bias_from_zero;
+    uint64_t n_neg_bias;
+    uint64_t n_runstate_skip;
+    uint64_t n_account_replay_skip;
+    uint64_t n_account_stopped;
+    uint64_t n_rt_inactive;
+    uint64_t n_arm_orphaned;
+    int64_t dl_samples[C7_WEFF_CAP];
+    int64_t sl_samples[C7_WEFF_CAP];
+} C7Weff;
+
+/* Spin value 0 is unlocked. .on == -1 means the env var is not cached. */
+static C7Weff c7_weff = {
+    .on = -1,
+    .rng = 1,
+};
+
+static bool c7_weff_enabled(void)
+{
+    int v = qatomic_read(&c7_weff.on);
+
+    if (unlikely(v < 0)) {
+        const char *e = getenv("CLASSIC7_ICOUNT_WARP_EFF");
+
+        v = (e && e[0] != '\0' && e[0] != '0') ? 1 : 0;
+        qatomic_set(&c7_weff.on, v);
+    }
+    return v == 1;
+}
+
+static int64_t c7_weff_x1000(int64_t num, int64_t den)
+{
+    if (den <= 0) {
+        return -1;
+    }
+    if (num > 0 && num > INT64_MAX / 1000) {
+        return INT64_MAX;
+    }
+    if (num < 0 && num < INT64_MIN / 1000) {
+        return INT64_MIN;
+    }
+    return (num * 1000 + (num >= 0 ? den / 2 : -den / 2)) / den;
+}
+
+static int c7_weff_cmp(const void *a, const void *b)
+{
+    int64_t da = *(const int64_t *)a;
+    int64_t db = *(const int64_t *)b;
+
+    if (da < db) {
+        return -1;
+    }
+    if (da > db) {
+        return 1;
+    }
+    return 0;
+}
+
+static int64_t c7_weff_p50(int64_t *v, int n)
+{
+    if (n <= 0) {
+        return 0;
+    }
+    qsort(v, n, sizeof(int64_t), c7_weff_cmp);
+    return v[n / 2];
+}
+
+static uint32_t c7_weff_rand(void)
+{
+    c7_weff.rng = c7_weff.rng * 1103515245u + 12345u;
+    return c7_weff.rng >> 1;
+}
+
+/* Min/max are exact. p50 is exact up to C7_WEFF_CAP, then a reservoir. */
+static void c7_weff_note_short(int64_t short_deadline, int64_t short_sleep)
+{
+    uint64_t seen;
+
+    if (!c7_weff.have_short) {
+        c7_weff.dl_min = c7_weff.dl_max = short_deadline;
+        c7_weff.sl_min = c7_weff.sl_max = short_sleep;
+        c7_weff.have_short = 1;
+    } else {
+        if (short_deadline < c7_weff.dl_min) {
+            c7_weff.dl_min = short_deadline;
+        }
+        if (short_deadline > c7_weff.dl_max) {
+            c7_weff.dl_max = short_deadline;
+        }
+        if (short_sleep < c7_weff.sl_min) {
+            c7_weff.sl_min = short_sleep;
+        }
+        if (short_sleep > c7_weff.sl_max) {
+            c7_weff.sl_max = short_sleep;
+        }
+    }
+    c7_weff.short_seen++;
+    seen = c7_weff.short_seen;
+    if (c7_weff.short_n < C7_WEFF_CAP) {
+        c7_weff.dl_samples[c7_weff.short_n] = short_deadline;
+        c7_weff.sl_samples[c7_weff.short_n] = short_sleep;
+        c7_weff.short_n++;
+        return;
+    }
+    if ((c7_weff_rand() % seen) < C7_WEFF_CAP) {
+        int idx = (int)(c7_weff_rand() % C7_WEFF_CAP);
+
+        c7_weff.dl_samples[idx] = short_deadline;
+        c7_weff.sl_samples[idx] = short_sleep;
+    }
+}
+
+static bool c7_weff_take_report(int64_t now, C7WeffSnap *snap)
+{
+    if (!c7_weff.have_sample) {
+        c7_weff.have_sample = 1;
+        c7_weff.report_ns = now;
+        return false;
+    }
+    if (now - c7_weff.report_ns < C7_WEFF_REPORT_NS) {
+        return false;
+    }
+
+    snap->done = c7_weff.done;
+    snap->deadline_ns = c7_weff.deadline_ns;
+    snap->slept_wall_ns = c7_weff.slept_wall_ns;
+    snap->bias_advance_ns = c7_weff.bias_advance_ns;
+    snap->rt_elapsed_ns = c7_weff.rt_elapsed_ns;
+    snap->n_deadline0 = c7_weff.n_deadline0;
+    snap->n_sleep_off = c7_weff.n_sleep_off;
+    snap->sleep_off_bias_ns = c7_weff.sleep_off_bias_ns;
+    snap->n_arm = c7_weff.n_arm;
+    snap->n_arm_set = c7_weff.n_arm_set;
+    snap->n_arm_kept = c7_weff.n_arm_kept;
+    snap->n_arm_lost = c7_weff.n_arm_lost;
+    memcpy(snap->n_early, c7_weff.n_early, sizeof(snap->n_early));
+    snap->n_account_unpaired = c7_weff.n_account_unpaired;
+    snap->bias_unpaired_ns = c7_weff.bias_unpaired_ns;
+    snap->n_bias_from_zero = c7_weff.n_bias_from_zero;
+    snap->bias_from_zero_ns = c7_weff.bias_from_zero_ns;
+    snap->n_neg_bias = c7_weff.n_neg_bias;
+    snap->n_runstate_skip = c7_weff.n_runstate_skip;
+    snap->n_account_replay_skip = c7_weff.n_account_replay_skip;
+    snap->n_account_stopped = c7_weff.n_account_stopped;
+    snap->n_rt_inactive = c7_weff.n_rt_inactive;
+    snap->n_arm_orphaned = c7_weff.n_arm_orphaned;
+    snap->have_short = c7_weff.have_short;
+    snap->short_n = c7_weff.short_n;
+    snap->dl_min = c7_weff.dl_min;
+    snap->dl_max = c7_weff.dl_max;
+    snap->sl_min = c7_weff.sl_min;
+    snap->sl_max = c7_weff.sl_max;
+    if (c7_weff.short_n > 0) {
+        memcpy(snap->dl_samples, c7_weff.dl_samples,
+               c7_weff.short_n * sizeof(int64_t));
+        memcpy(snap->sl_samples, c7_weff.sl_samples,
+               c7_weff.short_n * sizeof(int64_t));
+    }
+
+    c7_weff.done = 0;
+    c7_weff.deadline_ns = 0;
+    c7_weff.slept_wall_ns = 0;
+    c7_weff.bias_advance_ns = 0;
+    c7_weff.rt_elapsed_ns = 0;
+    c7_weff.n_deadline0 = 0;
+    c7_weff.n_sleep_off = 0;
+    c7_weff.sleep_off_bias_ns = 0;
+    c7_weff.n_arm = 0;
+    c7_weff.n_arm_set = 0;
+    c7_weff.n_arm_kept = 0;
+    c7_weff.n_arm_lost = 0;
+    memset(c7_weff.n_early, 0, sizeof(c7_weff.n_early));
+    c7_weff.n_account_unpaired = 0;
+    c7_weff.bias_unpaired_ns = 0;
+    c7_weff.n_bias_from_zero = 0;
+    c7_weff.bias_from_zero_ns = 0;
+    c7_weff.n_neg_bias = 0;
+    c7_weff.n_runstate_skip = 0;
+    c7_weff.n_account_replay_skip = 0;
+    c7_weff.n_account_stopped = 0;
+    c7_weff.n_rt_inactive = 0;
+    c7_weff.n_arm_orphaned = 0;
+    c7_weff.have_short = 0;
+    c7_weff.short_n = 0;
+    c7_weff.short_seen = 0;
+    c7_weff.report_ns = now;
+    return true;
+}
+
+static void c7_weff_report(C7WeffSnap *snap)
+{
+    int64_t dl_p50 = 0;
+    int64_t sl_p50 = 0;
+
+    if (snap->have_short && snap->short_n > 0) {
+        dl_p50 = c7_weff_p50(snap->dl_samples, snap->short_n);
+        sl_p50 = c7_weff_p50(snap->sl_samples, snap->short_n);
+    } else {
+        snap->dl_min = snap->dl_max = 0;
+        snap->sl_min = snap->sl_max = 0;
+    }
+
+    fprintf(stderr,
+            "classic7-icount-warp-eff: done=%" PRIu64
+            " deadline_ns=%" PRId64
+            " slept_wall_ns=%" PRId64
+            " bias_advance_ns=%" PRId64
+            " rt_elapsed_ns=%" PRId64
+            " bias_per_sleep_x1000=%" PRId64
+            " bias_per_deadline_x1000=%" PRId64
+            " sleep_per_deadline_x1000=%" PRId64
+            " bias_per_rt_x1000=%" PRId64
+            " n_deadline0=%" PRIu64
+            " n_sleep_off=%" PRIu64
+            " sleep_off_bias_ns=%" PRId64
+            " n_arm=%" PRIu64
+            " n_arm_set=%" PRIu64
+            " n_arm_kept=%" PRIu64
+            " n_arm_lost=%" PRIu64
+            " n_early_stopped=%" PRIu64
+            " n_early_not_idle=%" PRIu64
+            " n_early_qtest=%" PRIu64
+            " n_early_replay=%" PRIu64
+            " n_early_no_deadline=%" PRIu64
+            " n_account_unpaired=%" PRIu64
+            " bias_unpaired_ns=%" PRId64
+            " n_bias_from_zero=%" PRIu64
+            " bias_from_zero_ns=%" PRId64
+            " n_neg_bias=%" PRIu64
+            " n_runstate_skip=%" PRIu64
+            " n_account_replay_skip=%" PRIu64
+            " n_account_stopped=%" PRIu64
+            " n_rt_inactive=%" PRIu64
+            " n_arm_orphaned=%" PRIu64
+            " short_deadline_min=%" PRId64
+            " short_deadline_p50=%" PRId64
+            " short_deadline_max=%" PRId64
+            " short_sleep_min=%" PRId64
+            " short_sleep_p50=%" PRId64
+            " short_sleep_max=%" PRId64
+            " p50_n=%d"
+            " shift=%d sleep=%d\n",
+            snap->done,
+            snap->deadline_ns,
+            snap->slept_wall_ns,
+            snap->bias_advance_ns,
+            snap->rt_elapsed_ns,
+            c7_weff_x1000(snap->bias_advance_ns, snap->slept_wall_ns),
+            c7_weff_x1000(snap->bias_advance_ns, snap->deadline_ns),
+            c7_weff_x1000(snap->slept_wall_ns, snap->deadline_ns),
+            c7_weff_x1000(snap->bias_advance_ns, snap->rt_elapsed_ns),
+            snap->n_deadline0,
+            snap->n_sleep_off,
+            snap->sleep_off_bias_ns,
+            snap->n_arm,
+            snap->n_arm_set,
+            snap->n_arm_kept,
+            snap->n_arm_lost,
+            snap->n_early[C7W_EARLY_STOPPED],
+            snap->n_early[C7W_EARLY_NOT_IDLE],
+            snap->n_early[C7W_EARLY_QTEST],
+            snap->n_early[C7W_EARLY_REPLAY],
+            snap->n_early[C7W_EARLY_NO_DEADLINE],
+            snap->n_account_unpaired,
+            snap->bias_unpaired_ns,
+            snap->n_bias_from_zero,
+            snap->bias_from_zero_ns,
+            snap->n_neg_bias,
+            snap->n_runstate_skip,
+            snap->n_account_replay_skip,
+            snap->n_account_stopped,
+            snap->n_rt_inactive,
+            snap->n_arm_orphaned,
+            snap->dl_min,
+            dl_p50,
+            snap->dl_max,
+            snap->sl_min,
+            sl_p50,
+            snap->sl_max,
+            snap->short_n,
+            (int)qatomic_read(&timers_state.icount_time_shift),
+            icount_sleep ? 1 : 0);
+    fflush(stderr);
+}
+
+/* Caller holds c7_weff.lock. May release it to print. */
+static void c7_weff_maybe_report(int64_t now)
+{
+    C7WeffSnap snap;
+    bool do_report;
+
+    do_report = c7_weff_take_report(now, &snap);
+    qemu_spin_unlock(&c7_weff.lock);
+    if (do_report) {
+        c7_weff_report(&snap);
+    }
+}
+
+static void c7_weff_event(int which)
+{
+    int64_t now;
+
+    if (!c7_weff_enabled()) {
+        return;
+    }
+    now = get_clock();
+    qemu_spin_lock(&c7_weff.lock);
+    if (which >= 0 && which < C7W_N_EARLY) {
+        c7_weff.n_early[which]++;
+    }
+    c7_weff_maybe_report(now);
+}
+
+static void c7_weff_on_deadline0(void)
+{
+    int64_t now;
+
+    if (!c7_weff_enabled()) {
+        return;
+    }
+    now = get_clock();
+    qemu_spin_lock(&c7_weff.lock);
+    c7_weff.n_deadline0++;
+    c7_weff_maybe_report(now);
+}
+
+static void c7_weff_on_sleep_off(int64_t deadline)
+{
+    int64_t now;
+
+    if (!c7_weff_enabled()) {
+        return;
+    }
+    now = get_clock();
+    qemu_spin_lock(&c7_weff.lock);
+    c7_weff.n_sleep_off++;
+    c7_weff.sleep_off_bias_ns += deadline;
+    c7_weff_maybe_report(now);
+}
+
+static void c7_weff_on_arm(int64_t rt_clock, int64_t deadline, bool refreshed)
+{
+    int64_t now;
+
+    if (!c7_weff_enabled()) {
+        return;
+    }
+    now = get_clock();
+    qemu_spin_lock(&c7_weff.lock);
+    c7_weff.n_arm++;
+    if (!c7_weff.open || refreshed) {
+        if (c7_weff.open && refreshed) {
+            /* warp_start was replaced without an account. */
+            c7_weff.n_arm_lost++;
+        }
+        if (refreshed) {
+            c7_weff.n_arm_set++;
+        } else {
+            c7_weff.n_arm_kept++;
+        }
+        c7_weff.open = 1;
+        c7_weff.host0 = now;
+        c7_weff.arm_rt = rt_clock;
+        c7_weff.deadline_pending = deadline;
+    } else {
+        c7_weff.n_arm_kept++;
+    }
+    c7_weff_maybe_report(now);
+}
+
+static void c7_weff_on_account(int64_t rt_now, int64_t warp_start_used,
+                               int64_t bias_applied, bool applied)
+{
+    int64_t now;
+    int64_t slept;
+    int64_t rt_elapsed;
+
+    if (!c7_weff_enabled()) {
+        return;
+    }
+    now = get_clock();
+    qemu_spin_lock(&c7_weff.lock);
+
+    /*
+     * Fixed shift leaves vm_clock_warp_start at 0 until the first
+     * account. That credit is clock-0, not a paired sleep.
+     */
+    if (warp_start_used == 0) {
+        c7_weff.n_bias_from_zero++;
+        c7_weff.bias_from_zero_ns += bias_applied;
+        c7_weff.open = 0;
+    } else if (!c7_weff.open) {
+        c7_weff.n_account_unpaired++;
+        c7_weff.bias_unpaired_ns += bias_applied;
+    } else {
+        slept = now - c7_weff.host0;
+        if (slept < 0) {
+            slept = 0;
+        }
+        rt_elapsed = 0;
+        if (applied) {
+            rt_elapsed = rt_now - c7_weff.arm_rt;
+        }
+        c7_weff.done++;
+        c7_weff.deadline_ns += c7_weff.deadline_pending;
+        c7_weff.slept_wall_ns += slept;
+        c7_weff.bias_advance_ns += bias_applied;
+        c7_weff.rt_elapsed_ns += rt_elapsed;
+        if (!applied) {
+            c7_weff.n_runstate_skip++;
+        }
+        if (bias_applied < 0) {
+            c7_weff.n_neg_bias++;
+        }
+        c7_weff_note_short(c7_weff.deadline_pending - bias_applied,
+                           slept - bias_applied);
+        c7_weff.open = 0;
+    }
+    c7_weff_maybe_report(now);
+}
+
+static void c7_weff_on_rt_inactive(void)
+{
+    int64_t now;
+
+    if (!c7_weff_enabled()) {
+        return;
+    }
+    now = get_clock();
+    qemu_spin_lock(&c7_weff.lock);
+    c7_weff.n_rt_inactive++;
+    if (c7_weff.open) {
+        c7_weff.n_arm_orphaned++;
+        c7_weff.open = 0;
+    }
+    c7_weff_maybe_report(now);
+}
+
+static void c7_weff_on_account_stopped(void)
+{
+    int64_t now;
+
+    if (!c7_weff_enabled()) {
+        return;
+    }
+    now = get_clock();
+    qemu_spin_lock(&c7_weff.lock);
+    c7_weff.n_account_stopped++;
+    c7_weff_maybe_report(now);
+}
+
+static void c7_weff_on_account_replay_skip(void)
+{
+    int64_t now;
+
+    if (!c7_weff_enabled()) {
+        return;
+    }
+    now = get_clock();
+    qemu_spin_lock(&c7_weff.lock);
+    c7_weff.n_account_replay_skip++;
+    c7_weff_maybe_report(now);
+}
+
 static void icount_warp_rt(void)
 {
     unsigned seq;
     int64_t warp_start;
+    int64_t bias_applied = 0;
+    int64_t rt_now = 0;
+    int64_t warp_used;
+    bool applied = false;
 
     /*
      * The icount_warp_timer is rescheduled soon after vm_clock_warp_start
@@ -447,17 +1005,19 @@ static void icount_warp_rt(void)
 
     if (warp_start == -1) {
         c7_gap_sample(C7_EV_NONE);
+        c7_weff_on_rt_inactive();
         return;
     }
 
     seqlock_write_lock(&timers_state.vm_clock_seqlock,
                        &timers_state.vm_clock_lock);
+    warp_used = timers_state.vm_clock_warp_start;
     if (runstate_is_running()) {
         int64_t clock = REPLAY_CLOCK_LOCKED(REPLAY_CLOCK_VIRTUAL_RT,
                                             cpu_get_clock_locked());
         int64_t warp_delta;
 
-        warp_delta = clock - timers_state.vm_clock_warp_start;
+        warp_delta = clock - warp_used;
         if (icount_enabled() == 2) {
             /*
              * In adaptive mode, do not let QEMU_CLOCK_VIRTUAL run too far
@@ -474,10 +1034,16 @@ static void icount_warp_rt(void)
         }
         qatomic_set_i64(&timers_state.qemu_icount_bias,
                         timers_state.qemu_icount_bias + warp_delta);
+        rt_now = clock;
+        bias_applied = warp_delta;
+        applied = true;
     }
     timers_state.vm_clock_warp_start = -1;
     seqlock_write_unlock(&timers_state.vm_clock_seqlock,
                        &timers_state.vm_clock_lock);
+
+    /* Before notify: a re-entered arm must not pair with this credit. */
+    c7_weff_on_account(rt_now, warp_used, bias_applied, applied);
 
     if (qemu_clock_expired(QEMU_CLOCK_VIRTUAL)) {
         qemu_clock_notify(QEMU_CLOCK_VIRTUAL);
@@ -507,18 +1073,21 @@ void icount_start_warp_timer(void)
      */
     if (!runstate_is_running()) {
         c7_gap_sample(C7_EV_NONE);
+        c7_weff_event(C7W_EARLY_STOPPED);
         return;
     }
 
     if (replay_mode != REPLAY_MODE_PLAY) {
         if (!all_cpu_threads_idle()) {
             c7_gap_sample(C7_EV_NOT_IDLE);
+            c7_weff_event(C7W_EARLY_NOT_IDLE);
             return;
         }
 
         if (qtest_enabled()) {
             /* When testing, qtest commands advance icount.  */
             c7_gap_sample(C7_EV_NONE);
+            c7_weff_event(C7W_EARLY_QTEST);
             return;
         }
 
@@ -536,6 +1105,7 @@ void icount_start_warp_timer(void)
                 qemu_clock_notify(QEMU_CLOCK_VIRTUAL);
             }
             c7_gap_sample(C7_EV_NONE);
+            c7_weff_event(C7W_EARLY_REPLAY);
             return;
         }
     }
@@ -551,6 +1121,7 @@ void icount_start_warp_timer(void)
             notified = true;
         }
         c7_gap_sample(C7_EV_NO_DEADLINE);
+        c7_weff_event(C7W_EARLY_NO_DEADLINE);
         return;
     }
 
@@ -578,6 +1149,7 @@ void icount_start_warp_timer(void)
                                  &timers_state.vm_clock_lock);
             qemu_clock_notify(QEMU_CLOCK_VIRTUAL);
             c7_gap_sample(C7_EV_SLEEP_OFF);
+            c7_weff_on_sleep_off(deadline);
         } else {
             /*
              * We do stop VCPUs and only advance QEMU_CLOCK_VIRTUAL after some
@@ -587,21 +1159,26 @@ void icount_start_warp_timer(void)
              * you will not be sending network packets continuously instead of
              * every 100ms.
              */
+            bool refreshed = false;
+
             seqlock_write_lock(&timers_state.vm_clock_seqlock,
                                &timers_state.vm_clock_lock);
             if (timers_state.vm_clock_warp_start == -1
                 || timers_state.vm_clock_warp_start > clock) {
                 timers_state.vm_clock_warp_start = clock;
+                refreshed = true;
             }
             seqlock_write_unlock(&timers_state.vm_clock_seqlock,
                                  &timers_state.vm_clock_lock);
             timer_mod_anticipate(timers_state.icount_warp_timer,
                                  clock + deadline);
             c7_gap_sample(C7_EV_NONE);
+            c7_weff_on_arm(clock, deadline, refreshed);
         }
     } else if (deadline == 0) {
         qemu_clock_notify(QEMU_CLOCK_VIRTUAL);
         c7_gap_sample(C7_EV_NONE);
+        c7_weff_on_deadline0();
     }
 }
 
@@ -618,6 +1195,7 @@ void icount_account_warp_timer(void)
      */
     if (!runstate_is_running()) {
         c7_gap_sample(C7_EV_NONE);
+        c7_weff_on_account_stopped();
         return;
     }
 
@@ -626,6 +1204,7 @@ void icount_account_warp_timer(void)
     /* warp clock deterministically in record/replay mode */
     if (!replay_checkpoint(CHECKPOINT_CLOCK_WARP_ACCOUNT)) {
         c7_gap_sample(C7_EV_NONE);
+        c7_weff_on_account_replay_skip();
         return;
     }
 
