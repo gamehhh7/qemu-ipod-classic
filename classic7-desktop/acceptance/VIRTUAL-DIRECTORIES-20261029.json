@@ -1,0 +1,87 @@
+{
+  "operation": "readonly bounded virtual FAT root directory inspection",
+  "physical_disk": false,
+  "source_seed_open_mode": "rb",
+  "results": [
+    {
+      "overlay": "windows-8g.sqlite3",
+      "MBR_start_logical4096": 22860,
+      "MBR_length": 2097152,
+      "FAT_bytes_per_sector": 4096,
+      "sectors_per_cluster": 8,
+      "root_cluster": 2,
+      "entries_first_root_cluster": [
+        {
+          "short_name": "VIRTUALIPOD",
+          "attributes": 8,
+          "size": 0,
+          "cluster": 0
+        },
+        {
+          "short_name": "SYSTEM~1   ",
+          "attributes": 22,
+          "size": 0,
+          "cluster": 3
+        },
+        {
+          "short_name": "CODEX-~1TXT",
+          "attributes": 32,
+          "size": 3968,
+          "cluster": 6
+        }
+      ]
+    },
+    {
+      "overlay": "disk.sqlite3",
+      "MBR_start_logical4096": 22860,
+      "MBR_length": 16384,
+      "FAT_bytes_per_sector": 512,
+      "sectors_per_cluster": 1,
+      "root_cluster": 2,
+      "entries_first_root_cluster": [
+        {
+          "short_name": "IPOD       ",
+          "attributes": 8,
+          "size": 0,
+          "cluster": 0
+        },
+        {
+          "short_name": "IPOD_C~1   ",
+          "attributes": 18,
+          "size": 0,
+          "cluster": 3
+        },
+        {
+          "short_name": "METADA~1   ",
+          "attributes": 0,
+          "size": 0,
+          "cluster": 0
+        },
+        {
+          "short_name": "CALEND~1   ",
+          "attributes": 16,
+          "size": 0,
+          "cluster": 22408
+        },
+        {
+          "short_name": "CONTACTS   ",
+          "attributes": 16,
+          "size": 0,
+          "cluster": 22409
+        },
+        {
+          "short_name": "NOTES      ",
+          "attributes": 16,
+          "size": 0,
+          "cluster": 22410
+        },
+        {
+          "short_name": "RECORD~1   ",
+          "attributes": 16,
+          "size": 0,
+          "cluster": 22411
+        }
+      ]
+    }
+  ]
+}

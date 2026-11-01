@@ -1,0 +1,6 @@
+{
+  "approved": true,
+  "native_run_authorized": true,
+  "freeze_sha256": "3076f891afded4cbb2033f26b97a1a39447063cc9fae9b566caf0907c2926329",
+  "reason": "Consolidated exact previously exercised engine; host attaches actual guest descriptors via official installed driver. No test helper timed detach. New desktop mode disables only idle transport lifetime, retains guest timing/DMA/packet gates and one owner. Actual acceptance uses same finished EXE and filesystem operations; agent session itself remains330s. Old claims stay consumed; no retries."
+}

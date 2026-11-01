@@ -1,0 +1,22 @@
+[New Thread 1824.0x9048 (id 2)]
+[New Thread 1824.0x3628 (id 3)]
+[New Thread 1824.0x3404 (id 4)]
+[New Thread 1824.0x9288 (id 5)]
+[New Thread 1824.0x92a4 (id 6)]
+[New Thread 1824.0x93c4 (id 7)]
+[New Thread 1824.0x6100 (id 8)]
+[New Thread 1824.0x21c0 (id 9)]
+[New Thread 1824.0x6db8 (id 10)]
+[New Thread 1824.0x1c68 (id 11)]
+[New Thread 1824.0x553c (id 12)]
+[New Thread 1824.0x7650 (id 13)]
+[New Thread 1824.0x7038 (id 14)]
+[Switching to thread 1 (Thread 1824.0x4ecc)]
+0x00007ffb209c28a4 in ntdll!ZwWaitForMultipleObjects () from C:/WINDOWS/SYSTEM32/ntdll.dll
+$1 = 44117
+$2 = 28209152
+$3 = 28209152
+$4 = true
+$5 = {card = 0x7ff68a62bc40 <i2s_live>, s = 0x3489e10, info = {bits = 16, is_signed = true, is_float = false, freq = 44117, nchannels = 2, bytes_per_frame = 4, bytes_per_second = 176468, swap_endianness = 0}, conv = 0x7ff6892aa760 <conv_natural_int16_t_to_stereo>, resample_buf = {pos = 0, size = 4098, buffer = 0x4840e010}, rate = 0x4840ce60, total_hw_samples_mixed = 0, active = 1, empty = 1, hw = 0x34c16a0, name = 0x374ea40 "s5l8702.i2s.out", vol = {mute = 0, r = 4294967296, l = 4294967296}, callback = {opaque = 0x0, fn = 0x7ff6893b79d0 <i2s_live_out_cb>}, entries = {le_next = 0x0, le_prev = 0x34c1720}}
+$6 = {s = 0x3489e10, enabled = 1, poll_mode = 0, pending_disable = 0, info = {bits = 16, is_signed = true, is_float = false, freq = 44100, nchannels = 2, bytes_per_frame = 4, bytes_per_second = 176400, swap_endianness = 0}, clip = 0x7ff6892aa7e0 <clip_natural_int16_t_from_stereo>, ts_helper = 7049570, mix_buf = {pos = 354, size = 4096, buffer = 0x480d1a50}, buf_emul = 0x0, pos_emul = 3312, pending_emul = 0, size_emul = 16384, samples = 4096, sw_head = {lh_first = 0x3205630}, cap_head = {lh_first = 0x0}, pcm_ops = 0x7ff6897de3c0 <dsound_pcm_ops>, entries = {le_next = 0x0, le_prev = 0x3489e40}}
+[Inferior 1 (process 1824) detached]

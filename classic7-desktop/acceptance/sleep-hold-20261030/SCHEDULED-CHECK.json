@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-30T09:33:14.390901+00:00",
+  "phase": "R104_SCHEDULE_TRIGGERED_WAIT_ACTIVE_USER_SYNC",
+  "automation_id": "ipod-hold",
+  "quota_verified": {
+    "five_hour_used_percent": 1,
+    "weekly_used_percent": 43
+  },
+  "process_identity_verified": {
+    "app": 31352,
+    "app_created_hk": "2026-10-30T13:43:41.944151+08:00",
+    "qemu": 1732,
+    "storage": 9564,
+    "usb_host": 9832,
+    "AppleDevices": 15348,
+    "paths": "canonical executable and original Python paths verified via fresh Win32_Process"
+  },
+  "production_hashes_verified": {
+    "main": "18e48adc0bcc7915179107767f283be0161d71f1b1a5f8bb72d5ab108ac08e12",
+    "engine": "8da5a824f00dfbcca0912555b3d5e76938c870459b79b58671efd476865d165e"
+  },
+  "visual_review": {
+    "reviewer": "GPT-6 Luna low",
+    "AppleDevices": "Syncing music step1/1, copying14/32 Under Bright Lights (feat. Indy Skies), approximately16percent; no error visible",
+    "simulator": "Synchronizing / Do not disconnect; USB connected, animation changes",
+    "screenshots": [
+      "apple-devices-sync.png",
+      "ipod-classic7-sync.png"
+    ],
+    "actions": "read-only, no click, cancellation, eject or Hold"
+  },
+  "live_sync_sample": {
+    "utc": "2026-10-30T09:31:36.156401+00:00",
+    "sample_s": 12.005215644836426,
+    "commands": 9,
+    "write_commands": 4,
+    "written_bytes": 524288,
+    "backend_wall_s": 0.2226881999959005,
+    "backend_cpu_s": 0.03125,
+    "last_record": {
+      "n": 4384,
+      "t": 1793352695.318588,
+      "wall_s": 0.0015356999938376248,
+      "cpu_s": 0.0,
+      "req": "TASKFILE 200 0 24 8 29 9 0 0 0 64 0",
+      "resp": "RESULT 88 0 0 ok ok 298 12288",
+      "origin": "QEMU_TCP_ONLY",
+      "r3": "real8051",
+      "payload_sha256": "f3cc103136423a57975750907ebc1d367e2985ac6338976d4d5a439f50323f4a",
+      "decoded_payload_bytes": 12288,
+      "persistent_cow": true
+    },
+    "read_only": true,
+    "user_session_unchanged": true,
+    "bytes_per_s": 43671.685333324436,
+    "backend_wall_fraction": 0.018549287791567587
+  },
+  "new_sleep_evidence": {
+    "sequence": [
+      "FRONTEND-HOLD locked=1 vns=3113358330348",
+      "FRONTEND-HOLD locked=0 vns=3113395345844",
+      "CPU_exception_handler",
+      "guest software reset SWRCON0xaa5 next image-------- pc_approx0835d03c lr0802dd50 sp08a1155c"
+    ],
+    "interpretation": "A guest CPU exception precedes software reset. Existing ordinary run does not record fault PC/DFAR/DFSR, so the exact cause is not established. Do not assume another battery warning or a QEMU host crash.",
+    "next_capture": "After safe user closure, instrument bounded exception-only fault state and wake-related PMU/GPIO/I2C events; reproduce real idle without reducing sleep threshold."
+  },
+  "source_modified": false,
+  "process_or_usb_modified": false,
+  "sleep_fixed": false,
+  "performance_fixed": false,
+  "waiting_for": "User synchronization completion, safe eject in Apple Devices, then normal simulator closure. Do not stop current writes or create a second writer.",
+  "automation_next": "One-shot attempted; retire it, resume on user reply rather than establishing a loop."
+}

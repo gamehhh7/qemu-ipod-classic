@@ -1,0 +1,14 @@
+{
+  "bound_seconds": 330,
+  "review": {
+    "seed_readonly": true,
+    "approved": true,
+    "no_physical_device": true,
+    "native_GUI_settings_only": true,
+    "prior_marker_runtime_hashes_unchanged": true
+  },
+  "source_freeze_sha256": "922D9A6BFDDFBE8426125A6BFD17DB897AF115E8C9C2F5972AE13CBAE5BCAE4B",
+  "native_run_authorized": true,
+  "utc": "2026-10-30T05:04:59.0378399Z",
+  "purpose": "Real GUI change to requested simplified Chinese, commit to existing disk and independent restart persistence acceptance"
+}

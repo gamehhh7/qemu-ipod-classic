@@ -1,0 +1,123 @@
+{
+  "directories": [
+    {
+      "path": "iPod_Control"
+    },
+    {
+      "path": "iPod_Control/Music"
+    },
+    {
+      "path": "iPod_Control/Music/F00"
+    },
+    {
+      "path": "iPod_Control/Music/F01"
+    },
+    {
+      "path": "iPod_Control/iTunes"
+    },
+    {
+      "path": "iPod_Control/Device"
+    },
+    {
+      "path": "iPod_Control/Tones"
+    },
+    {
+      "path": "Calendars"
+    },
+    {
+      "path": "Contacts"
+    },
+    {
+      "path": "Notes"
+    },
+    {
+      "path": "Recordings"
+    }
+  ],
+  "status": "import_complete_waiting_user_manual_feedback",
+  "physical_device": false,
+  "destination": "E:\\",
+  "parent_chain": [
+    "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+    "USB\\VID_05AC&PID_1261&MI_00\\3&2E0BF28E&0",
+    "USB\\VID_05AC&PID_1261\\000A2700214DCAC1",
+    "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+    "ROOT\\USB\\0000",
+    "HTREE\\ROOT\\0"
+  ],
+  "virtual_disk": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+  "purpose": "User requested old virtual iPod file import, then stop for manual feedback",
+  "files": [
+    {
+      "bytes": 9555564,
+      "sha256": "216611c8ffa10cbef37c0571c8488acbff5ca8f898b401dc5ee72949f8d50c3e",
+      "metadata_adjustment": null,
+      "path": "iPod_Control/Music/F00/TIDL0001.MP3",
+      "action": "copied_and_flushed"
+    },
+    {
+      "bytes": 1911956,
+      "sha256": "d7f23cc921eab1fc2aff6ee98c871619f76cfb1cdc927ff3f9c645ecddf2ff40",
+      "metadata_adjustment": null,
+      "path": "iPod_Control/Music/F01/TRUL0002.MP3",
+      "action": "copied_and_flushed"
+    },
+    {
+      "bytes": 8036,
+      "sha256": "36282aca6a0390ca977de4ad3b1a2ddfaf3bd1989f764ccfb676f4d3c5a9a902",
+      "metadata_adjustment": null,
+      "path": "iPod_Control/iTunes/iTunesDB",
+      "action": "copied_and_flushed"
+    },
+    {
+      "bytes": 84,
+      "sha256": "a05bd2d100121e266be9e76daa2430f25da54a873df6c70135ba7e12af6e2092",
+      "metadata_adjustment": "Existing configured native manufacturing profile, replacing old zero IDs in imported metadata only",
+      "path": "iPod_Control/Device/SysInfo",
+      "action": "copied_and_flushed"
+    },
+    {
+      "bytes": 32,
+      "sha256": "9f7f63d81f3b92eb1049682777e479397da552ff2e5a39220cdca5162972ee0c",
+      "metadata_adjustment": null,
+      "path": "iPod_Control/Device/clock",
+      "action": "copied_and_flushed"
+    },
+    {
+      "bytes": 2956,
+      "sha256": "65ace918ac6816b948fb27e259c6e1326241f039a45165d46e3f2ecf98e1cf5f",
+      "metadata_adjustment": null,
+      "path": "iPod_Control/Device/Preferences",
+      "action": "copied_and_flushed"
+    },
+    {
+      "bytes": 8,
+      "sha256": "351343cd10492539181a7c02cdd5c2dc74a254645b1d7749b19bc76ddbb69254",
+      "metadata_adjustment": null,
+      "path": "iPod_Control/Device/alarms",
+      "action": "copied_and_flushed"
+    },
+    {
+      "bytes": 69,
+      "sha256": "f8991403cb7d1a54799c872879f90358ce4f7a279e4b2ce9f40e5fdff93f7d4c",
+      "metadata_adjustment": null,
+      "path": "iPod_Control/Tones/Beep.tone",
+      "action": "copied_and_flushed"
+    },
+    {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata_adjustment": null,
+      "path": ".metadata_never_index",
+      "action": "copied_and_flushed"
+    },
+    {
+      "bytes": 14,
+      "sha256": "4bd8f6eb9c382d05c0f5cca8a0a42bcebaf8a9d6a9b41c832e0d4995253a77d8",
+      "metadata_adjustment": null,
+      "path": "Notes/Instructions",
+      "action": "copied_and_flushed"
+    }
+  ],
+  "format_performed": false
+}

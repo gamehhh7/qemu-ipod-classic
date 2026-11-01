@@ -1,0 +1,16 @@
+[New Thread 1280.0x3860 (id 2)]
+[New Thread 1280.0x3a54 (id 3)]
+[New Thread 1280.0xf2c (id 4)]
+[New Thread 1280.0x2d40 (id 5)]
+[New Thread 1280.0x7c0 (id 6)]
+[New Thread 1280.0x3500 (id 7)]
+[New Thread 1280.0x189c (id 8)]
+[New Thread 1280.0x7e28 (id 9)]
+[New Thread 1280.0x1410 (id 10)]
+[Switching to thread 1 (Thread 1280.0xd2c)]
+0x00007ffb209c28a4 in ntdll!ZwWaitForMultipleObjects () from C:/WINDOWS/SYSTEM32/ntdll.dll
+DIAGNOSTIC_TRACE_ONLY
+$1 = 15462648561052
+$2 = 400
+$3 = 15988985769784
+[Inferior 1 (process 1280) detached]

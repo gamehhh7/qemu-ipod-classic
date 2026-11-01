@@ -1,0 +1,120 @@
+{
+  "phase": "R90_ACTUAL_VIRTUAL_USBSTOR_DISK_ACCEPTED_CONSOLIDATE_MAIN",
+  "utc": "2026-10-29T10:09:03.809905+00:00",
+  "actual_USBSTOR": {
+    "instance": "USB\\VID_05AC&PID_1261\\0000000000000000",
+    "status": "OK",
+    "devnode_flags": 25190666,
+    "problem_code": 0,
+    "name": "USB 大容量存储设备",
+    "service": "USBSTOR",
+    "class": "USB",
+    "parent_chain": [
+      "USB\\VID_05AC&PID_1261\\0000000000000000",
+      "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+      "ROOT\\USB\\0000",
+      "HTREE\\ROOT\\0"
+    ],
+    "ude_parent_proven": true
+  },
+  "actual_disk": {
+    "instance": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&26B0DCEB&0&0000000000000000&0",
+    "status": "OK",
+    "devnode_flags": 25174026,
+    "problem_code": 0,
+    "name": "Apple iPod USB Device",
+    "service": "disk",
+    "class": "DiskDrive",
+    "parent_chain": [
+      "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&26B0DCEB&0&0000000000000000&0",
+      "USB\\VID_05AC&PID_1261&MI_00\\3&2C04DDC7&0",
+      "USB\\VID_05AC&PID_1261\\0000000000000000",
+      "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+      "ROOT\\USB\\0000",
+      "HTREE\\ROOT\\0"
+    ],
+    "ude_parent_proven": true,
+    "pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&26B0DCEB&0&0000000000000000&0",
+    "partitions": [],
+    "geometry_not_queried": true
+  },
+  "terminal": {
+    "app_pid": 10372,
+    "exit_code": 0,
+    "runs": [
+      "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261029T095528Z-10372"
+    ],
+    "owned_children": [
+      30992,
+      12144,
+      18924
+    ],
+    "remaining_inventory": [],
+    "manifest_unchanged": true,
+    "protected_unchanged": true
+  },
+  "driver_result": {
+    "utc": "2026-10-29T09:54:30.2651771Z",
+    "device_mutation_attempted": true,
+    "apply_exit": 0,
+    "permit_sha256": "516d68fc99385ceba3a208dfff285c389de7db0fc6079b21f66f4a972292e476",
+    "apply_result": {
+      "utc": "2026-10-29T09:56:20.9405217Z",
+      "instance": "USB\\VID_05AC&PID_1261\\0000000000000000",
+      "mode": "--apply",
+      "device_mutation_attempted": true,
+      "permit_sha256": "516d68fc99385ceba3a208dfff285c389de7db0fc6079b21f66f4a972292e476",
+      "helper_pid": 31544,
+      "parent_chain_before": [
+        "USB\\VID_05AC&PID_1261\\0000000000000000",
+        "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+        "ROOT\\USB\\0000"
+      ],
+      "candidates": [
+        {
+          "description": "USB 大容量存储设备",
+          "provider": "Microsoft",
+          "inf": "C:\\WINDOWS\\INF\\usbstor.inf",
+          "section": "USBSTOR_BULK",
+          "sha256": "65b3f027d1bf4970565164f87f1bd6b940000fd83423a34be0e711fc45207fb2"
+        },
+        {
+          "description": "Apple iPod",
+          "provider": "Apple",
+          "inf": "C:\\WINDOWS\\INF\\oem33.inf",
+          "section": "AppleIPod_Device",
+          "sha256": "259ab4d460a9c462d934db18038875cce114d06c8fb6c048bcadff91246c5353"
+        },
+        {
+          "description": "Apple iPod USB Driver",
+          "provider": "Apple, Inc.",
+          "inf": "C:\\WINDOWS\\INF\\oem135.inf",
+          "section": "USBAAPL64.Dev",
+          "sha256": "edea577e694efceec5b26d745fff8125e9fc8a78cacd7365e77ef35031ebc49b"
+        }
+      ],
+      "selected_inf": "usbstor.inf",
+      "selected_found": true,
+      "parent_chain_reverified": [
+        "USB\\VID_05AC&PID_1261\\0000000000000000",
+        "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+        "ROOT\\USB\\0000"
+      ],
+      "Windows_install_returned_success": true,
+      "reboot_required": true,
+      "reboot_performed": false,
+      "parent_chain_after": [
+        "USB\\VID_05AC&PID_1261\\0000000000000000",
+        "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+        "ROOT\\USB\\0000"
+      ],
+      "acceptance_limit": "driver API success only; actual refreshed service, UDE disk/volume and USB file persistence still required",
+      "status": "specific_device_driver_change_returned"
+    },
+    "status": "specific_apply_finished"
+  },
+  "volume_and_Windows_file_IO": false,
+  "why_disappeared": "owned observation helper intentionally detached exact imported port on completion",
+  "next": "single canonical desktop project; integrate native bridge with user-controlled cable lifetime; no more copied project variants",
+  "old_claims_consumed": true
+}

@@ -1,0 +1,47 @@
+{
+  "phase": "R115_WARM_POWER_AND_REAL_GUEST_RESUME_LOADED_NATURAL_ACCEPTANCE_PENDING",
+  "updated_utc": "2026-10-31T04:21:58.355397+00:00",
+  "app_pid": 14832,
+  "app_created_hk": "2026-10-31 12:14:47",
+  "qemu_pid": 32092,
+  "qemu_created_hk": "2026-10-31 12:14:50",
+  "backend_pid": 31996,
+  "run": "20261031T041447Z-14832",
+  "engine_sha256": "bd74a3589404ee2ed3c8184215309cb883d0c385e80ba801594a4cd10331ef99",
+  "main_sha256": "c59c1b5015327c8ef1809dd34342887d13ff5c8f006388f0b3a011d066437d2c",
+  "argv": "ordinary; default icount; USB off; no debugger/test/autoexit flags",
+  "previous_run": "20261030T234613Z-31980;31980/7664/32352 normallyclosed allterminal afterpreservation",
+  "new_repairs": [
+    "Qmp.Call now sends request ID and matches responses before success/error; timeout late reply cannot become next qom-get return. Regression mock server waits5400ms (timeout5000), sends stale{}, event, then correctbool: PASS. Genuine UI readback locktrue/unlockfalse nowverified R113.",
+    "RTC read was ALREADY dynamic qemu_get_timedate; native regcache zeros were NOT frozen actual clock. Do not repeat earlier false conclusion. Actual missing parts: writes ignored and alarm/SECOND sources absent. New pmu_rtc.inc counter seeded from configured QEMU RTC date, advances on rtc_clock, guest BCD writes commit atSTOP; second/alarm latch INT1 and use existing nIRQ/masks/read-clear. Alarm all-one per-field reset/wildcards per NXP UMrev06 section8.15.",
+    "R109 boot IRAM40000 fix remains intact. No GPIO4 hookup, firmware patch, guest state writes, reset suppression, sleep policy/time reduction or battery changes."
+  ],
+  "tests": {
+    "rtc_component": "PASS leap-day rollover, masked SECOND, alarm weekday wildcard/nIRQ, read-clear, clock write/advance, invalid date rejection",
+    "build": "Only PMU object compiled and canonical engine relinked; not full speed/server rebuild.",
+    "native_live": "R114-RTC-LIVE.txt: rtc_initialized true; epoch1793403976; base1793403976560464000; SECOND80 status, INT1M b0; callbackran. Timer expire-1 observed INSIDE callback before reschedule, not proof of missing timer.",
+    "visual": "Fresh Luna handle790544 HK07:46:55 actualmainmenuMusic, noerror, USBdisconnected, noinput."
+  },
+  "residual_previous_revision": "R113 cleanfrontend naturalSleep truePC22002e74; Enter FIFO8 IRQ23masked. Actual oneHold true->false at07:36:37, PMUunlockedread2; restored thenreturnedlowpower. Enter07:37still8FIFO; noabort/reset. NewRTC version not yetaccepted.",
+  "critical_regression_missing": "SavepathNOWactuallycompletedpostRTC atlegal28000. Actualrestore/normalwake/noreset/navigation/Songs/settings/CoverFlowstillpending. No sleepcompletionclaim.",
+  "gdb": "NoattachedGDB/native/guesttracer. RefreshPID/hash/created/paths/UIhandle. DoNOTnativeinferiorfunctioncalls or$ch convenience(nativeCH). Rootalltechnical,LunaonlyUI/@sky;wait2secondsafterUIactionbeforejudging. UseM/Upmenu,notW.",
+  "quota_last": "12:13 5hused19%,weekused90%;checkfresh beforecontinuing",
+  "stop_state": "Noquota stop now. Noattacheddebugger,pendinginput,autoexit/test/debugflags. Keepordinaryappidle.",
+  "scheduled_resume": {
+    "automation_id": "classic7",
+    "schedule_hk": "2026-10-31 12:52:30",
+    "reason": "one bounded natural-idle acceptance after finalnewcode;notdailyloop"
+  },
+  "window_handle_observed": 986450,
+  "last_input_hk": "2026-10-31 12:17:21.562 M returnmainmenu",
+  "R115_root_cause": "R114 realRTC alarm00:19:40 fired, guestactualIRAMsave legal28000bytes completed;cache40000, header68696265 flags1/1 size04000000 restoreentry080d24d0. R115-FIRST-LONG-SAVE.bin 163840bytes/31333nonzero,vectorsmatch,first128Konly45stackbytechanges. Guest22000364 mode1 writesPMU0c02 then22000594 cmp r4=1/bneforever expectsCPUdomainpowerdown. Oldmodelonlystoredrequest,neverpoweredoffnorwarmbooted. OneEnter12:03:32 plusoneactualHoldpair12:03:49.488/50.229 failed;nofault/reset.",
+  "R115_fix": "AddedPMUwarm-standbyoutputforobserved0c02;boardvalidatesactualguesthibernationheader thenstandardARMCPUpoweroff/on. OnphysicalHoldunlock(unmaskedGPIO2),enabledRTC/USBwake,CPUbootsfixedROM20000000;readonly-kernelhandoffARMcodevalidatesheader andbranchesguest-suppliedrestoreentry. DRAM/PMU/storage retained;avoidwholemachineROMreloadwhichwouldoverwriteheader/context. Nohostcontinuation-PC/guestRAM/firmwarepatch/IRQforcing/GPIO4guess/resetblock/sleepthresholdchange/batteryadjustment. Fullpoweroff0c01outsidepatchscope. Newsrc/usb/hibernate_boot.inc plusPMU/machinecanonicalsource/header changes. OnlyPMU/machinecompiled+linked.",
+  "R115_tests": [
+    "ExecutedactualARMshim via task-localUnicorn2.1.2 usingcaptured20byteguestheader; valid->080d24d0/SP22020000/R00, badmagic/version/state/unaligned/below/pastRAM->park. Componenttest,NOTactualsleepresume.",
+    "RTCcomponenttests pass includingalarmwake/BCDwriteadvance/leapday/masks/readclear/invaliddate.",
+    "Firstcandidate36116/qemu12012 startupassert DEVICE(ownerMachineState) fixedROMownerNULL; failedcandidateandchildrenallterminal beforefinal14832. Finalbuildlogs clean.",
+    "FreshLunacoldUI actualSongs All Night / KILL SCRIPT viewonly,noplayback. SettingsShuffleOff/RepeatOff. ReturnedmainmenuSettingsselected12:17:23.824; lastinput12:17:21.562."
+  ],
+  "pending_acceptance": "KeepNOINPUTthrough12:52:30HK >=35minafterlastinput;naturalRTCdeepstandbyexpectedabout12:50. Firstsavefreshlog/CPU/CLK/VIC/EIC/RTC/powerstate/header/savebuffer. PMUPOWERretained-standby plusactualCPU_OFFexpected. NormalEnteronce2secactualwake;ifunresponsiveandUSBoff/fullcapture,oneHlock0.7secunlock,noretries. Proveactualfirmwarerestore080aa328 viaheader75736564/flag0,IRAMrestore,navigation,noSWRCON/exception. ThenSongsAllNightKILLSCRIPT,SettingsOff/Off,CoverFlow. ResidualordinarykeyfailuremeansNOTcomplete;rootcontinuefix.",
+  "dependencies": "Unicorn2.1.2 componenttests onlyat K:/CodexResources/2026-10-31/classic7-sleep-deps/unicorn; noglobalinstall."
+}

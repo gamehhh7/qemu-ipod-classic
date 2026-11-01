@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "--connect-usb"
+  ],
+  "pid": 28320,
+  "serial": "8K0090019ZS",
+  "GUID": "000A2700214DCAC1",
+  "model": "MC293LL",
+  "automatic_exit": false,
+  "utc": "2026-10-29T11:17:33.1870114Z"
+}

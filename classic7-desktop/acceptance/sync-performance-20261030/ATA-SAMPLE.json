@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-30T07:03:45.861138+00:00",
+  "sample_seconds": 20.0098774433136,
+  "new_ATA_commands": 34,
+  "ATA_command_counts": {
+    "202": 34
+  },
+  "ATA_written_bytes": 2101248,
+  "ATA_write_bytes_per_second": 105010.53821807103,
+  "successful_payload_write_commands": 17,
+  "awaiting_write_phases": 17,
+  "backend_total_wall_s": 0.7779212999812444,
+  "backend_max_wall_s": 0.10836930000368739,
+  "backend_total_CPU_s": 0.078125,
+  "latest_commands": [
+    {
+      "n": 1787,
+      "t": 1793343825.0594513,
+      "req": "TASKFILE 202 0 0 96 187 4 0 0 0 64 131072",
+      "resp": "RESULT 80 0 0 ok ok 315 0",
+      "wall_s": 0.05331599999772152,
+      "decoded_payload_bytes": 0
+    },
+    {
+      "n": 1788,
+      "t": 1793343825.0614622,
+      "req": "TASKFILE 202 0 0 96 188 4 0 0 0 64 0",
+      "resp": "RESULT 88 0 0 awaiting_pio_write none 0 0",
+      "wall_s": 0.0010793999972520396,
+      "decoded_payload_bytes": 0
+    },
+    {
+      "n": 1789,
+      "t": 1793343825.1156874,
+      "req": "TASKFILE 202 0 0 96 188 4 0 0 0 64 131072",
+      "resp": "RESULT 80 0 0 ok ok 315 0",
+      "wall_s": 0.05328379999991739,
+      "decoded_payload_bytes": 0
+    },
+    {
+      "n": 1790,
+      "t": 1793343825.1166909,
+      "req": "TASKFILE 202 0 0 96 189 4 0 0 0 64 0",
+      "resp": "RESULT 88 0 0 awaiting_pio_write none 0 0",
+      "wall_s": 0.0008543999938410707,
+      "decoded_payload_bytes": 0
+    },
+    {
+      "n": 1791,
+      "t": 1793343825.1714995,
+      "req": "TASKFILE 202 0 0 96 189 4 0 0 0 64 131072",
+      "resp": "RESULT 80 0 0 ok ok 315 0",
+      "wall_s": 0.05330629999662051,
+      "decoded_payload_bytes": 0
+    }
+  ],
+  "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T054342Z-31352",
+  "read_only": true
+}

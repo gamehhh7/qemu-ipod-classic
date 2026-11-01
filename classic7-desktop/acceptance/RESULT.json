@@ -1,0 +1,40 @@
+{
+  "status": "actual_desktop_input_display_acceptance_passed",
+  "completed_utc": "2026-10-28T13:17:49.147554+00:00",
+  "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261028T131325Z-20752",
+  "native_windows_exe": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.exe",
+  "exe_sha256": "b5a8a65d893132cfe3ee1652f95feeabfe0617df968b544170ce71cc70dd6fe2",
+  "source_sha256": "36dffb47456d6be19e8e336e9bd5bc17750ac0f9764d130dbe5bae78273ff69f",
+  "engine_sha256": "940781794a2cf62009e6d5976e9374fc3464a51334ef0aa77061123d8aa22a3e",
+  "actual_verified": [
+    "QEMU real framebuffer through VNC/RFB",
+    "center input through desktop event handlers",
+    "physical Hold GPIO/PMU event and QOM readback both directions",
+    "native model refuses button while locked",
+    "USB PMU property readback both directions",
+    "touch drag through desktop pointer handlers",
+    "owned guest/backend/test app terminated"
+  ],
+  "image_review": "IMAGE-REVIEW.json by GPT-6 Luna Low, actual firmware lock icon and menu movement",
+  "frame_hashes": {
+    "01-before-input-lcd.png": "8591f3e0936a5136051e3b47442e4709d91c58657adfc03e8a6b58fdcdfaace5",
+    "01-before-input-window.png": "13bb105fc2cdd649c7ffaf2560eee7c1693c8a12d5ea2abed642e01e1aa59032",
+    "02-select-lcd.png": "09bb4c575430a982b99a6cccab0500964c0115ca09e706d04b8e05f4754802ae",
+    "02-select-window.png": "daec47332daec12c8586e139a99b0130dc554201971ff32e28a83d5fafd790c3",
+    "03-hold-lcd.png": "bde3c24f1c26926933517c68f4c350fbf7f5cc05d502c5dff3a7726b046ec7be",
+    "03-hold-window.png": "730c3c2c1cf592bb55852ed7089ef8941fb29a04bbf11fe1f3a70741dba071a5",
+    "04-unlock-lcd.png": "09bb4c575430a982b99a6cccab0500964c0115ca09e706d04b8e05f4754802ae",
+    "04-unlock-window.png": "daec47332daec12c8586e139a99b0130dc554201971ff32e28a83d5fafd790c3",
+    "05-usb-connected-lcd.png": "783bd3d75d99a608094860fb5046acf91d8e3f0cd2b97db6fe93abdd9550e026",
+    "05-usb-connected-window.png": "cd5146aeac844ac4c46a6198ccdd5b8c4127f1c264422fef6328756725d3b18c",
+    "06-usb-disconnected-lcd.png": "09bb4c575430a982b99a6cccab0500964c0115ca09e706d04b8e05f4754802ae",
+    "06-usb-disconnected-window.png": "daec47332daec12c8586e139a99b0130dc554201971ff32e28a83d5fafd790c3",
+    "07-wheel-lcd.png": "f8f782fe87612264ac92ecf0c13eff5ab6d7a6dd29d62d65ea142063ab48da7e",
+    "07-wheel-window.png": "48784f1a07ce803b8b376edaac1f8619befb412c257014aa954946a7505fc271"
+  },
+  "seed_policy": "existing seed read-only + RAM COW; no image copy or full image hash",
+  "real_windows_usb_sync_complete": false,
+  "formal_engine_unchanged": true,
+  "user_requested_pause_after_delivery": true,
+  "pid_reuse_observations": []
+}

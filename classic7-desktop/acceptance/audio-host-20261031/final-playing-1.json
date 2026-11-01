@@ -1,0 +1,12 @@
+{
+  "label": "final-playing-1",
+  "start_utc": "2026-10-31T15:22:56.027182+00:00",
+  "end_utc": "2026-10-31T15:23:02.053418+00:00",
+  "endpoint": "扬声器 (HECATE G2 GAMING HEADSET)",
+  "loopback": true,
+  "samplerate": 48000,
+  "frames": 288000,
+  "peak": 9.999999960041972e-13,
+  "rms": 4.564355620892413e-14,
+  "nonzero_samples": 1200
+}

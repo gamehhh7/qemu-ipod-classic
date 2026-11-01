@@ -1,0 +1,619 @@
+{
+  "phase": "R110_SLEEP_ACCEPTANCE_FAILED_NORMAL_KEY_WAKE_REMAINS",
+  "utc": "2026-10-30T18:00:16.839643+00:00",
+  "canonical": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop",
+  "import_result": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\MEDIA-IMPORT-20261029\\RESULT.json",
+  "files_imported": 10,
+  "directories_imported": 11,
+  "readback_verified_at_copy": true,
+  "safe_eject_CONFIGRET": 0,
+  "original_seed_and_old_userdata_preserved": true,
+  "daily_user_app": {
+    "pid": 31352,
+    "utc": "2026-10-30T05:43:41.9730610Z",
+    "argv": [],
+    "synchronization_client": "Apple Devices app",
+    "mode": "ordinary user delivery, no max-seconds/test/diagnostic flags, no automatic exit"
+  },
+  "normal_sync_success": false,
+  "restore_success": false,
+  "transport_changes": {
+    "UNLINK_unused_tail": "live exercised during file import; no whole-device disconnect for unused padding",
+    "IN_overflow": "actual run8728 captured CSW5553425370065ea50400000000, residue4/status0; returns honest-EOVERFLOW without ACK/truncate or killing lease",
+    "NAK_timeout": "source now returns per-request-ETIMEDOUT with known actual count; not loaded in existing user process8728; next manual EXE restart required; no extra run"
+  },
+  "last_restore": {
+    "CDB": "c696 then c6940003000000000000000000000000",
+    "actual_packet_hex": "5553425370065ea50400000000",
+    "subsequent_request_timeout": "actual endpoint did not arm, native_URB_terminal_fault seq3136 killed lease; corrected request-local handling in source",
+    "restore_success": false,
+    "normal_sync_success": false
+  },
+  "next": "Root continue with firmware power-policy predicates and actual low-power wake source/clock handling. Save helperchain0805d024->0807b270->veneer0802d050->IRAM220005a0. Nofirmwarepatch,forcewake,IRQmaskoverride,GPIOguess,sleep-disable,orreset-suppression.",
+  "single_automation_deleted": "classic7",
+  "baseline_before_import_R97": {
+    "main_exe_sha256": "946f40e0189bbfefbf0e4cb82290dc24e0c6ef1c424a6a3cabc3709770688058",
+    "engine_sha256": "d585cad0f397706804bba541e947e51911fb8ca19860e5c2ea537c5f6ad37dc3",
+    "identity": {
+      "profile": "Classic7_160GB_silver_OS204_virtual_8GiB_media",
+      "serial": "8K0090019ZS",
+      "model": "MC293LL",
+      "OS_version": "2.0.4",
+      "serial_origin": "Synthetic emulator prefix 8K009001 plus creator-documented silver7G suffix9ZS. The tutorial does not publish one complete reusable serial. Not a claimed physical allocation.",
+      "model_origin": "creator iPodModelsBySNEndingModelNumber.java silver7G=MC293/9ZS",
+      "tutorial": "https://github.com/Olsro/reddit-ipod-guides/blob/main/guides/ipod6g-flash-more-recent-firmwares.md",
+      "boot_fields_applied": {
+        "serial": {
+          "offset": 24,
+          "bytes": 32
+        },
+        "model": {
+          "offset": 152,
+          "bytes": 16
+        },
+        "FireWireGUID": {
+          "offset": 56,
+          "bytes": 8,
+          "getter_fileVA": "08369c10"
+        }
+      },
+      "GUID_FwId_not_changed_in_this_step": false,
+      "real_data_capacity": 8589934592,
+      "firewire_guid": "000A2700214DCAC1",
+      "FwId_source_bytes": "00000001 C1CA4D21 00270A00",
+      "GUID_origin": "public tutorial US2.0.4 example, FwId data bytes4..11 little-endian"
+    }
+  },
+  "current_repair": {
+    "phase": "R99_REAL_CSW_OVERFLOW_ACK_FIX_PREPARED_WAIT_USER_CLOSE",
+    "utc": "2026-10-29T15:42:40.018110+00:00",
+    "active_user_run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261029T152918Z-11948",
+    "active_user_pid": 11948,
+    "actual_failure_chain": [
+      "C696 CBW expects4IN",
+      "actual CSW55534253108a19740400000000: tag matches, residue4, status0",
+      "previous overflow handling did not ACK actual13B packet",
+      "host issues C694 but old CSW pending prevents next OUT arm",
+      "following control descriptor requests still complete; repeated bulk request-local timeout, no lease loss"
+    ],
+    "fix": "ACK only actual valid complete <=MPS native packet using exact nonce; return EOVERFLOW with no overflow packet copied as successful payload; real device completion ISR drains; no guest patch or guessed reply",
+    "runtime_status": "new ACK fix not loaded in current11948; user asked to cancel hung iTunes restore and close simulator because CU activation failed",
+    "DB_separate_fact": "actual imported old scheme1 hash58 matches zeroGUID; currentGUID fails. Corrected normal-integrity file staged iTunesDB.current-device + DATABASE-REPAIR-PLAN.json, NOT applied to user volume. NativeVPD DBVersion3 supports hash58. No firmware/auth-check bypass.",
+    "current_source_sha256": "aadbec8153b4c569af05e5719cccfa08ee20c2c7af169f37244ff44e9a037b10",
+    "external_tasks": "DSH stopped, root all technical, no technical agents",
+    "pending": "User close, then one actual finished app run and real host restore request path, not repeated fixtures",
+    "user_window_not_force_killed": true,
+    "user_authorized": "Diagnose and repair stalled actual iTunes restore; screenshot is PRE-restore cannot-read-content, not current half-progress screen",
+    "pending_user_operation": "Async request accepted: cancel current hung restore in iTunes and close simulator11948. Do not forcekill or start second writer; no actual verification of new ACK fix yet.",
+    "process_control": "CloseMainWindow11948 returnedtrue but did not exit; CU failed to activate captured window; iTunes alias ownerbinding still fails. QueryFullProcessImageName proved canonical11948 and modifiedlab25404.",
+    "no_new_guest": "No runtime started after source ACK change; current11948 still old behavior, ordinary user session untouched after close attempt."
+  },
+  "owned_bounded_app": null,
+  "no_new_branch": true,
+  "rollback": "backup/previous-release.zip",
+  "volume_mount_fix": {
+    "source": "tools/repair_volume_marker.py",
+    "classifier": "0808dbdc-0808dc30 original firmware memcmp fallback at VBR+0x34",
+    "old_seed_marker": "464154",
+    "new_volume_marker_before": "000000",
+    "changed_ATA512_sectors": [
+      182880,
+      182928
+    ],
+    "changed_bytes_per_sector": 3,
+    "format": false,
+    "files_relocated": false,
+    "firmware_modified": false,
+    "evidence": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\mount-20261030\\MARKER-REPAIR.json",
+    "first_actual_run": "20261030T043604Z-10044",
+    "first_actual_UI": "Main menu music artwork; 1 Song on Shuffle Songs; final capture saved",
+    "data_region_read_count_after_fix_at_startup": 37,
+    "data_region_read_count_before_fix": 1,
+    "restart_acceptance": "passed actual main EXE/new backend run1676; direct main menu with artwork and native About",
+    "native_About": {
+      "songs": 1,
+      "used": "44.3 MB",
+      "free": "7.9 GB",
+      "version": "2.0.4 PC",
+      "serial": "8K0090019ZS",
+      "model": "MC293LL-"
+    },
+    "restart_run": "20261030T045732Z-1676",
+    "reviewer": "user-requested GPT6 Luna low visual agent"
+  },
+  "current_virtual_files": {
+    "snapshot": "SQLite readonly transaction, original seed rb",
+    "reserved_marker_hex": "464154",
+    "bytes_per_sector": 4096,
+    "cluster_bytes": 32768,
+    "data_volume_bytes": 8589934592,
+    "total_clusters": 262076,
+    "free_clusters": 260723,
+    "free_bytes": 8543371264,
+    "files": [
+      {
+        "path": "System Volume Information/WPSettings.dat",
+        "size": 12,
+        "sha256": "f225bf20ff648595acb9582d392a89e1495bfad1f9d12437b91a637f890be808"
+      },
+      {
+        "path": "System Volume Information/IndexerVolumeGuid",
+        "size": 76,
+        "sha256": "3e609af0c26f70d536f491f0aec0b35d0fd5faaa7bf7d364313913994d0d390f"
+      },
+      {
+        "path": "Codex-iPod-391137d3581c4ec88f2600098e605401.txt",
+        "size": 3968,
+        "sha256": "4f95a099425200bac488ff9bd25c66b777452c4076c02744930acc18c9afe3e4"
+      },
+      {
+        "path": "iPod_Control/Music/F13/GBFQ.MP3",
+        "size": 7923039
+      },
+      {
+        "path": "iPod_Control/iTunes/iTunesControl",
+        "size": 34603008
+      },
+      {
+        "path": "iPod_Control/iTunes/Extras.itdb",
+        "size": 172032,
+        "sha256": "1103d19f2c2429c45463570b8fdaadd9570101fffe9c2c8c3ed1f826c7e4fb48"
+      },
+      {
+        "path": "iPod_Control/iTunes/iTunesDB",
+        "size": 16170,
+        "sha256": "f2aa9e1af433b508f0a348e0cb41e0636aa973267be7a82b164ee8b558ba31a4",
+        "mhbd": "mhbd",
+        "database_track_count": 1
+      },
+      {
+        "path": "iPod_Control/iTunes/Rentals.plist",
+        "size": 245,
+        "sha256": "6829ac1161bc483ae28e6895ca8fe9e73a593ed31286d97ebf8e02d96cb081cd"
+      },
+      {
+        "path": "iPod_Control/iTunes/iTunesPrefs",
+        "size": 1232,
+        "sha256": "eb4be56e9b98c5e874a43507f212efdaad53a93e51c0b7578061d83df88a7dc3"
+      },
+      {
+        "path": "iPod_Control/iTunes/iTunesPrefs.plist",
+        "size": 2634,
+        "sha256": "b74da47b73a695fa5ac96c8ea0002b199f5d09548d3a2c0b2fd1ae9f6b9ab1d2"
+      },
+      {
+        "path": "iPod_Control/Device/SysInfo",
+        "size": 84,
+        "sha256": "a05bd2d100121e266be9e76daa2430f25da54a873df6c70135ba7e12af6e2092"
+      },
+      {
+        "path": "iPod_Control/Device/CLOCK",
+        "size": 32,
+        "sha256": "9f7f63d81f3b92eb1049682777e479397da552ff2e5a39220cdca5162972ee0c"
+      },
+      {
+        "path": "iPod_Control/Device/Preferences",
+        "size": 2956,
+        "sha256": "65ace918ac6816b948fb27e259c6e1326241f039a45165d46e3f2ecf98e1cf5f"
+      },
+      {
+        "path": "iPod_Control/Device/ALARMS",
+        "size": 8,
+        "sha256": "351343cd10492539181a7c02cdd5c2dc74a254645b1d7749b19bc76ddbb69254"
+      },
+      {
+        "path": "iPod_Control/Tones/Beep.tone",
+        "size": 69,
+        "sha256": "f8991403cb7d1a54799c872879f90358ce4f7a279e4b2ce9f40e5fdff93f7d4c"
+      },
+      {
+        "path": "iPod_Control/Artwork/F1055_1.ithmb",
+        "size": 32768,
+        "sha256": "fac4a14c351ee20533628ec0e643df64162b3b0f56eb6b2ae49da55af7675a84"
+      },
+      {
+        "path": "iPod_Control/Artwork/F1060_1.ithmb",
+        "size": 204800,
+        "sha256": "df8cf7962ab0da906e1f14935cdfa8f37650975ea2aae503d2a77477d00635be"
+      },
+      {
+        "path": "iPod_Control/Artwork/F1061_1.ithmb",
+        "size": 6160,
+        "sha256": "efb7a4a5e87f44bfd8cf05b27aa3140a2e10db8c2346845d24aebf6644012493"
+      },
+      {
+        "path": "iPod_Control/Artwork/ArtworkDB",
+        "size": 1832,
+        "sha256": "ecb485812a03d99b3f615678df6b77b97cb036c5bd55e0c51dd74a0a34c8647a"
+      },
+      {
+        "path": "Notes/Instructions",
+        "size": 14,
+        "sha256": "4bd8f6eb9c382d05c0f5cca8a0a42bcebaf8a9d6a9b41c832e0d4995253a77d8"
+      },
+      {
+        "path": ".metadata_never_index",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "physical_device": false,
+    "media_written": false
+  },
+  "prior_transport_state_note": "Prior R99 timeout and overflow fixes are present in source; no new claim of complete iTunes sync or restore.",
+  "itunes_observation": {
+    "COM_readonly": "80080005 server execution failed after exact existing lab process path proven via QueryFullProcessImageName",
+    "existing_pid": 25404,
+    "responding": true,
+    "GUI": "alias minimized/capture returned Task Manager; not yet actual iTunes acceptance",
+    "new_itunes_process_started": false
+  },
+  "sync_client": "Apple Devices app",
+  "itunes_work_discontinued": true,
+  "coverflow_issue": {
+    "user_report": "CoverFlow often shows Connect to Power then reboots",
+    "existing_run": "20261030T051427Z-5476",
+    "confirmed_reset_log": "SWRCON0xaa5 next image-------- atvns46824816800",
+    "host_process_crash": false,
+    "root_cause": "not yet established",
+    "observer": "src/usb/observed_pmu.c CLASSIC7_POWER_TRACE=1, bounded32768, values actually returned; behaviour unchanged",
+    "user_confirmed_safely_ejected_and_closed": true,
+    "root_cause_evidence": {
+      "standard_clock_same_engine": {
+        "ADC_result_register_writes": 8,
+        "software_resets": 1
+      },
+      "instruction_count_clock": {
+        "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T053122Z-6668",
+        "trace_rows": 7110,
+        "cap": 32768,
+        "cap_reached": false,
+        "ADC_result_writes": 0,
+        "battery55_values": {
+          "d3": 42
+        },
+        "hold87_values": {
+          "02": 1
+        },
+        "reset_count": 0,
+        "GUI": "fresh visual agent made1center click at05:36:36, no menu transition before timeout; CoverFlow not verified in this run",
+        "terminal": "{\"utc\":\"2026-10-30T05:36:53.9284103Z\",\"kind\":\"owned_processes_stopped\",\"data\":{\"qemu\":8824,\"backend\":31436}}"
+      }
+    },
+    "source_fix": [
+      "I2C new byte/address clears old completion state",
+      "I2C STOP delivers FINISH based on pre-writeBUSY; serial-off cancels pending byte state",
+      "Default main EXE uses existing -icount shift=3 so I2C deadlines track guest CPU progress instead of host rendering time"
+    ],
+    "image_status": "LunaLow performing actual CoverFlow navigation",
+    "status": "repaired_and_verified",
+    "result": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\power-coverflow-20261030\\RESULT.json",
+    "actual_default_mode": {
+      "tcg": "normal dynamic translation",
+      "clock": "instruction-count",
+      "diagnostics": false
+    },
+    "default_actual_entries": 4,
+    "default_software_resets": 0,
+    "clock_diagnostic_actual_ADC_samples": 42,
+    "clock_diagnostic_wrong_ADC_writes": 0,
+    "final_capture_review": "GPT6LunaLow confirmed CoverFlow/Afterglow album-track view and green battery, no power prompt",
+    "main_exe_sha256": "18e48adc0bcc7915179107767f283be0161d71f1b1a5f8bb72d5ab108ac08e12",
+    "engine_sha256": "8da5a824f00dfbcca0912555b3d5e76938c870459b79b58671efd476865d165e"
+  },
+  "sleep_hold_issue": {
+    "utc": "2026-10-30T06:58:12.020720+00:00",
+    "issue": "\u957f\u671f\u95f2\u7f6e\u8fdb\u5165\u4f11\u7720\u540e\uff0c\u5207\u6362Hold\u4e0d\u80fd\u6b63\u5e38\u5524\u9192\uff0c\u53cd\u800c\u91cd\u542f",
+    "status": "guest_exception_confirmed_wait_active_sync_to_finish_not_fixed",
+    "automation_id": "ipod-hold",
+    "target_thread": "01a18b10-a0cb-7e80-832c-d69e112fec02",
+    "scheduled_hong_kong": "2026-10-30T17:29:10+08:00",
+    "schedule_basis": "live official five-hour reset1793352490 plus60seconds",
+    "recurrence": "once",
+    "user_session_at_schedule": {
+      "app_pid": 31352,
+      "app_creation_hk": "2026-10-30T13:43:41.944151+08:00",
+      "qemu_pid": 1732,
+      "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T054342Z-31352",
+      "must_recheck_liveness": true,
+      "no_user_process_stopped": true
+    },
+    "captured_reset_or_hold_log": [
+      "FRONTEND-HOLD locked=1 vns=3113358330348",
+      "FRONTEND-HOLD locked=0 vns=3113395345844",
+      "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.exe: warning: S5L8702: guest asked for a software reset (SWRCON = 0xaa5), next image \"--------\" pc~0x0835d03c lr=0x0802dd50 sp=0x08a1155c"
+    ],
+    "recent_control_events": [
+      {
+        "utc": "2026-10-30T06:53:16.3477810Z",
+        "kind": "hold_readback",
+        "data": true
+      },
+      {
+        "utc": "2026-10-30T06:53:16.4746009Z",
+        "kind": "hold_readback",
+        "data": false
+      },
+      {
+        "utc": "2026-10-30T06:55:20.8364965Z",
+        "kind": "usb_readback",
+        "data": true
+      }
+    ],
+    "implementation_owner": "root only; image review GPT6 Luna low",
+    "sync_client": "Apple Devices app",
+    "coverflow_repair_preserve": "acceptance/power-coverflow-20261030/RESULT.json",
+    "next": "Read current state and existing user idle-run evidence; diagnose real sleep/wake/Hold interrupt and reboot path, repair canonical app then actual idle/wake regression; do not disable sleep or suppress reset.",
+    "new_evidence": "CPU_exception_handler immediately before software reset afterHold; faultregistersnotyetrecorded"
+  },
+  "sync_performance": {
+    "utc": "2026-10-30T07:09:10.496459+00:00",
+    "status": "scheduled_live_check_completed_still_syncing_wait_safe_closure",
+    "sample": {
+      "utc": "2026-10-30T07:03:45.861138+00:00",
+      "sample_seconds": 20.0098774433136,
+      "new_ATA_commands": 34,
+      "ATA_command_counts": {
+        "202": 34
+      },
+      "ATA_written_bytes": 2101248,
+      "ATA_write_bytes_per_second": 105010.53821807103,
+      "successful_payload_write_commands": 17,
+      "awaiting_write_phases": 17,
+      "backend_total_wall_s": 0.7779212999812444,
+      "backend_max_wall_s": 0.10836930000368739,
+      "backend_total_CPU_s": 0.078125,
+      "latest_commands": [
+        {
+          "n": 1787,
+          "t": 1793343825.0594513,
+          "req": "TASKFILE 202 0 0 96 187 4 0 0 0 64 131072",
+          "resp": "RESULT 80 0 0 ok ok 315 0",
+          "wall_s": 0.05331599999772152,
+          "decoded_payload_bytes": 0
+        },
+        {
+          "n": 1788,
+          "t": 1793343825.0614622,
+          "req": "TASKFILE 202 0 0 96 188 4 0 0 0 64 0",
+          "resp": "RESULT 88 0 0 awaiting_pio_write none 0 0",
+          "wall_s": 0.0010793999972520396,
+          "decoded_payload_bytes": 0
+        },
+        {
+          "n": 1789,
+          "t": 1793343825.1156874,
+          "req": "TASKFILE 202 0 0 96 188 4 0 0 0 64 131072",
+          "resp": "RESULT 80 0 0 ok ok 315 0",
+          "wall_s": 0.05328379999991739,
+          "decoded_payload_bytes": 0
+        },
+        {
+          "n": 1790,
+          "t": 1793343825.1166909,
+          "req": "TASKFILE 202 0 0 96 189 4 0 0 0 64 0",
+          "resp": "RESULT 88 0 0 awaiting_pio_write none 0 0",
+          "wall_s": 0.0008543999938410707,
+          "decoded_payload_bytes": 0
+        },
+        {
+          "n": 1791,
+          "t": 1793343825.1714995,
+          "req": "TASKFILE 202 0 0 96 189 4 0 0 0 64 131072",
+          "resp": "RESULT 80 0 0 ok ok 315 0",
+          "wall_s": 0.05330629999662051,
+          "decoded_payload_bytes": 0
+        }
+      ],
+      "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T054342Z-31352",
+      "read_only": true
+    },
+    "backend_time_fraction": 0.038876864797649756,
+    "later_write_processing_median_s": 0.0463262,
+    "later_write_interval_median_s": 0.05577636,
+    "later_write_interval_max_s": 5.63412714,
+    "confirmed": "Most delay precedes new ATA writes; precise AppleDevices/USBbridge/guestfirmware split not yet measured. Backend is not primary wait.",
+    "source_candidates_unproven": [
+      "512byte synchronous nativeRPC per OUTpacket",
+      "2ms NAK retry delay",
+      "USBIPserver lacks explicit TCP_NODELAY"
+    ],
+    "source_modified": false,
+    "USB_changed": false,
+    "user_sync_interrupted": false,
+    "scheduled_followup": {
+      "id": "ipod-hold",
+      "hong_kong": "2026-10-30T17:29:10+08:00",
+      "once": true,
+      "scope": "sync performance and sleep/Hold wake reboot"
+    },
+    "latest_sample": {
+      "utc": "2026-10-30T09:31:36.156401+00:00",
+      "sample_s": 12.005215644836426,
+      "commands": 9,
+      "write_commands": 4,
+      "written_bytes": 524288,
+      "backend_wall_s": 0.2226881999959005,
+      "backend_cpu_s": 0.03125,
+      "last_record": {
+        "n": 4384,
+        "t": 1793352695.318588,
+        "wall_s": 0.0015356999938376248,
+        "cpu_s": 0.0,
+        "req": "TASKFILE 200 0 24 8 29 9 0 0 0 64 0",
+        "resp": "RESULT 88 0 0 ok ok 298 12288",
+        "origin": "QEMU_TCP_ONLY",
+        "r3": "real8051",
+        "payload_sha256": "f3cc103136423a57975750907ebc1d367e2985ac6338976d4d5a439f50323f4a",
+        "decoded_payload_bytes": 12288,
+        "persistent_cow": true
+      },
+      "read_only": true,
+      "user_session_unchanged": true,
+      "bytes_per_s": 43671.685333324436,
+      "backend_wall_fraction": 0.018549287791567587
+    }
+  },
+  "scheduled_check": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\sleep-hold-20261030\\SCHEDULED-CHECK.json",
+  "sync_performance_latest": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\sync-performance-20261030\\CURRENT-PERFORMANCE.json",
+  "owned_diagnostic_capture": {
+    "app_pid": 29760,
+    "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T104311Z-29760",
+    "source_relink_pending": true,
+    "user_session": false
+  },
+  "temporary_SSD_test": {
+    "requested": "non-C SSD only, temporary",
+    "drive": "G NVMe Samsung",
+    "restored_to_K": true,
+    "source_configuration": "userdata/windows-disk.json overlay_file=windows-8g.sqlite3",
+    "G_active_COW_removed": true
+  },
+  "sleep_repair_R107": {
+    "utc": "2026-10-30T16:21:22.288013+00:00",
+    "phase": "R107_DEFAULT_WAKE_CAPTURE_LOADED_NOT_A_FIX",
+    "app_pid": 27636,
+    "engine_sha256": "c05722928d6571f516290f9f823e1a7598acde48e0993d35ccdb86d8fdebca53",
+    "main_sha256": "18e48adc0bcc7915179107767f283be0161d71f1b1a5f8bb72d5ab108ac08e12",
+    "argv": [],
+    "max_seconds": null,
+    "sync_performance_work": "stopped per user",
+    "previous_app_closed_by_user": true,
+    "previous_run": "20261030T153427Z-12024",
+    "normal_sleep_required": true,
+    "observer_only": true,
+    "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T162123Z-27636",
+    "qemu_pid": 11440,
+    "backend_pid": 24120,
+    "observer_loaded_verified": "WAKEOBS enabled=1 ordinary_launch=1 in actual qemu.log; native GDB enabled=1 count=0",
+    "baseline": "BASELINE.txt, readonly native attach; detached; code dump saved",
+    "sleep_repair_complete": false,
+    "reboot_evidence": "previous actual run printed CPU_exception_handler followed by SWRCON0xaa5; LR0802dd50 maps to data-abort dispatch in saved runtime code; exact fault PC/VA not yet captured",
+    "preserved": [
+      "original firmware",
+      "natural sleep thresholds",
+      "reset behavior",
+      "I2C CoverFlow correction",
+      "instruction-count clock",
+      "single existing K drive overlay",
+      "original seed",
+      "single rollback package"
+    ],
+    "compiled_parts": [
+      "pmu",
+      "wake_observer"
+    ],
+    "not_recompiled": [
+      "server",
+      "controller",
+      "i2c",
+      "wheel",
+      "frontend"
+    ],
+    "next": "Keep ordinary app27636 running; await real natural sleep and user report; read bounded WAKEFAULT/WAKEIRQ/WAKEPMU; do not repeat restart or optimize sync.",
+    "source_hashes": {
+      "src/usb/wake_observer.c": "aeb50bc06a410aba71c1cfd6ce5822601945f9c03371d0879314aeb72dff63e7",
+      "src/usb/observed_pmu.c": "b689fd3090f2252d3602e5a3a1ca6e59ec7a389e007628a636ad192be70259cf"
+    }
+  },
+  "sleep_monitor_R108": {
+    "phase": "R108_WAIT_30MIN_NATURAL_SLEEP_MONITOR_ACTIVE",
+    "automation_id": "ipod-2",
+    "target_thread": "01a18d5f-dd73-7ea1-8d0c-912e4f903fb3",
+    "created_utc": "2026-10-30T16:33:41.951000+00:00",
+    "first_expected_hk": "2026-10-31T01:03:41.951000+08:00",
+    "interval_minutes": 30,
+    "status": "ACTIVE",
+    "user_instruction": "wait30min; confirm unresponsive then one real Hold cycle; otherwise continue waiting",
+    "current_app_pid": 27636,
+    "current_qemu_pid": 11440,
+    "current_backend_pid": 24120,
+    "run": "20261030T162123Z-27636",
+    "latest_hold_result": "Two Hold cycles in current qemu.log, latest was user manual, no WAKEFAULT/panic/reset recorded",
+    "not_fixed": true,
+    "notes": [
+      "Deep WFI alone is not deadlock evidence",
+      "Preserve single writer and current ordinary session",
+      "No sync performance work",
+      "Pause monitor on captured failure, user stop, or app closure",
+      "No repeated Hold cycles in one check"
+    ]
+  },
+  "sleep_repair_R109": {
+    "utc": "2026-10-30T17:11:29.910900+00:00",
+    "phase": "R109_BOOTINFO_IRAM_CAPACITY_FIXED_NATURAL_SLEEP_ACCEPTANCE_PENDING",
+    "app_pid": 7544,
+    "engine_sha256": "543540d54cb105d4aa78741727a4a499627817af6af433bff738d71d1d622786",
+    "main_sha256": "18e48adc0bcc7915179107767f283be0161d71f1b1a5f8bb72d5ab108ac08e12",
+    "change": "boot handoff SysInfo+e8 = actual IRAM0+IRAM1 =0x40000; firmware reserve0x18000 yields legitimate0x28000 save length instead of0xfffe8000",
+    "previous_run": "20261030T162123Z-27636",
+    "previous_children_verified_terminal": true,
+    "argv": [],
+    "autoexit": false,
+    "firmware_modified": false,
+    "guest_runtime_memory_patched": false,
+    "peripheral_irq_forced": false,
+    "original_sleep_behavior_preserved": true,
+    "automation_ipod_2_deleted": true,
+    "qemu_pid": 1280,
+    "backend_pid": 30048,
+    "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T171130Z-7544",
+    "actual_boot_field_verified": "native GDB FIX-SYSINFO-READ.txt: boot-copy+e8 and handoff+e8 both0x40000",
+    "copy_size": 163840,
+    "natural_idle_acceptance": "pending",
+    "initial_UI": "01:12:20.984HK fresh PID7544/window986546 real mainmenu Music, USB disconnected, no input"
+  },
+  "sleep_acceptance_monitor": {
+    "automation_id": "classic7",
+    "kind": "heartbeat",
+    "status": "DELETED",
+    "one_time": true,
+    "scheduled_hk": "2026-10-31T01:43:00+08:00",
+    "purpose": "actual natural sleep/wake acceptance of rootcause bootinfoIRAMcapacity correction",
+    "app_pid": 7544,
+    "qemu_pid": 1280,
+    "backend_pid": 30048,
+    "do_not_send_input_until_check": true,
+    "normal_sleep_thresholds_unchanged": true,
+    "acceptance_complete": false
+  },
+  "sleep_acceptance_R110": {
+    "phase": "R110_SLEEP_ACCEPTANCE_FAILED_NORMAL_KEY_WAKE_REMAINS",
+    "app_pid": 7544,
+    "qemu_pid": 1280,
+    "run": "20261030T171130Z-7544",
+    "before_read": "20261030T174332Z-accept-before.txt",
+    "enter_utc": "2026-10-30T17:43:49.2834198Z",
+    "after_enter": {
+      "cpu_pc": "22002e74",
+      "fifo": 8,
+      "IRQ23": "masked",
+      "frames": 107,
+      "ui": "mainmenu unchanged"
+    },
+    "hold_utc": [
+      "2026-10-30T17:44:29.1566684Z",
+      "2026-10-30T17:44:29.8986768Z"
+    ],
+    "after_hold": {
+      "cpu_pc": "22002e74",
+      "fifo": 0,
+      "frames": 107,
+      "panic": 0,
+      "software_resets": 0,
+      "iram_size_cache": "ffffffff"
+    },
+    "original_reboot_fix_complete_acceptance": false,
+    "whole_sleep_repair_complete": false,
+    "next": "Root continue with firmware power-policy predicates and actual low-power wake source/clock handling. Save helperchain0805d024->0807b270->veneer0802d050->IRAM220005a0. Nofirmwarepatch,forcewake,IRQmaskoverride,GPIOguess,sleep-disable,orreset-suppression.",
+    "updated_utc": "2026-10-30T18:00:16.839643+00:00",
+    "remaining_problem": "Actual Enter queues8packets and raisesIRQ23raw, but guest masksIRQ23 in deep WFI and UIdoesnotadvance. HoldPMUint isprocessed, drainsFIFO, and returnsWFI; noactualnormalnavigation accepted.",
+    "critical_save_path": "NOT ACCEPTED. SysInfo+e8fixruntimeverified40000, but firstHoldatvirtual1455s didnotreadcachedSRAMsize(cacheffffffff). Absenceofabortthereisnotsufficientregressionevidence.",
+    "later_readonly_clock": "17:54:46UTC nativevirtual1912405889624ns, SRAMsizecacheffffffff. AnotherHoldwaspreparedbutCANCELEDbeforeinput: priorHoldmayresetidlepolicy; matchingabsolutetimealonecannotjustifyrepeatingtest.",
+    "extra_Hold_since_initial_acceptance": 0,
+    "timer": "classic7 DELETED; noautomaticrepeatsremain",
+    "current_session": "app7544/qemu1280/backend30048 ordinarysinglewriter preserved; noforcedexit/restartafter01:11",
+    "source_changes_this_acceptance_turn": false,
+    "hardware_contract_gap": "No verifiedphysicalsourceforEIC6bit28/GPIO4. RockboxdefinesEICmappingandactualwheelserialGPIOE2/E3/E4/E5; surveyedfreemyipodmodeldoesnotestablishaGPIO4wheelwakewire. Do notconnectaguessedkeyboardeventtoIRQ/GPIO."
+  }
+}

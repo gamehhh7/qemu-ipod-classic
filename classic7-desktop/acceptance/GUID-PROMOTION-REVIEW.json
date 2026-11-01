@@ -1,0 +1,19 @@
+{
+  "approved": true,
+  "scope": "normal user desktop revision, no timed experiment or restore",
+  "utc": "2026-10-29T11:17:23.651862+00:00",
+  "manifest": {
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.pending.exe": "946f40e0189bbfefbf0e4cb82290dc24e0c6ef1c424a6a3cabc3709770688058",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.pending.exe": "d585cad0f397706804bba541e947e51911fb8ca19860e5c2ea537c5f6ad37dc3",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\userdata\\device-identity.json": "a06edcfe7a3c16a922b06937cfb7b6f3614b60bd0c2616aa418ea38ef69a547c",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\src\\usb\\ipod_classic.c": "97272dea598ffc2c2f840efb6475f214ad5879f49cb0c0b377524a07d8f8163e",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\src\\include\\hw\\arm\\ipod_classic\\ipod_classic.h": "0da3793556c87f31de3a7d7cd6c935e87a3e3c412012305d7525c4cfbca1b149",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\Classic7.cs": "779bf5259e90da4c8445079f5f467cc5eb43ef75719dabb0e7b72175cf5c13f7"
+  },
+  "native_boot_ABI": "Serial+18, Model+98, GUID getter08369c10 reads+38/+3c; immutable machine properties before startup",
+  "source": "public tutorial US2.0.4 FwId sample; native firmware generates USB/SCSI data",
+  "virtual_disk_unchanged": true,
+  "restore": false,
+  "installed_driver_change": false,
+  "possible_next": "new USB serial could require new exact UDE driver binding; do not assume driver chosen or Windows success"
+}

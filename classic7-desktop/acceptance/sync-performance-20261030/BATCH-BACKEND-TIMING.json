@@ -1,0 +1,9 @@
+{
+  "commands": 15,
+  "payload_write_commands": 7,
+  "payload": 917504,
+  "total_wall": 0.24558820002130233,
+  "work": 0.027221899974392727,
+  "commit": 0.2172875000105705,
+  "cpu": 0.03125
+}

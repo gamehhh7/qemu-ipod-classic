@@ -1,0 +1,30 @@
+[New Thread 1824.0x7e30 (id 2)]
+[New Thread 1824.0x7e8c (id 3)]
+[New Thread 1824.0x7468 (id 4)]
+[New Thread 1824.0x9048 (id 5)]
+[New Thread 1824.0x3628 (id 6)]
+[New Thread 1824.0x3404 (id 7)]
+[New Thread 1824.0x9288 (id 8)]
+[New Thread 1824.0x92a4 (id 9)]
+[New Thread 1824.0x93c4 (id 10)]
+[New Thread 1824.0x38b4 (id 11)]
+[New Thread 1824.0x6100 (id 12)]
+[New Thread 1824.0x21c0 (id 13)]
+[New Thread 1824.0x6db8 (id 14)]
+[New Thread 1824.0x1c68 (id 15)]
+[New Thread 1824.0x1a24 (id 16)]
+[New Thread 1824.0x553c (id 17)]
+[New Thread 1824.0x315c (id 18)]
+[Switching to thread 1 (Thread 1824.0x4ecc)]
+0x00007ffb209c59c4 in ntdll!ZwWaitForAlertByThreadId () from C:/WINDOWS/SYSTEM32/ntdll.dll
+$1 = 1
+$2 = true
+$3 = (SWVoiceOut *) 0x3205630
+$4 = true
+$5 = 44117
+$6 = 2076672
+$7 = 2080082
+$8 = 0x7ff68a3d9111 <wav_capture_ops+2113> "dsound"
+$9 = 1
+$10 = 1
+[Inferior 1 (process 1824) detached]

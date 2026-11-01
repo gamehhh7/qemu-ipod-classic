@@ -1,0 +1,16 @@
+{
+  "purpose": "normal imported database integrity migration to configured native GUID",
+  "physical_device": false,
+  "format": false,
+  "firmware_modified": false,
+  "whole_image_read": false,
+  "guid": "000A2700214DCAC1",
+  "status": "database_identity_updated",
+  "changed": true,
+  "changed_ATA512_sector": 210720,
+  "changed_file_offset": 88,
+  "changed_bytes": 20,
+  "old_sha256": "36282aca6a0390ca977de4ad3b1a2ddfaf3bd1989f764ccfb676f4d3c5a9a902",
+  "new_sha256": "ffe7d0730c33b19c798ff3b0b16c2057dabe34217e640e68bce6007ad1f319ba",
+  "tracks_preserved": true
+}

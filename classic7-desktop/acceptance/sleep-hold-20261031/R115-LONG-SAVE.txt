@@ -1,0 +1,18 @@
+[New Thread 7664.0x80c4 (id 2)]
+[New Thread 7664.0x2a8c (id 3)]
+[New Thread 7664.0x5614 (id 4)]
+[New Thread 7664.0x8ba0 (id 5)]
+[New Thread 7664.0x2174 (id 6)]
+[New Thread 7664.0x8230 (id 7)]
+[New Thread 7664.0x7564 (id 8)]
+[New Thread 7664.0x3460 (id 9)]
+[New Thread 7664.0x5d58 (id 10)]
+[Switching to thread 1 (Thread 7664.0x1884)]
+0x00007ffb209c28a4 in ntdll!ZwWaitForMultipleObjects () from C:/WINDOWS/SYSTEM32/ntdll.dll
+SLEEP_HEADER_AND_CONTEXT
+0x43c00000:	0x68696265	0x00000001	0x00000001	0x04000000
+0x43c00010:	0x080d24d0	0x00000000	0x00000000	0x00000000
+0x43c00020:	0x00000000	0x00000000	0x00000000	0xe59f3004
+0x44600478:	0x71fb4a0e	0xde242ab5	0x6d94ac8e	0x4c3f6f0d
+0x44600488:	0xf5e5ee2e	0xe71ae558	0xfc2f3396	0x9508ec78
+[Inferior 1 (process 7664) detached]

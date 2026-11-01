@@ -1,0 +1,6 @@
+{
+  "app_pid": 2264,
+  "utc": "2026-10-30T09:54:52.602524+00:00",
+  "timer_precision": 1,
+  "source_fix_only": "host timer precision scoped to one USB session; guest timing/ACK unchanged"
+}

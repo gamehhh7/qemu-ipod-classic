@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-30T09:31:36.156401+00:00",
+  "sample_s": 12.005215644836426,
+  "commands": 9,
+  "write_commands": 4,
+  "written_bytes": 524288,
+  "backend_wall_s": 0.2226881999959005,
+  "backend_cpu_s": 0.03125,
+  "last_record": {
+    "n": 4384,
+    "t": 1793352695.318588,
+    "wall_s": 0.0015356999938376248,
+    "cpu_s": 0.0,
+    "req": "TASKFILE 200 0 24 8 29 9 0 0 0 64 0",
+    "resp": "RESULT 88 0 0 ok ok 298 12288",
+    "origin": "QEMU_TCP_ONLY",
+    "r3": "real8051",
+    "payload_sha256": "f3cc103136423a57975750907ebc1d367e2985ac6338976d4d5a439f50323f4a",
+    "decoded_payload_bytes": 12288,
+    "persistent_cow": true
+  },
+  "read_only": true,
+  "user_session_unchanged": true,
+  "bytes_per_s": 43671.685333324436,
+  "backend_wall_fraction": 0.018549287791567587
+}

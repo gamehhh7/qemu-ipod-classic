@@ -1,0 +1,24 @@
+{
+  "phase": "R108_WAIT_30MIN_NATURAL_SLEEP_MONITOR_ACTIVE",
+  "automation_id": "ipod-2",
+  "target_thread": "01a18d5f-dd73-7ea1-8d0c-912e4f903fb3",
+  "created_utc": "2026-10-30T16:33:41.951000+00:00",
+  "first_expected_hk": "2026-10-31T01:03:41.951000+08:00",
+  "interval_minutes": 30,
+  "status": "DELETED",
+  "user_instruction": "wait30min; confirm unresponsive then one real Hold cycle; otherwise continue waiting",
+  "current_app_pid": 27636,
+  "current_qemu_pid": 11440,
+  "current_backend_pid": 24120,
+  "run": "20261030T162123Z-27636",
+  "latest_hold_result": "Two Hold cycles in current qemu.log, latest was user manual, no WAKEFAULT/panic/reset recorded",
+  "not_fixed": true,
+  "notes": [
+    "Deep WFI alone is not deadlock evidence",
+    "Preserve single writer and current ordinary session",
+    "No sync performance work",
+    "Pause monitor on captured failure, user stop, or app closure",
+    "No repeated Hold cycles in one check"
+  ],
+  "final_result": "01:06HK actual fault/reset captured; superseded by rootcause fix and separate one-time natural acceptance"
+}
