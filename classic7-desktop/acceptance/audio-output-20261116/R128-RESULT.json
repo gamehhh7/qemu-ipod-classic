@@ -1,0 +1,92 @@
+{
+  "round": "R128",
+  "time": "2026-11-16T18:07:52.329570",
+  "status": "NOT_FIXED",
+  "endpoint": {
+    "time": "2026-11-16T17:48:41.780650",
+    "endpoint": "扬声器 (HECATE G2 GAMING HEADSET)",
+    "samplerate": 48000,
+    "channels": 2,
+    "bits": 32,
+    "format_tag": 65534,
+    "block_align": 8,
+    "method": "IAudioClient.GetMixFormat; read only"
+  },
+  "comparisons": [
+    {
+      "mode": "off",
+      "wall_s": 60.0072124,
+      "ratio_60s": 0.9817472972965496,
+      "ratio_last25s": 0.9421416617428197,
+      "pcm_Bps_last25s": null,
+      "ring_start": 0,
+      "ring_end": 0,
+      "source": "r128-off-60s.json"
+    },
+    {
+      "mode": "on441",
+      "wall_s": 60.005070499999995,
+      "ratio_60s": 0.9721228964475594,
+      "ratio_last25s": 0.945225207623746,
+      "pcm_Bps_last25s": 166939.64956786067,
+      "ring_start": 337756,
+      "ring_end": 47020,
+      "source": "r128-on441-60s.json"
+    },
+    {
+      "mode": "on480",
+      "wall_s": 60.007118500000004,
+      "ratio_60s": 0.9777894752936687,
+      "ratio_last25s": 0.9429832891370393,
+      "pcm_Bps_last25s": 166441.70866832076,
+      "ring_start": 220488,
+      "ring_end": 3488,
+      "source": "r128-on480-60s.json"
+    },
+    {
+      "mode": "affinity",
+      "wall_s": 60.0068942,
+      "ratio_60s": 0.9082393700022555,
+      "ratio_last25s": 0.9086319721210628,
+      "pcm_Bps_last25s": 160380.72889148616,
+      "ring_start": 4096,
+      "ring_end": 4096,
+      "source": "r128-affinity-60s.json"
+    }
+  ],
+  "conclusions": [
+    "Current engine remains ~94% real time in late playback windows with host output off, on44100, and on48000.",
+    "Matching host output to endpoint48000 does not fix sustained PCM deficit; it does not exclude a separate driver/listening issue.",
+    "Historical pre-audio version has not been reconstructed or compared; user report remains open regression evidence.",
+    "Finite UI samples did not reproduce backwards seconds; absence is not proven.",
+    "Single-logical-CPU affinity worsened speed and was restored to65535; do not adopt.",
+    "No default change, firmware change, guest memory patch, fake IRQ, or formal binary replacement."
+  ],
+  "visual_on441": [
+    [
+      "09:57:56.054Z",
+      "0:38"
+    ],
+    [
+      "09:57:58.160Z",
+      "0:41"
+    ],
+    [
+      "09:58:00.265Z",
+      "0:44"
+    ],
+    [
+      "09:58:02.371Z",
+      "0:45"
+    ],
+    [
+      "09:58:04.476Z",
+      "0:48"
+    ],
+    [
+      "09:58:06.575Z",
+      "0:49"
+    ]
+  ],
+  "next": "Instrument native IRQ dispatch/BQL handoff and correlate guest progress source versus LCD descriptor swaps; no unsupported timing/IRQ patches."
+}

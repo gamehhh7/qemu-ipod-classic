@@ -1,0 +1,226 @@
+{
+  "source_base": "1c33be87c7e97b56053142ae9d7f0686feaed504",
+  "selection": "Local QEMU text files modified after 2026-10-01; separate dependency snapshot, not promoted into repository root",
+  "files": [
+    {
+      "path": "accel/tcg/cpu-exec.c",
+      "sha256": "9f073b9305b94f4679e259acd346d539e66d6b0517d3ad7179e59c1223d7f19a",
+      "bytes": 50112
+    },
+    {
+      "path": "accel/tcg/icount-common.c",
+      "sha256": "51a386343281c2745bd7bda7dfcd5d6861fc16d4210789c199360be254d6f75a",
+      "bytes": 41773
+    },
+    {
+      "path": "accel/tcg/tcg-accel-ops-rr.c",
+      "sha256": "9c731fac38fae8c9fe594f1e9421c620dc172234acc64ea79f6bffc2878648d5",
+      "bytes": 10735
+    },
+    {
+      "path": "hw/arm/ipod_touch_sha1.c",
+      "sha256": "3cdd9abad798e82175538b85e2f8827f445c2c46b224462e0ed37902b0394836",
+      "bytes": 14118
+    },
+    {
+      "path": "hw/arm/meson.build",
+      "sha256": "83e0f76fc769ce8d7e29d36a83130450a2e0f5c4c4054b27f19513fc4e6b3946",
+      "bytes": 6375
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic.c",
+      "sha256": "91e5c0c2ac01bab01b47b3d231418c9ed722a3fa39221a31afe5b8dc8abe09b6",
+      "bytes": 48785
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_aes.c",
+      "sha256": "f866486d64ebf9bc8426d2c655a575a707c19ee96b6eb8c72b544ea9219ed715",
+      "bytes": 7894
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_ata.c",
+      "sha256": "1ead01f0c038f66ab7118b4b62e010fd51a4c2c5fe05e49086111bae6c42d50d",
+      "bytes": 21412
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_ata_fc1307.c",
+      "sha256": "052f7270deab2f1c39e05d7991383d9f322aa568194077a97a0196bfee386c4e",
+      "bytes": 42321
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_clk.c",
+      "sha256": "bc43c53413e744b41ee6a4151d66187aff0f2d9dc99a5cd5162eeef62528f2ba",
+      "bytes": 8849
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_disp.c",
+      "sha256": "677102c6badee64e2b230de571bc1019fe63d59a01a2383a8838f234412175a9",
+      "bytes": 21828
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_gpio.c",
+      "sha256": "5907581299d8544df922aba27f064c8636bf5edae00e7ecb4abff4e7da5656f1",
+      "bytes": 7763
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_i2s.c",
+      "sha256": "6ffadd4caaa70cbb1265afb2e97c5f697b2dbb67d7fc03cb266a2444c364087c",
+      "bytes": 29165
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_pmu.c",
+      "sha256": "18c90c63903044f06d7de03f7665f356f82bc57f937156e3bb3c48cd9e6704e9",
+      "bytes": 25863
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_sm1.c",
+      "sha256": "24c4a83d7770b7837ba0f7e78c3bd3ce9e0c770ff83f827ccbb069e7dcfa19bc",
+      "bytes": 79470
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_sysalv.c",
+      "sha256": "15c71b494e56fe709637e3dc7d23878cd0e6de36724b92f286feb8578d5711f3",
+      "bytes": 6393
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_usb.c",
+      "sha256": "ac70319edea3b317d175da5fcf09c96f1c2d4e5c3a3463c9699eecd5ec8f55f3",
+      "bytes": 16449
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_usb_dma_selftest.h",
+      "sha256": "b5c07b9dce03623eea399cc93f3b4534dcd87ed78de6d85ea2af1bd1742c4c9f",
+      "bytes": 19909
+    },
+    {
+      "path": "hw/arm/ipod_classic/ipod_classic_wheel.c",
+      "sha256": "a503607bf75432d50307e8900d2487d1a875b9328e827bd0bdf7a5cb0b7b3185",
+      "bytes": 26285
+    },
+    {
+      "path": "hw/arm/ipod_classic/minimp3.h",
+      "sha256": "3f149c83041068fac527f0b24cce2c8f3fa6c7a55460bfd1517c2ffee7e1a69a",
+      "bytes": 79360
+    },
+    {
+      "path": "hw/dma/pl080.c",
+      "sha256": "d7a87aa9b8a9ac4b9d09f24711cb2deca4882b97b923eee72e4611bff7d7c0df",
+      "bytes": 26032
+    },
+    {
+      "path": "include/hw/arm/ipod_touch_sha1.h",
+      "sha256": "72c0cab88514c8fbaee074fe8138fab36eb149962431ddb2de8bc004f1b8c56d",
+      "bytes": 2202
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic.h",
+      "sha256": "299e306a1068d910ec0d2d5649019c86ac2a16fb6eb6657c6a329a6c9b5651ae",
+      "bytes": 10570
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_ata.h",
+      "sha256": "2244d868adc8097d1ae084a5ea7f315b15db214569429bd9d6f851ac75f4d4fa",
+      "bytes": 5929
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_ata_fc1307.h",
+      "sha256": "ccd2d69f1d5d37d4845c33693effe7b5fe6c3d6f3df83222c0eb34ca5bb3a8b2",
+      "bytes": 594
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_gpio.h",
+      "sha256": "de35aec902662a85474c75b3f1c17a86ddb98a6f16180de85f649d381e9e788a",
+      "bytes": 4823
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_playtrace.h",
+      "sha256": "5ced36a6fd5eae91213a2902b6423e726b923e239487d2717bd243f243f249cf",
+      "bytes": 358
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_pmu.h",
+      "sha256": "b4caa556da7d73f9074ec3b7a61517e08266256f37b4315a180254d5cd984f58",
+      "bytes": 5468
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_pmu_usb.h",
+      "sha256": "dc000c6c2d029be5ff69cdc352884b3a1fa76e5a4cb9c57164d5d855232703e7",
+      "bytes": 2226
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_sm1.h",
+      "sha256": "b13a2ea5a5ffdfb2fa177dc16118a0b2d6ea3d6f820cd4bc739f85502cedf0dd",
+      "bytes": 11500
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_sysalv.h",
+      "sha256": "7417621ea7ea4ea6b6229101d10615ae06ba62b0ba65b0e159af98b1cef018fc",
+      "bytes": 558
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_usb.h",
+      "sha256": "1e286441a6e0487b496919bc8c117e4693a99f33e8c7b4cf58054a12b14674fd",
+      "bytes": 1763
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_usb_core.h",
+      "sha256": "91f5cecad83f1a9ec838228d9f18be79433636497fa97a119c9337de6629cd7e",
+      "bytes": 13856
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_usb_dma.h",
+      "sha256": "094344f261df08a27a4da0c822421b5098823106b7aa71614127d455076b21bd",
+      "bytes": 2890
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_usb_stage.h",
+      "sha256": "0bf35407833c4a56ee6542d0242b24308774ca9403c6fd42aadda8da8dbd3ee1",
+      "bytes": 6089
+    },
+    {
+      "path": "include/hw/arm/ipod_classic/ipod_classic_wheel.h",
+      "sha256": "bff4545bc3fb14f34ebce99745ffc858b71713f2688552dc83289da658dcf24d",
+      "bytes": 16756
+    },
+    {
+      "path": "include/sysemu/cpu-timers.h",
+      "sha256": "db4fbb249be4c7667f7095653c43cb3930f2e3ea85e80eaf4c7c6ca5feb7f32b",
+      "bytes": 2707
+    },
+    {
+      "path": "scripts/symlink-install-tree.py",
+      "sha256": "d921ee31c58487e3cbc86ad985e8249bab68a89ed45653c090810c615f4ecf02",
+      "bytes": 1576
+    },
+    {
+      "path": "scripts/tracetool/backend/log.py",
+      "sha256": "b1e0c7af6d71e44efa49ba4b8e974f17e1e570fe1ccd9fa975a273597dd4da33",
+      "bytes": 2141
+    },
+    {
+      "path": "target/arm/helper.h",
+      "sha256": "3d702dd5a68b67ccd51fae795ac8ba2021a1a2951f04d7fb48090fc611e007dd",
+      "bytes": 50163
+    },
+    {
+      "path": "target/arm/tcg/op_helper.c",
+      "sha256": "68ebba4f3b99102ab15b08b585c52cfafca5ae5aaab44b181ac16a063cd0ad90",
+      "bytes": 34033
+    },
+    {
+      "path": "target/arm/tcg/translate.c",
+      "sha256": "fa1dc5a91403f260cd36738e325fd9cca3a79e92d498c91cc399a117f1d9448a",
+      "bytes": 292104
+    },
+    {
+      "path": "target/arm/tcg/translate.h",
+      "sha256": "d7782bcb0dd67e7bf8a089a94f7ec9cc1b5cc447b56aa19eae537260e616d233",
+      "bytes": 26086
+    },
+    {
+      "path": "trace/meson.build",
+      "sha256": "9c9be6defd7d94193ba2bba3941f28788a40540233554c936f025c05b1a65d42",
+      "bytes": 4592
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "reconciled_at_hk": "2026-11-01T20:13:01.453+08:00",
+  "zone": "Asia/Shanghai",
+  "round": "R125",
+  "task": "weff_ledger_vs_overall_virtual_wall_shortfall",
+  "method": "offline_analysis_existing_artifacts",
+  "remeasure": false,
+  "remeasure_reason": "qemu.log already has paired WARP_EFF=1 and GAP=1 lines (31 each); live 60s aligns to weff/gap idx 19..30 by event timing (execution_mode 12:04:22Z, live end ~12:06:58Z)",
+  "source_artifacts": {
+    "weff_lines": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r125-k2-warp-eff-lines.txt",
+    "live_60s": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r125-k2-warp-eff-live-60s.json",
+    "r125_result": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\R125-K2-WARP-EFF-RESULT.json",
+    "qemu_log": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261101T120410Z-4504\\qemu.log",
+    "run_dir": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261101T120410Z-4504"
+  },
+  "formal_session": {
+    "alive": true,
+    "app_pid": 34696,
+    "qemu_pid": 31628,
+    "note": "rollback formal still up; no restart this reconcile"
+  },
+  "measure_window": {
+    "label": "live_time_align_weff_gap_idx_19_30",
+    "idx_lo": 19,
+    "idx_hi": 30,
+    "n_buckets": 12,
+    "window_wall_ns": 60007195900,
+    "window_wall_s": 60.0071959,
+    "live_wall_s": 60.00524930000029,
+    "live_virtual_s": 56.550130384,
+    "live_virtual_wall_ratio": 0.9424197223358545,
+    "live_pcm_Bps": 166351.31286755527,
+    "live_dvirtual_ns": 56550130384,
+    "live_dvirtual_ns_from_samples": 56550130384,
+    "alignment_note": "events: execution_mode 12:04:22Z, stop 12:07:00Z; live measured_at ~12:06:58Z => live window ~12:05:58-12:06:58 aligns with gap/weff idx 19..30"
+  },
+  "sums": {
+    "slept_wall_ns": 56096733100,
+    "bias_advance_ns": 56126175500,
+    "deadline_ns": 19083725310,
+    "rt_elapsed_ns": 56126175500,
+    "done": 42792,
+    "gap_wall_ns": 60007195900,
+    "gap_exec_ns": 2537148100,
+    "gap_warp_ns": 56286331600,
+    "gap_gap_ns": 1183716200,
+    "gap_stopped_ns": 0,
+    "gap_buckets_sum_ns": 60007195900,
+    "gap_bucket_residual_ns": 0
+  },
+  "ratios": {
+    "slept_wall_share_of_wall": 0.9348334355346872,
+    "unaccounted_wall_vs_slept_share": 0.06516656446531273,
+    "exec_share": 0.042280730868145766,
+    "warp_share": 0.9379930315990652,
+    "gap_share": 0.019726237532788963,
+    "bias_over_wall": 0.9353240833571428,
+    "bias_over_slept": 1.0005248505282387,
+    "bias_sum_over_live_dvirtual": 0.992503025525827,
+    "sleep_per_deadline": 2.9395064217679203,
+    "bias_per_deadline": 2.9410492232661465,
+    "live_virtual_wall_ratio": 0.9424197223358545,
+    "warp_minus_slept_ns": 189598500,
+    "virt_from_non_sleep_ns": 423954884,
+    "shortfall_from_1": 0.05758027766414553,
+    "non_sleep_wall_explains_shortfall_approx": true,
+    "non_sleep_virt_shortfall_share": 0.05810149705728876
+  },
+  "unaccounted_wall_ns": 3910462800,
+  "unaccounted_vs_gap_buckets": {
+    "exec_ns": 2537148100,
+    "warp_ns": 56286331600,
+    "gap_ns": 1183716200,
+    "stopped_ns": 0,
+    "note": "gap buckets partition wall exactly (residual 0). unaccounted vs slept ~= exec+gap (~6.52%); warp_ns ~= slept_wall_ns (delta ~190ms / 60s)."
+  },
+  "counters_window": {
+    "n_arm_lost": 0,
+    "n_account_unpaired": 0,
+    "bias_unpaired_ns": 0,
+    "n_bias_from_zero": 0,
+    "bias_from_zero_ns": 0,
+    "n_arm_orphaned": 0,
+    "n_early_not_idle": 56711,
+    "n_rt_inactive": 122348,
+    "n_deadline0": 14107,
+    "n_arm": 111907,
+    "n_arm_set": 42792,
+    "n_arm_kept": 69115,
+    "mean_short_sleep_p50": -375.0,
+    "interpretation": "lost/unpaired/orphan all 0 in window; from_zero 0 in window (only 1 at boot). Negligible ledger leakage. early_not_idle and rt_inactive are large but expected (non-idle returns / inactive RT)."
+  },
+  "sleep_per_deadline_interp": {
+    "sleep_per_deadline": 2.9395064217679203,
+    "bias_per_deadline": 2.9410492232661465,
+    "verdict": "late_or_long_host_sleep_with_full_RT_credit",
+    "detail": "sleep/deadline~2.94 and bias/deadline~2.94 with bias/slept~1.0005 means each done-warp credits full host sleep (~3x armed deadline), not a deadline-units mismatch. short_sleep_p50~-375ns (slight over-advance vs sleep). Matches QEMU icount sleep=on RT catch-up; n_arm_kept>>0 shows re-arms keeping deadlines. Does NOT cause under-advance during paired warps."
+  },
+  "hypothesis_update": {
+    "H-R125-UNACCOUNTED-WALL": {
+      "status": "SUPPORTED",
+      "evidence": "In live-aligned 60s window, slept_wall is only 93.48% of wall; unaccounted 6.52% equals gap exec(4.23%)+gap(1.97%). bias/wall~0.9353 tracks slept share; live V/W~0.9424 is bias/wall plus tiny exec icount (~0.7% wall). Overall shortfall from 1.0 (~5.76%) matches non-sleep wall that produces almost no virtual."
+    },
+    "H-R125-DEADLINE-MISMATCH": {
+      "status": "FALSIFIED_AS_PRIMARY",
+      "evidence": "sleep_per_deadline~3 reflects full-RT credit on long host sleeps vs short armed deadlines, not sparse-deadline virtual loss inside warps. Paired bias tracks host sleep (~1000) and RT (~1000); between-deadline virtual loss is exactly the unaccounted exec+gap wall, already covered by H-R125-UNACCOUNTED-WALL."
+    },
+    "H-R124-WARP-UNDERADVANCE": {
+      "status": "FALSIFIED_FOR_R125_PAIRED_WARPS",
+      "evidence": "R125 K2 paired credits contradict under-advance vs host sleep (bias_per_sleep~1000, short_sleep_p50 negative)."
+    }
+  },
+  "verdict": "Paired weff warps are healthy (bias≈sleep≈RT); overall V/W~0.94 because ~6.5% of wall is outside paired sleeps (exec~4.2% + gap~2.0%) and that wall contributes ~0.7% virtual only—so unaccounted wall explains the residual shortfall.",
+  "next_knife": "Attribute virtual advance during gap-exec buckets (icount Δ vs wall) and/or why ret_not_idle keeps ~4% wall in exec instead of warp; contrast with R124's ~0.983 session where warp share was likely higher—no more bias-underadvance knives.",
+  "comparison_windows_brief": {
+    "full_31": {
+      "slept_share": 0.9029108153937814,
+      "bias_over_wall": 0.9060499377686277,
+      "unacc_share": 0.09708918460621863
+    },
+    "steady_4_30": {
+      "slept_share": 0.930080096299726,
+      "bias_over_wall": 0.933624718872101,
+      "unacc_share": 0.06991990370027404
+    }
+  }
+}

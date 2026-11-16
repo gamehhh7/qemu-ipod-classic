@@ -96,7 +96,7 @@ sealed class Engine : IDisposable {
         Backend.ErrorDataReceived+=(s,e)=>{if(e.Data!=null){WriteBounded(backendLog,e.Data);if(e.Data.Contains("IPC server (text protocol)"))listening=true;}};
         Backend.OutputDataReceived+=(s,e)=>{if(e.Data!=null)WriteBounded(backendLog,e.Data);};
         Backend.Start();Backend.BeginErrorReadLine();Backend.BeginOutputReadLine();
-        for(int i=0;i<200&&!listening;i++){if(closed)return;if(Backend.HasExited)throw new IOException("存储后端启动失败");Thread.Sleep(50);}
+        for(int i=0;i<1200&&!listening;i++){if(closed)return;if(Backend.HasExited)throw new IOException("存储后端启动失败");Thread.Sleep(50);}
         if(!listening)throw new IOException("存储后端未就绪");
         string dataDir=@"K:\CodexResources\2026-09-30\ipod-emulation\qemu-fc1307\src\qemu-ipod-classic-1c33be87c7e97b56053142ae9d7f0686feaed504\pc-bios";
         string machine="iPod-Classic";string identityPath=Path.Combine(root,"userdata","device-identity.json");if(File.Exists(identityPath)){var identity=json.Deserialize<Dictionary<string,object>>(File.ReadAllText(identityPath));string serial=Convert.ToString(identity["serial"]),model=Convert.ToString(identity["model"]);if(!System.Text.RegularExpressions.Regex.IsMatch(serial,"^[A-Z0-9]{11,12}$")||!System.Text.RegularExpressions.Regex.IsMatch(model,"^[A-Z0-9]{5,15}$"))throw new IOException("虚拟设备身份格式无效");machine+=",serial-number="+serial+",model-number="+model;if(identity.ContainsKey("firewire_guid")){string guid=Convert.ToString(identity["firewire_guid"]);if(!System.Text.RegularExpressions.Regex.IsMatch(guid,"^[0-9A-F]{16}$"))throw new IOException("虚拟GUID格式无效");machine+=",firewire-guid="+guid;}}
@@ -104,7 +104,8 @@ sealed class Engine : IDisposable {
         // clocking, I2C can finish the next byte before the previous ISR tail
         // clears/resumes it, replaying IICDS and corrupting PMU measurements.
         // Keep the unpaced clock available only as an explicit diagnostic mode.
-        string timing=deterministic?" -icount shift=3,align=off,sleep=on":"";
+        string icountShift=Environment.GetEnvironmentVariable("CLASSIC7_ICOUNT_SHIFT")??"3";if(icountShift!="3"&&icountShift!="auto")throw new IOException("Invalid instruction clock mode");
+        string timing=deterministic?" -icount shift="+icountShift+",align=off,sleep=on":"";
         string args="-L "+Quote(dataDir)+" -M "+machine+" -kernel "+Quote(Payload)+" -accel tcg,thread=single"+timing+" -display none -serial null -monitor none -audio dsound,id=classic7,out.frequency=44100,out.channels=2,out.format=s16 -qmp tcp:127.0.0.1:"+qmpPort+",server=on,wait=off -vnc 127.0.0.1:"+(vncPort-5900)+" -global pcf50635.usb-connected=off -global s5l8702-usb-device-core.experimental-link-v0=on";
         string debugPortText=Environment.GetEnvironmentVariable("CLASSIC7_GDB_PORT");int debugPort;
         if(!String.IsNullOrEmpty(debugPortText)){if(!Int32.TryParse(debugPortText,out debugPort)||debugPort<1024||debugPort>65535)throw new IOException("Invalid local debugger port");args+=" -gdb tcp:127.0.0.1:"+debugPort;}

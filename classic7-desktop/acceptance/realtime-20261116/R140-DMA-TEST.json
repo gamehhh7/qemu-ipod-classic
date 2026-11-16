@@ -1,0 +1,8 @@
+{
+  "pass_": true,
+  "results": [
+    "255 transaction-order/boundary/fallback cases PASS",
+    "disabled fallback PASS"
+  ],
+  "limits": "Actual helper with stub memory/cache; no end-to-end guest IRQ or listening claim"
+}

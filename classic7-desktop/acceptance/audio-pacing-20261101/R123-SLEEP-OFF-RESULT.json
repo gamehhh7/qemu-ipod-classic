@@ -1,0 +1,212 @@
+{
+    "id":  "K3-bounded-sleep-off-contrast",
+    "phase":  "R123-SLEEP-OFF-RESULT",
+    "completed_at_hk":  "2026-11-01T19:19:54.683+08:00",
+    "status":  "COMPLETE",
+    "contrast":  {
+                     "app_pid":  21256,
+                     "qemu_pid":  4744,
+                     "backend_pid":  35276,
+                     "run":  "20261101T111609Z-21256",
+                     "exe":  "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r123-sleep-off.exe",
+                     "formal_bin_untouched":  true,
+                     "formal_sha256":  "DE2A8E1D6D9473A19ACC26D6070C7941F7CCB3E68563526B6F968F4AAFD6EEA6",
+                     "icount_actual":  "shift=3,align=off,sleep=off",
+                     "usb":  "pcf50635.usb-connected=off"
+                 },
+    "ui_state":  {
+                     "frozen":  true,
+                     "note":  "User reported UI stuck; app/qemu Responding=True; qemu CPU rising; display_metrics received_fps=0/presented_fps=0 with received_total/presented_total stuck at 66/60; button events still logged; LCD not refreshing",
+                     "last_display_metrics_lines":  [
+                                                        "{\"utc\":\"2026-11-01T11:20:48.8027938Z\",\"kind\":\"display_metrics\",\"data\":{\"seconds\":3.0114,\"received_fps\":0,\"presented_fps\":0,\"received_total\":66,\"presented_total\":60,\"paints\":280,\"pixel_scale\":1,\"lcd_x\":104,\"lcd_y\":84,\"lcd_w\":320,\"lcd_h\":240,\"client_w\":528,\"client_h\":820,\"dpi\":96}}",
+                                                        "{\"utc\":\"2026-11-01T11:20:51.8039405Z\",\"kind\":\"display_metrics\",\"data\":{\"seconds\":3.0011467,\"received_fps\":0,\"presented_fps\":0,\"received_total\":66,\"presented_total\":60,\"paints\":280,\"pixel_scale\":1,\"lcd_x\":104,\"lcd_y\":84,\"lcd_w\":320,\"lcd_h\":240,\"client_w\":528,\"client_h\":820,\"dpi\":96}}",
+                                                        "{\"utc\":\"2026-11-01T11:20:54.8184156Z\",\"kind\":\"display_metrics\",\"data\":{\"seconds\":3.0144751,\"received_fps\":0,\"presented_fps\":0,\"received_total\":66,\"presented_total\":60,\"paints\":280,\"pixel_scale\":1,\"lcd_x\":104,\"lcd_y\":84,\"lcd_w\":320,\"lcd_h\":240,\"client_w\":528,\"client_h\":820,\"dpi\":96}}"
+                                                    ]
+                 },
+    "measurement":  {
+                        "tool":  "py37 read-live.py",
+                        "duration_s":  60,
+                        "addresses_file":  "r123-sleep-off-addresses.txt",
+                        "live_file":  "r123-sleep-off-live-60s.json",
+                        "virtual_wall_ratio":  67.360150323128735,
+                        "pcm_Bps":  176449.42899168102,
+                        "drain_Bps":  176449.42899168102,
+                        "nominal":  176468,
+                        "ring_min":  1048576,
+                        "ring_max":  1048576,
+                        "wall_s":  60.0063149,
+                        "virtual_s":  4042.034392001,
+                        "raw_live":  {
+                                         "pid":  4744,
+                                         "label":  "r123-sleep-off-live-60s",
+                                         "method":  "ReadProcessMemory only; no suspend or writes",
+                                         "wall_s":  60.0063149,
+                                         "virtual_s":  4042.034392001,
+                                         "virtual_wall_ratio":  67.36015032312874,
+                                         "pcm_Bps":  176449.42899168102,
+                                         "drain_Bps":  176449.42899168102,
+                                         "nominal":  176468,
+                                         "ring_min":  1048576,
+                                         "ring_max":  1048576,
+                                         "samples":  [
+                                                         {
+                                                             "wall":  0.0988022,
+                                                             "virtual_ns":  6262147670765,
+                                                             "rate":  44117,
+                                                             "rd":  22323336,
+                                                             "wr":  23371912,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  5.0987797,
+                                                             "virtual_ns":  6582505989379,
+                                                             "rate":  44117,
+                                                             "rd":  23205676,
+                                                             "wr":  24254252,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  10.0990541,
+                                                             "virtual_ns":  6903860001040,
+                                                             "rate":  44117,
+                                                             "rd":  24088016,
+                                                             "wr":  25136592,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  15.099996,
+                                                             "virtual_ns":  7232182075309,
+                                                             "rate":  44117,
+                                                             "rd":  24970356,
+                                                             "wr":  26018932,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  20.1005262,
+                                                             "virtual_ns":  7576122777035,
+                                                             "rate":  44117,
+                                                             "rd":  25852696,
+                                                             "wr":  26901272,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  25.1013183,
+                                                             "virtual_ns":  7920504487894,
+                                                             "rate":  44117,
+                                                             "rd":  26735036,
+                                                             "wr":  27783612,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  30.1019069,
+                                                             "virtual_ns":  8261474180724,
+                                                             "rate":  44117,
+                                                             "rd":  27617376,
+                                                             "wr":  28665952,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  35.1025441,
+                                                             "virtual_ns":  8600122772854,
+                                                             "rate":  44117,
+                                                             "rd":  28499716,
+                                                             "wr":  29548292,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  40.1030475,
+                                                             "virtual_ns":  8941556685824,
+                                                             "rate":  44117,
+                                                             "rd":  29382056,
+                                                             "wr":  30430632,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  45.1034119,
+                                                             "virtual_ns":  9276259406764,
+                                                             "rate":  44117,
+                                                             "rd":  30264396,
+                                                             "wr":  31312972,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  50.1041108,
+                                                             "virtual_ns":  9620710750644,
+                                                             "rate":  44117,
+                                                             "rd":  31146736,
+                                                             "wr":  32195312,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  55.1047986,
+                                                             "virtual_ns":  9964940001040,
+                                                             "rate":  44117,
+                                                             "rd":  32029076,
+                                                             "wr":  33077652,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         },
+                                                         {
+                                                             "wall":  60.1051171,
+                                                             "virtual_ns":  10304182062766,
+                                                             "rate":  44117,
+                                                             "rd":  32911416,
+                                                             "wr":  33959992,
+                                                             "ring":  1048576,
+                                                             "shift":  3
+                                                         }
+                                                     ]
+                                     }
+                    },
+    "baselines_sleep_on":  {
+                               "r123_steady_60s_virtual_per_wall":  0.941,
+                               "r123_steady_60s_b_virtual_per_wall":  0.942,
+                               "approx_pcm_Bps":  166000
+                           },
+    "deltas_vs_sleep_on":  {
+                               "virtual_wall_ratio_mult_vs_A":  71.5836,
+                               "pcm_Bps_delta":  10449.4,
+                               "pcm_improved_toward_nominal":  true,
+                               "virtual_runaway":  true,
+                               "ui_frozen":  true
+                           },
+    "hypothesis_H_R123_ICOUNT_NONIDLE_GAP":  {
+                                                 "verdict":  "PARTIALLY_SUPPORTED_BUT_PATHOLOGICAL",
+                                                 "summary":  "sleep=off raises pcm_Bps toward nominal (~176KB/s vs ~166KB/s baseline) but virtual/wall explodes (~67x vs ~0.94) AND UI freezes (display_metrics fps=0, totals stuck 66/60) while app/qemu still Responding and button events still write. Ring stayed at 1MB. Do NOT default sleep=off."
+                                             },
+    "notes":  [
+                  "UI frozen during/after measure: received_fps=0 presented_fps=0 totals stuck 66/60; Responding=True; events still accept button presses",
+                  "virtual_wall_ratio ~67.36 vs sleep=on baseline ~0.941-0.942: sleep=off removes idle yield and guest virtual time runs away",
+                  "pcm_Bps ~176449 near/above sleep=on baseline ~166KB/s: audio path less starved but at cost of runaway virtual + frozen LCD",
+                  "ring_min=ring_max=1048576 (1MB) throughout; no evidence of drain catching up",
+                  "formal bin iPodClassic7.exe sha256 DE2A8E... never overwritten; contrast used bin side EXE copy",
+                  "H-R123-ICOUNT-NONIDLE-GAP: PARTIALLY_SUPPORTED_BUT_PATHOLOGICAL 鈥?sleep=off is not a safe default"
+              ],
+    "next_actions":  [
+                         "Keep formal production on sleep=on",
+                         "Document UI freeze as blocking side-effect of sleep=off (display path vs runaway virtual)",
+                         "If further pacing work: consider bounded warp/bias adjustments while keeping sleep=on",
+                         "Optional: bias/warp resample under a non-frozen sleep=on session after rollback"
+                     ],
+    "rollback_pending_then_done_below":  false,
+    "rollback":  {
+                     "contrast_closed":  true,
+                     "method":  "CloseMainWindow",
+                     "formal_started_pid":  34144,
+                     "formal_qemu_pid":  36700,
+                     "formal_argv_sleep_on":  true,
+                     "formal_sha256":  "DE2A8E1D6D9473A19ACC26D6070C7941F7CCB3E68563526B6F968F4AAFD6EEA6",
+                     "at_hk":  "2026-11-01T19:21:14.941+08:00"
+                 }
+}

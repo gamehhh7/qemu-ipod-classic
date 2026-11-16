@@ -1,0 +1,1 @@
+{"method": "compiled unmodified queue functions extracted from candidate source; small ring for boundary cases", "result": "PASS: partial-channel overflow, complete-frame discard, counter wrap, mixed write widths, bounded stale queue", "status": "PASS"}

@@ -121,6 +121,7 @@ static const char *i2s_reg_name(hwaddr off)
 static FILE *i2s_wav;
 static uint32_t i2s_wav_data_bytes;
 static bool i2s_wav_announced;
+static int i2s_wav_enabled = -1;
 
 static void i2s_wav_put_le32(uint8_t *p, uint32_t v)
 {
@@ -217,7 +218,12 @@ static void i2s_wav_sample(IPodClassicI2SState *s, uint64_t value, unsigned size
 {
     uint8_t b[4];
 
-    if (getenv("AUDIOWAV") == NULL) {
+    /* Process environment is fixed at launch. Avoid a CRT environment lookup
+     * (including its lock) for every 16-bit FIFO write when capture is off. */
+    if (i2s_wav_enabled < 0) {
+        i2s_wav_enabled = getenv("AUDIOWAV") != NULL;
+    }
+    if (!i2s_wav_enabled) {
         return;
     }
     if (!i2s_wav) {
@@ -528,6 +534,15 @@ static void ipod_classic_i2s_drain(void *opaque)
     uint64_t before, moved;
     int64_t delay_ns;
     uint32_t rate;
+    static int timing_enabled = -1;
+    static int64_t timing_start, timing_work;
+    static uint64_t timing_bytes, timing_calls;
+    int64_t work_start = 0;
+
+    if (timing_enabled < 0) {
+        const char *e = getenv("IPOD_AUDIO_TIMING");
+        timing_enabled = e && *e && *e != '0';
+    }
 
     if (!s->tx_running || !s->dmac0) {
         return;
@@ -554,8 +569,29 @@ static void ipod_classic_i2s_drain(void *opaque)
     ipod_classic_hle_audio_fill_dma();
 
     before = s->tx_samples;
+    if (timing_enabled) {
+        work_start = qemu_clock_get_ns(QEMU_CLOCK_REALTIME);
+        if (!timing_start) {
+            timing_start = work_start;
+        }
+    }
     pl080_pace_request(s->dmac0, S5L8702_I2S_DMA_IIS0_TX);
     moved = s->tx_samples - before;   /* 16-bit samples this chunk */
+    if (timing_enabled) {
+        int64_t now = qemu_clock_get_ns(QEMU_CLOCK_REALTIME);
+        timing_work += now - work_start;
+        timing_bytes += moved * 2;
+        timing_calls++;
+        if (now - timing_start >= 5000000000LL) {
+            fprintf(stderr, "AUDIOTIMING wall_ns=%" PRId64
+                    " dma_work_ns=%" PRId64 " pcm_bytes=%" PRIu64
+                    " calls=%" PRIu64 "\n", now - timing_start,
+                    timing_work, timing_bytes, timing_calls);
+            timing_start = now;
+            timing_work = 0;
+            timing_bytes = timing_calls = 0;
+        }
+    }
 
     /* Advance the HLE PCM cursor by what the burst actually consumed. */
     ipod_classic_hle_audio_commit((uint32_t)moved);
@@ -577,7 +613,20 @@ static void ipod_classic_i2s_drain(void *opaque)
                 "(%u Hz) -> next tick in %" PRId64 " us\n",
                 moved, rate, delay_ns / 1000);
     }
-    s->next_tick_ns = qemu_clock_get_ns(QEMU_CLOCK_VIRTUAL) + delay_ns;
+    /* Keep the transmitter's sample-clock phase. Restarting the period at
+     * callback delivery time accumulates late-delivery latency on every DMA
+     * block. A genuinely empty channel or long suspension starts a new phase;
+     * never replay an unbounded backlog after a debugger stop or standby. */
+    int64_t tick_now = qemu_clock_get_ns(QEMU_CLOCK_VIRTUAL);
+    if (moved >= 2 && s->next_tick_ns > 0 &&
+        tick_now - s->next_tick_ns < 100000000) {
+        s->next_tick_ns += delay_ns;
+        if (s->next_tick_ns <= tick_now) {
+            s->next_tick_ns = tick_now + 1000;
+        }
+    } else {
+        s->next_tick_ns = tick_now + delay_ns;
+    }
     timer_mod(s->drain_timer, s->next_tick_ns);
 }
 
@@ -587,7 +636,8 @@ static void i2s_pace_arm(IPodClassicI2SState *s)
         return;
     }
     /* First tick soon; the drain callback then paces itself. */
-    timer_mod(s->drain_timer, qemu_clock_get_ns(QEMU_CLOCK_VIRTUAL) + 100000);
+    s->next_tick_ns = qemu_clock_get_ns(QEMU_CLOCK_VIRTUAL) + 100000;
+    timer_mod(s->drain_timer, s->next_tick_ns);
 }
 
 static void i2s_pace_disarm(IPodClassicI2SState *s)

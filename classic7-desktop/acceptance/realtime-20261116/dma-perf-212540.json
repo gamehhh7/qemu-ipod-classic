@@ -1,0 +1,15 @@
+{
+  "c7_dma_cached_blocks": 6255,
+  "c7_dma_cached_bytes": 25619456,
+  "c7_dma_request_ns": 5611532100,
+  "c7_dma_request_calls": 6266,
+  "c7_dma_compare_ns[0]": 0,
+  "c7_dma_compare_ns[1]": 443276100,
+  "c7_dma_compare_bytes[0]": 0,
+  "c7_dma_compare_bytes[1]": 2096128,
+  "c7_dma_compare_calls[0]": 0,
+  "c7_dma_compare_calls[1]": 512,
+  "c7_dma_compare_seen": 1024,
+  "decoded_frames": 2077,
+  "utc": "2026-11-16T13:25:40.811672+00:00"
+}
