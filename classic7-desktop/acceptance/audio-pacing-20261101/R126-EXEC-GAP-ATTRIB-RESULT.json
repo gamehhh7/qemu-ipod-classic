@@ -1,0 +1,328 @@
+{
+  "round": "R126",
+  "zone": "Asia/Shanghai",
+  "task": "attribute_unaccounted_exec_and_gap_wall",
+  "measured_at_hk": "2026-11-01T20:17:31.000+08:00",
+  "ended_at_hk": "2026-11-01T20:19:06.415+08:00",
+  "pids": {
+    "app": 21284,
+    "qemu": 14900
+  },
+  "run_dir": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261101T121538Z-21284",
+  "env": {
+    "CLASSIC7_ICOUNT_GAP": "1",
+    "CLASSIC7_ICOUNT_WARP_EFF": "1",
+    "CLASSIC7_ICOUNT_SHIFT": "3"
+  },
+  "sleep": "on",
+  "music_playing": true,
+  "pcm_Bps": 168153.09169369104,
+  "overall_rpm_95s": {
+    "wall_s": 95.10025559999849,
+    "virtual_s": 90.623801124,
+    "virtual_wall_ratio": 0.9529291015281082,
+    "bias_s": 90.0653893,
+    "bias_wall_ratio": 0.9470572789922285,
+    "exec_s_from_icount": 0.558411824,
+    "exec_wall_ratio": 0.005871822535879797,
+    "dicount": 69801478,
+    "pcm_Bps": 168153.09169369104,
+    "ring_min": 0,
+    "ring_max": 7392,
+    "music_playing": true
+  },
+  "gap_windows": {
+    "steady_idx_4_30": {
+      "n": 27,
+      "wall_s": 135.0159868,
+      "exec_share": 0.0461739535277018,
+      "warp_share": 0.9328753948713872,
+      "gap_share": 0.020950651600911013,
+      "exec_ns": 6234221900,
+      "gap_ns": 2828672900,
+      "warp_ns": 125953092000,
+      "ret_not_idle": 129027,
+      "ret_not_idle_per_s": 955.6423876761237,
+      "mean_exec_burst_ns": 48317.18865043751,
+      "avg_exec_pct": 4.074074074074074,
+      "avg_gap_pct": 1.8518518518518519
+    },
+    "measure_active_idx_20_30": {
+      "n": 11,
+      "wall_s": 55.006082,
+      "exec_share": 0.04581250124304436,
+      "warp_share": 0.9335200096600227,
+      "gap_share": 0.020667489096932955,
+      "exec_ns": 2519966200,
+      "gap_ns": 1136837600,
+      "warp_ns": 51349278200,
+      "ret_not_idle": 53046,
+      "ret_not_idle_per_s": 964.3660859175536,
+      "mean_exec_burst_ns": 47505.30105945783,
+      "avg_exec_pct": 4.0,
+      "avg_gap_pct": 1.8181818181818181
+    },
+    "measure_quiet_idx_32_40": {
+      "n": 9,
+      "wall_s": 45.017947,
+      "exec_share": 0.0017472364965910152,
+      "warp_share": 0.9841183406253511,
+      "gap_share": 0.014134422878057945,
+      "exec_ns": 78657000,
+      "gap_ns": 636302700,
+      "warp_ns": 44302987300,
+      "ret_not_idle": 456,
+      "ret_not_idle_per_s": 10.129293545971787,
+      "mean_exec_burst_ns": 172493.42105263157,
+      "avg_exec_pct": 0.0,
+      "avg_gap_pct": 1.0
+    },
+    "measure_all_idx_20_39": {
+      "n": 20,
+      "wall_s": 100.0192983,
+      "exec_share": 0.03119315725093424,
+      "warp_share": 0.9510122008124506,
+      "gap_share": 0.017794641936615146,
+      "exec_ns": 3119917700,
+      "gap_ns": 1779807600,
+      "warp_ns": 95119573000,
+      "ret_not_idle": 56503,
+      "ret_not_idle_per_s": 564.9209798545447,
+      "mean_exec_burst_ns": 55216.850432720385,
+      "avg_exec_pct": 2.7,
+      "avg_gap_pct": 1.45
+    }
+  },
+  "rpm_split": {
+    "active_t0_lt_55s": {
+      "wall_s": 47.69979999999999,
+      "virtual_s": 44.754896120000005,
+      "virtual_wall_ratio": 0.9382617143048821,
+      "bias_s": 44.38548560000001,
+      "bias_wall_ratio": 0.9305172264873233,
+      "exec_s_icount": 0.36941051999999996,
+      "exec_wall_ratio": 0.0077444878175589845,
+      "dicount": 46176315,
+      "mean_warp_frac": 0.811320754716981,
+      "n_buckets": 53
+    },
+    "quiet_t0_ge_60s": {
+      "wall_s": 29.393699999999995,
+      "virtual_s": 28.8843812,
+      "virtual_wall_ratio": 0.9826725182607159,
+      "bias_s": 28.8843812,
+      "bias_wall_ratio": 0.9826725182607159,
+      "exec_s_icount": 0.0,
+      "exec_wall_ratio": 0.0,
+      "dicount": 0,
+      "mean_warp_frac": 0.9506493506493507,
+      "n_buckets": 33
+    }
+  },
+  "attribution": {
+    "gap_exec_share_in_active_window": 0.04581250124304436,
+    "gap_gap_share_in_active_window": 0.020667489096932955,
+    "rpm_icount_wall_ratio_active": 0.0077444878175589845,
+    "rpm_virtual_wall_active": 0.9382617143048821,
+    "rpm_bias_wall_active": 0.9305172264873233,
+    "exec_bucket_icount_efficiency": 0.16904747847040588,
+    "interpretation": "GAP exec wall is time with !all_cpu_threads_idle(). RPM shows qemu_icount<<shift advances at only ~0.8% of wall during active music, while GAP exec is ~4.6% of wall => exec-bucket icount efficiency ~0.17. ret_not_idle ~964/s with mean burst ~47505ns implies brief wakeups (interrupt/audio/timer), not sustained guest compute. During quiet (exec_pct~0) icount freezes and V/W rises via bias-only warp."
+  },
+  "quiet_attribution": {
+    "gap_shares": {
+      "n": 9,
+      "wall_s": 45.017947,
+      "exec_share": 0.0017472364965910152,
+      "warp_share": 0.9841183406253511,
+      "gap_share": 0.014134422878057945,
+      "exec_ns": 78657000,
+      "gap_ns": 636302700,
+      "warp_ns": 44302987300,
+      "ret_not_idle": 456,
+      "ret_not_idle_per_s": 10.129293545971787,
+      "mean_exec_burst_ns": 172493.42105263157,
+      "avg_exec_pct": 0.0,
+      "avg_gap_pct": 1.0
+    },
+    "rpm": {
+      "wall_s": 29.393699999999995,
+      "virtual_s": 28.8843812,
+      "virtual_wall_ratio": 0.9826725182607159,
+      "bias_s": 28.8843812,
+      "bias_wall_ratio": 0.9826725182607159,
+      "exec_s_icount": 0.0,
+      "exec_wall_ratio": 0.0,
+      "dicount": 0,
+      "mean_warp_frac": 0.9506493506493507,
+      "n_buckets": 33
+    },
+    "note": "Quiet: GAP exec~0, gap~1.4%, warp~98%. RPM icount frozen (dicount~0); virtual advances via bias only. gap bucket still ~1% idle-without-warp with \u0394icount=0 and negligible bias (no warp_start)."
+  },
+  "wait_profile": {
+    "duration_s": 92.05528770000092,
+    "samples": 359,
+    "state_histogram_counts": {
+      "Waiting": 4861,
+      "Running": 34,
+      "Standby": 3
+    },
+    "wait_reason_histogram_when_Waiting": {
+      "UserRequest": 2490,
+      "WrQueue": 949,
+      "WrAlertByThreadId": 1422
+    },
+    "total_process_cpu_s": 10.203125,
+    "core_fraction": 0.11083692479731284,
+    "top_threads_by_cpu": [
+      {
+        "tid": 34144,
+        "cpu_s": 4.40625,
+        "ctx_delta": 85001,
+        "wait_reason_samples": {
+          "WrAlertByThreadId": 344,
+          "Executive": 14,
+          "UserRequest": 1
+        },
+        "state_samples": {
+          "Waiting": 344,
+          "Running": 15
+        }
+      },
+      {
+        "tid": 7204,
+        "cpu_s": 4.09375,
+        "ctx_delta": 143687,
+        "wait_reason_samples": {
+          "UserRequest": 357,
+          "WrAlertByThreadId": 2
+        },
+        "state_samples": {
+          "Waiting": 344,
+          "Running": 13,
+          "Standby": 2
+        }
+      },
+      {
+        "tid": 35688,
+        "cpu_s": 1.390625,
+        "ctx_delta": 99327,
+        "wait_reason_samples": {
+          "UserRequest": 359
+        },
+        "state_samples": {
+          "Waiting": 352,
+          "Running": 6,
+          "Standby": 1
+        }
+      },
+      {
+        "tid": 22356,
+        "cpu_s": 0.296875,
+        "ctx_delta": 9176,
+        "wait_reason_samples": {
+          "UserRequest": 359
+        },
+        "state_samples": {
+          "Waiting": 359
+        }
+      },
+      {
+        "tid": 36280,
+        "cpu_s": 0.015625,
+        "ctx_delta": 246,
+        "wait_reason_samples": {
+          "UserRequest": 359
+        },
+        "state_samples": {
+          "Waiting": 359
+        }
+      }
+    ],
+    "conclusion": "NOT host-CPU-bound (~0.11 core). Threads almost always Waiting (UserRequest/WrAlertByThreadId/WrQueue). Running samples rare. Matches brief wakeup storm, not sustained spin.",
+    "r123_compare": {
+      "r123_core_fraction": 0.144069,
+      "r123_wait_top": {
+        "UserRequest": 266,
+        "WrAlertByThreadId": 174
+      },
+      "r126_vs_r123": "Same pattern: Waiting-dominated, UserRequest+WrAlertByThreadId; low core fraction."
+    }
+  },
+  "hypotheses": {
+    "H-R126-EXEC-ICOUNT-ADVANCES": {
+      "status": "PARTIAL_WEAK",
+      "evidence": "During active music, GAP exec~4.4% wall but RPM icount<<shift only ~0.9% wall (efficiency~0.2). Some icount advance exists, but most exec-classified wall does not produce proportional virtual."
+    },
+    "H-R126-EXEC-FALSE-NOT-IDLE-OR-BRIEF-WAKE": {
+      "status": "SUPPORTED",
+      "evidence": "ret_not_idle~960/s, mean exec dwell~46us; host threads Waiting not Running; when wakeups stop (quiet) exec_pct->0 and V/W improves via warp. Points to interrupt/audio/timer brief wakeups mis-keeping !all_cpu_threads_idle rather than sustained guest work or host CPU spin."
+    },
+    "H-R126-GAP-DELTA-V-NEAR-ZERO": {
+      "status": "SUPPORTED",
+      "evidence": "GAP bucket is idle-without-warp by definition; quiet window still ~1.4% gap with icount frozen. Active window gap~2.1%. No bias/icount path while warp_start not recorded. Matches R125 reconcile (gap wall contributes ~0 virtual)."
+    }
+  },
+  "verdict": {
+    "exec_delta_v_over_delta_w": 0.0077444878175589845,
+    "exec_gap_bucket_share": 0.04581250124304436,
+    "gap_delta_v_over_delta_w": 0.0,
+    "gap_bucket_share_active": 0.020667489096932955,
+    "ret_not_idle_interpretation": "Counter of icount_start_warp_timer early-returns because !all_cpu_threads_idle(). ~960/s during active music with ~46us mean EXEC latch dwell => brief runnable pulses. Not proof of sustained guest compute; coincides with low host Running samples.",
+    "top_host_wait_cause": "Waiting/UserRequest + WrAlertByThreadId (alertable sleep/wait); secondary WrQueue. No evidence of CPU-bound spin. Likely QEMU timer/aio sleep + audio/iothread waits.",
+    "what_owns_4pct_exec": "Frequent brief !all_cpu_threads_idle pulses (likely audio I2S / guest timer / IRQ wakeups during decode), each too short for efficient TCG icount progress; wall charged to EXEC prevents warp arming. Not bias-underadvance; not host CPU shortage; not large true guest compute."
+  },
+  "next_knife": {
+    "goal": "bounded_hot_path_fix_no_default_sleep_change",
+    "proposal": "Identify the wakeup source behind ~960/s ret_not_idle during music (I2S IRQ rate, ptimer, bh schedule) and coalesce/defer so all_cpu_threads_idle stays true longer between real work \u2014 raising warp share from ~93% toward ~97%+ and cutting unaccounted exec wall. Optional: add a tiny existing-style probe counting why not-idle (cpu->halted vs queued work) if symbols allow. Do NOT chase bias-underadvance; do NOT flip sleep default.",
+    "success_metric": "steady GAP exec_pct < 1.5 with pcm_Bps>~160k and overall V/W >= 0.97 while sleep=on"
+  },
+  "artifacts": {
+    "rpm_raw": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r126-rpm-attrib-raw.json",
+    "rpm_summary": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r126-rpm-attrib-summary.json",
+    "wait_profile": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r126-wait-profile.json",
+    "gap_lines": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r126-gap-lines.txt",
+    "weff_lines": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r126-weff-lines.txt",
+    "addresses": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r126-addresses.txt",
+    "session": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\R126-EXEC-GAP-ATTRIB-SESSION.json"
+  },
+  "rollback": {
+    "rolled_back_at_hk": "2026-11-01T20:20:57.361+08:00",
+    "candidate_app_pid": 21284,
+    "candidate_qemu_pid": 14900,
+    "formal_app_pid": 32468,
+    "formal_qemu_pid": 35612,
+    "formal_qemu_cmd": "\"K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.exe\" -L \"K:\\CodexResources\\2026-09-30\\ipod-emulation\\qemu-fc1307\\src\\qemu-ipod-classic-1c33be87c7e97b56053142ae9d7f0686feaed504\\pc-bios\" -M iPod-Classic,serial-number=8K0090019ZS,model-number=MC293LL,firewire-guid=000A2700214DCAC1 -kernel \"K:\\CodexResources\\2026-10-08\\ipod-game-recovery\\candidate\\revb204-osos.recovered.payload.bin\" -accel tcg,thread=single -icount shift=3,align=off,sleep=on -display none -serial null -monitor none -audio dsound,id=classic7,out.frequency=44100,out.channels=2,out.format=s16 -qmp tcp:127.0.0.1:11672,server=on,wait=off -vnc 127.0.0.1:1 -global pcf50635.usb-connected=off -global s5l8702-usb-device-core.experimental-link-v0=on",
+    "formal_engine_sha256": "B55E89D6C4D33E8430F32D3A8D0F05FE8D20165C764D2AE6F00498528DB0549D",
+    "formal_bin_sha256": "DE2A8E1D6D9473A19ACC26D6070C7941F7CCB3E68563526B6F968F4AAFD6EEA6",
+    "audio_candidate_sha256": "5FA35167367C4E0CE57C6BF40BBB722BCC2931F92C94F67B26092F229D472E76",
+    "sleep_on": true,
+    "engine_is_formal": true,
+    "env_cleared": [
+      "CLASSIC7_ICOUNT_GAP",
+      "CLASSIC7_ICOUNT_WARP_EFF",
+      "CLASSIC7_ICOUNT_SLEEP"
+    ]
+  },
+  "finalized_at_hk": "2026-11-01T20:21:17.928708+08:00",
+  "formal_untouched": true,
+  "candidate_audio_sha256": "5FA35167367C4E0CE57C6BF40BBB722BCC2931F92C94F67B26092F229D472E76",
+  "method": {
+    "approach": "one-shot candidate relaunch with GAP=1 WARP_EFF=1; RPM 150ms x95s + host wait 250ms; correlate with gap/weff lines; rollback formal",
+    "side_exe": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r125-k2-warp-eff.exe",
+    "run_dir": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261101T121538Z-21284",
+    "cpu_halt_bits": "unavailable this turn (GDB first_cpu->halted failed); inferred via icount advance vs EXEC latch instead"
+  },
+  "report_numbers": {
+    "active_window": "gap idx 20..30 (~55s) overlapping RPM active t<55s",
+    "exec_deltaV_over_deltaW_proxy": 0.0077444878175589845,
+    "exec_wall_share_gap": 0.04581250124304436,
+    "exec_bucket_icount_efficiency": 0.16904747847040588,
+    "gap_deltaV_over_deltaW": 0.0,
+    "gap_wall_share_active": 0.020667489096932955,
+    "quiet_vw_bias_only": 0.9826725182607159,
+    "ret_not_idle_per_s_active": 964.3660859175536,
+    "mean_exec_burst_ns": 47505.30105945783,
+    "overall_rpm_vw_95s": 0.9529291015281082,
+    "pcm_Bps": 168153.09169369104
+  }
+}

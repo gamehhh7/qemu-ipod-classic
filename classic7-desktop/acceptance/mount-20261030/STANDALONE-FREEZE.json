@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-30T04:34:22.1201236Z",
+  "native_run_authorized": true,
+  "review": {
+    "seed_readonly": true,
+    "approved": true,
+    "no_raw_disk": true,
+    "no_guest_forcing": true,
+    "no_restore": true,
+    "firmware_unchanged": true
+  },
+  "single_writer": true,
+  "purpose": "Observe real firmware standalone mount and settings on existing canonical COW; no disk geometry writes",
+  "bound_seconds": 330,
+  "hashes": {
+    "engine\\qemu-system-arm-classic7.exe": "56CF87CBA7D13B03B3802E82CACBB33811EEBCFC326B8587558732B0867D21E4",
+    "storage\\persistent_store.py": "28C17A47B36F994F6BC6CB6BB40CF4E6D34E34AA8D7EB5C7FC3D94CF9B4915D6",
+    "bin\\iPodClassic7.exe": "58AE3E24B55288A068BF0C0033548A5CFCA122DFC2334A1A1824035F83FB0E77",
+    "storage\\backend_persistent.py": "59714F88790F6E5149E4531948BED19CA3574D05D8FEE2309476B81A47190ACF"
+  }
+}

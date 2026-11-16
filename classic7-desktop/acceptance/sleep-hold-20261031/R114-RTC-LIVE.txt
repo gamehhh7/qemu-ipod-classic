@@ -1,0 +1,25 @@
+[New Thread 7664.0x80c4 (id 2)]
+[New Thread 7664.0x2a8c (id 3)]
+[New Thread 7664.0x5614 (id 4)]
+[New Thread 7664.0x8ba0 (id 5)]
+[New Thread 7664.0x2174 (id 6)]
+[New Thread 7664.0x8230 (id 7)]
+[New Thread 7664.0x7564 (id 8)]
+[New Thread 7664.0x6860 (id 9)]
+[New Thread 7664.0x3460 (id 10)]
+[New Thread 7664.0x26c0 (id 11)]
+[New Thread 7664.0x5c78 (id 12)]
+[New Thread 7664.0x3300 (id 13)]
+[Switching to thread 1 (Thread 7664.0x1884)]
+0x00007ffb209c59c4 in ntdll!ZwWaitForAlertByThreadId () from C:/WINDOWS/SYSTEM32/ntdll.dll
+Breakpoint 1 at 0x7ff70307d810: file K:/CodexResources/2026-10-28/ipod-classic7-desktop/src/usb/pmu_rtc.inc, line 11.
+[Thread 7664.0x3300 (id 13) exited]
+RTC_NATIVE
+$1 = true
+$2 = 1793403976
+$3 = 1793403976560464000
+$4 = -1
+0x47e1ffa0:	0xff	0xff	0xff	0xff	0xff	0xff	0xff
+0x47e1ff40:	0x00	0x00	0x80	0x00	0x00	0x00	0x00	0xb0
+0x47e1ff48:	0x00	0xfe	0xfc	0xff
+[Inferior 1 (process 7664) detached]

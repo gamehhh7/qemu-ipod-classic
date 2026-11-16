@@ -1,0 +1,93 @@
+{
+  "measured_at_hk": "2026-11-01T19:44:26.076+08:00",
+  "mode": "k1_gap_instrumentation",
+  "hypothesis": "H-R123-ICOUNT-NONIDLE-GAP",
+  "question": "Does wall idle-without-warp (gap_pct) account for the ~5.8% virtual shortfall?",
+  "pids": {
+    "app": 26784,
+    "qemu": 36352
+  },
+  "run_dir": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261101T113615Z-26784",
+  "engine": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.audio.exe",
+  "engine_sha256": "39BBB55BC1E9FACD21E5213FB8E60E1E666C740C0AF0E04C0EA72A56ECF1FA93",
+  "argv_icount": "shift=3,align=off,sleep=on",
+  "env": {
+    "CLASSIC7_ICOUNT_GAP": "1",
+    "CLASSIC7_ICOUNT_SHIFT": "3",
+    "CLASSIC7_ICOUNT_SLEEP": null
+  },
+  "gap_lines_total": 34,
+  "gap_lines_steady_count": 32,
+  "gap_averages_all": {
+    "exec_pct": 5.706,
+    "warp_pct": 91.235,
+    "gap_pct": 1.382,
+    "exec_ns": 319126723.529,
+    "warp_ns": 4586340791.176,
+    "gap_ns": 95068200.0
+  },
+  "gap_averages_steady_exec_pct_lt_20": {
+    "exec_pct": 3.531,
+    "warp_pct": 93.5,
+    "gap_pct": 1.312,
+    "exec_ns": 209553031.25,
+    "warp_ns": 4699231093.75,
+    "gap_ns": 91784996.875
+  },
+  "gap_sample_lines_last8": [
+    "classic7-icount-gap: wall_ns=5001076200 exec_ns=212670000 warp_ns=4697056900 gap_ns=91349300 stopped_ns=0 exec_pct=4 warp_pct=93 gap_pct=1 ret_not_idle=4933 ret_no_deadline=0 sleep_off=0 shift=3 sleep=1",
+    "classic7-icount-gap: wall_ns=5000657800 exec_ns=188702900 warp_ns=4720473100 gap_ns=91481800 stopped_ns=0 exec_pct=3 warp_pct=94 gap_pct=1 ret_not_idle=4656 ret_no_deadline=0 sleep_off=0 shift=3 sleep=1",
+    "classic7-icount-gap: wall_ns=5000776700 exec_ns=188300400 warp_ns=4721759300 gap_ns=90717000 stopped_ns=0 exec_pct=3 warp_pct=94 gap_pct=1 ret_not_idle=4677 ret_no_deadline=0 sleep_off=0 shift=3 sleep=1",
+    "classic7-icount-gap: wall_ns=5000551100 exec_ns=186794100 warp_ns=4722841700 gap_ns=90915300 stopped_ns=0 exec_pct=3 warp_pct=94 gap_pct=1 ret_not_idle=4711 ret_no_deadline=0 sleep_off=0 shift=3 sleep=1",
+    "classic7-icount-gap: wall_ns=5000673600 exec_ns=188172400 warp_ns=4722764900 gap_ns=89736300 stopped_ns=0 exec_pct=3 warp_pct=94 gap_pct=1 ret_not_idle=4674 ret_no_deadline=0 sleep_off=0 shift=3 sleep=1",
+    "classic7-icount-gap: wall_ns=5000728100 exec_ns=381954500 warp_ns=4551514000 gap_ns=67259600 stopped_ns=0 exec_pct=7 warp_pct=91 gap_pct=1 ret_not_idle=1068 ret_no_deadline=0 sleep_off=0 shift=3 sleep=1",
+    "classic7-icount-gap: wall_ns=5001078500 exec_ns=8757000 warp_ns=4923285600 gap_ns=69035900 stopped_ns=0 exec_pct=0 warp_pct=98 gap_pct=1 ret_not_idle=56 ret_no_deadline=0 sleep_off=0 shift=3 sleep=1",
+    "classic7-icount-gap: wall_ns=5003020000 exec_ns=8871500 warp_ns=4924574200 gap_ns=69574300 stopped_ns=0 exec_pct=0 warp_pct=98 gap_pct=1 ret_not_idle=46 ret_no_deadline=0 sleep_off=0 shift=3 sleep=1"
+  ],
+  "live_60s": {
+    "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r123-k1-gap-live-60s.json",
+    "virtual_wall_ratio": 0.9536840834561574,
+    "pcm_Bps": 168309.02188777004,
+    "drain_Bps": 168331.58667595568,
+    "wall_s": 60.0049949000022,
+    "virtual_s": 57.225808564,
+    "ring_min": 0,
+    "ring_max": 4096
+  },
+  "baseline_compare": {
+    "virtual_wall_ratio_baseline": "0.941-0.942",
+    "pcm_Bps_baseline": "~166000",
+    "residual_shortfall_pct": 5.8,
+    "observed_gap_pct_steady": 1.312
+  },
+  "ui_frozen": false,
+  "music_playing": true,
+  "verdict": {
+    "H_R123_gap_accounts_for_residual": false,
+    "reason": "Steady-state gap_pct averages ~1.3% (all-samples ~1.4%), far below the ~5.8% virtual shortfall. Most wall time is charged to warp (~93.5% steady) with exec ~3.5%. Gap (idle-without-warp) does NOT explain the residual.",
+    "next_knife": "Look beyond gap bucket: warp accounting quality / bias path / non-idle exec efficiency; gap instrumentation can stay opt-in for future contrasts."
+  },
+  "formal_hashes_untouched": {
+    "bin_iPodClassic7_exe": "DE2A8E1D6D9473A19ACC26D6070C7941F7CCB3E68563526B6F968F4AAFD6EEA6",
+    "engine_formal": "B55E89D6C4D33E8430F32D3A8D0F05FE8D20165C764D2AE6F00498528DB0549D",
+    "expect_bin": "DE2A8E1D6D9473A19ACC26D6070C7941F7CCB3E68563526B6F968F4AAFD6EEA6",
+    "expect_engine": "B55E89D6C4D33E8430F32D3A8D0F05FE8D20165C764D2AE6F00498528DB0549D",
+    "note": "Confirmed at build time in R123-K1-BUILD.json; formal binaries not overwritten this session."
+  },
+  "rollback": {
+    "formal_app_pid": 16072,
+    "formal_qemu_pid": 33740,
+    "formal_qemu_cmd_icount": "-icount shift=3,align=off,sleep=on",
+    "engine_path_is_formal": true,
+    "CLASSIC7_ICOUNT_GAP_unset": true,
+    "sleep": "on"
+  },
+  "artifacts": {
+    "build": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\R123-K1-BUILD.json",
+    "gap_lines": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r123-k1-gap-lines.txt",
+    "addresses": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r123-k1-gap-addresses.txt",
+    "live": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\r123-k1-gap-live-60s.json",
+    "session": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\R123-K1-GAP-SESSION.json",
+    "result": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\acceptance\\audio-pacing-20261101\\R123-K1-GAP-RESULT.json"
+  }
+}

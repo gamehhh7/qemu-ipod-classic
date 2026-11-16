@@ -1,0 +1,11 @@
+Breakpoint 1 at 0x7ff65b55bf10: file ../src/qemu-ipod-classic-1c33be87c7e97b56053142ae9d7f0686feaed504/hw/arm/ipod_classic/ipod_classic_sysalv.c, line 68.
+[Thread 1280.0x554 (id 10) exited]
+[Switching to thread 5 (Thread 1280.0x2d40)]
+EIC6_WRITE value=0 guestpc=80d8fa4 lr=80d8ef0 r0=89cd9bc r1=39a00000 r2=0 r3=38e01000
+
+Thread 1 stopped.
+[Switching to thread 1 (Thread 1280.0xd2c)]
+0x00007ffb209c28a4 in ntdll!ZwWaitForMultipleObjects ()
+   from C:/WINDOWS/SYSTEM32/ntdll.dll
+Detaching from program: K:/CodexResources/2026-10-28/ipod-classic7-desktop/engine/qemu-system-arm-classic7.exe, process 1280
+[Inferior 1 (process 1280) detached]

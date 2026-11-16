@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-29T19:57:24.054214+00:00",
+  "purpose": "actual finished main app after measured COUNT bottleneck repair, capture true IDENTIFY and final guest LCD",
+  "bound_seconds": 330,
+  "one_attempt": true,
+  "previous_measured": {
+    "commands": 16,
+    "total_profiled_s": 2.3643713,
+    "SQL_count_s": 2.1223959
+  },
+  "files": {
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.exe": "58ae3e24b55288a068bf0c0033548a5cfca122dfc2334a1a1824035f83fb0e77",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.exe": "56cf87cba7d13b03b3802e82cacbb33811eebcfc326b8587558732b0867d21e4",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\storage\\backend_persistent.py": "59714f88790f6e5149e4531948bed19ca3574d05d8fee2309476b81a47190acf",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\storage\\persistent_store.py": "28c17a47b36f994f6bc6cb6bb40cf4e6d34e34aa8d7eb5c7fc3d94cf9b4915d6"
+  },
+  "review": {
+    "approved": true,
+    "native_run_authorized": true,
+    "no_behavior_shortcut": true,
+    "count_is_exact_in_transaction": true,
+    "rollback_restores_count": true,
+    "seed_rb": true,
+    "normal_user_mode_no_autoexit": true
+  }
+}

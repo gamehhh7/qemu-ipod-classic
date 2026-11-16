@@ -1,0 +1,261 @@
+{
+  "files": [
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-atomic-candidate.exe",
+      "bytes": 64512,
+      "sha256": "34abc966fe6df752445395ff18517027503d4565d4eb473ee0254b9676258900"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-bounded-journal-candidate.exe",
+      "bytes": 66048,
+      "sha256": "df9a7da88f4f6f0a19755d90a3d84dce4b51078db00c4b514fb9e3c64d9436df"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-bulk-candidate.exe",
+      "bytes": 64512,
+      "sha256": "dad086f6f7b9908cc2be6ad701aba50396a5c1a94f27c83592c2b9d7e5a7266a"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-bulk-disable-candidate.exe",
+      "bytes": 65024,
+      "sha256": "b390c1cfd8a9eed35fd152482d15d3fb4e0974b4c8e6646c80a276a47aab663d"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-bulk-mc1-candidate.exe",
+      "bytes": 64512,
+      "sha256": "d43b848ac4fe92d6c278d6ce266d57b9858c2e8e952b181c72f7db84e6f35895"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-bulk-ready-candidate.exe",
+      "bytes": 64512,
+      "sha256": "193d2bfa60b752f1c5e2990b9a56f9a591109912946d959b2c4f5222a67aa207"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-bulk-sense-candidate.exe",
+      "bytes": 64512,
+      "sha256": "c56eb79d33530e286d74ca826bc13510fe7baf231924f44f85402c18f96d86f2"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-bulk-timed-candidate.exe",
+      "bytes": 64512,
+      "sha256": "bc640ff2d3e815a6151ca4ee9f3cb1364b798de5fc947960fdbf189dbd4fff41"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-control-drain-candidate.exe",
+      "bytes": 64512,
+      "sha256": "b01f839f13752afa66a8575d44e5f884b46faac2b5a60c34d5ed421e4256750a"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-debounced-eject-candidate.exe",
+      "bytes": 65024,
+      "sha256": "4e85b15f7eea7d101fef33e99a2a3f5a0baf2a2a39b7c550b3e2964f0b1d142a"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-descriptors-candidate.exe",
+      "bytes": 65024,
+      "sha256": "e305b1d50417d9471b5f031c74b3225136a9e59db5d67436461c8e3702a46cb3"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-display-candidate.exe",
+      "bytes": 52736,
+      "sha256": "8c886c93091bc0f02519250f32cb56b0ac1f2265f2c75104be1394a5240f129f"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-driver-binding-candidate.exe",
+      "bytes": 65536,
+      "sha256": "52c1aedeef6af87c4c36d0a51f2d000b16abf411d7d8d4e66c704eda8d0af245"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-eject-probe-candidate.exe",
+      "bytes": 64512,
+      "sha256": "4ed343a7a759ae22d34f3c814226ecbb07c3b16c58c574c3a7a37c75a8023601"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-ep0-cause-candidate.exe",
+      "bytes": 65024,
+      "sha256": "93347bec30f2747a0a895246285e4399a065e6adc8a20540b049d1d1b7b7f9be"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-host-arbitration-candidate.exe",
+      "bytes": 66048,
+      "sha256": "17070f18f4a7deb8b4a69b39b0f10c204c57894e9b8485384a02980c8b85fce8"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-host-cadence-candidate.exe",
+      "bytes": 65536,
+      "sha256": "05750f966c6ba80797e4cce79cd2bb42c472bdbf26becceda4f4b2fd2900eded"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-i2c-journal-candidate.exe",
+      "bytes": 65536,
+      "sha256": "488c34278c4761aab94b05f6f857e6f7913280f6d33b782fe02e32d891c9ce5d"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-initialized-eject-candidate.exe",
+      "bytes": 65536,
+      "sha256": "9831da96dfb3a26e94c3dabb815dba7c611336893914aa471bf9015ff25ea4fc"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-instruction-clock-candidate.exe",
+      "bytes": 66048,
+      "sha256": "56f7944596b2ff082fbbd6e24841ce438642f8b397e9754c1e7edbb34bd6bc29"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-packet-drain-candidate.exe",
+      "bytes": 64512,
+      "sha256": "54a573e2bf3fd22407c405361a126ef94fe1e0742f58f3e6614ca63e8a9f219d"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-persistent-candidate.exe",
+      "bytes": 57344,
+      "sha256": "cbd947c4914db6f5e9ec06e2ad488896523e21a2792e1970bee582cc276dd73c"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-raw-export-candidate.exe",
+      "bytes": 65024,
+      "sha256": "5197c9875ed4491834f6ede6fadaaf484f3f30d2f19e421a59c9789021e81a05"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-rfb-after.exe",
+      "bytes": 65024,
+      "sha256": "1d26d5a56fc3ea23644ddacab3e0c058dfc49d806c0720166809764175dee5fa"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-rfb-before.exe",
+      "bytes": 44544,
+      "sha256": "baabd7b1b349628267ff89f556a701b4fc8cf82fe3db710ea5f53c1246980f90"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-root-port-candidate.exe",
+      "bytes": 64512,
+      "sha256": "54ec7cadf04ff0b0d3bcdcb48b4bb53985bf0c7320d7b447b8586894d5c72465"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-rx-journal-candidate.exe",
+      "bytes": 65024,
+      "sha256": "7e6c65e634cfe40a67ae552a8cc1c8d0fb6a9825f5ffdd0f44a06c4419d1e44b"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-scope-errors-candidate.exe",
+      "bytes": 65536,
+      "sha256": "ff17758b1951a42e1fac000f499ed4048c7dc5519d9f6edc0198f1ef63cfcdc9"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-setup-causality-candidate.exe",
+      "bytes": 65536,
+      "sha256": "f09630f1e40435c785bb7fcfe3d732c659c4f5926f4c09f8dda681f4b61e1852"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-usb-candidate.exe",
+      "bytes": 55296,
+      "sha256": "a600fe6ac3b0431c682cd554218e6031cfb85d8690e2e89695a12b387659d6f7"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-v2-candidate.exe",
+      "bytes": 63488,
+      "sha256": "379df35a1b9532bcac480ef699351e82ff31b8f1e8331b077d915f73b641aae5"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-windows-candidate.exe",
+      "bytes": 65024,
+      "sha256": "78a25bb088b63c1bf734a5dd7b0b340eae6dd729a89de26b1ac005533023adb3"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-write-flush-candidate.exe",
+      "bytes": 64512,
+      "sha256": "aa159c787372f898ef004b79095873dc59c3bbcccdd8d1af634b0e201128174b"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7-write-probe-candidate.exe",
+      "bytes": 64512,
+      "sha256": "fac0727a37be3c8e0e23d6e6d2668b56c1a32decd5d7a8a91e906e8b53ae68da"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7-v2.exe",
+      "bytes": 96996948,
+      "sha256": "e90870eeb084d216a5a089dcc2c87a6e892d56de8c2c231e4af6ebae40084d62"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-29\\ipod-usb-native-bounded-journal\\build\\qemu-system-arm-native-bulk.exe",
+      "bytes": 97091590,
+      "sha256": "a6661a68cd10b3d0064dbb05aa0cb66d98a374e88263863eb29e48f7020f6833"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-29\\ipod-usb-native-driver-binding\\build\\qemu-system-arm-native-bulk.exe",
+      "bytes": 97091590,
+      "sha256": "a6661a68cd10b3d0064dbb05aa0cb66d98a374e88263863eb29e48f7020f6833"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-29\\ipod-usb-native-host-arbitration\\build\\qemu-system-arm-native-bulk.exe",
+      "bytes": 97091590,
+      "sha256": "a6661a68cd10b3d0064dbb05aa0cb66d98a374e88263863eb29e48f7020f6833"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-29\\ipod-usb-native-host-cadence\\build\\qemu-system-arm-native-bulk.exe",
+      "bytes": 97091590,
+      "sha256": "a6661a68cd10b3d0064dbb05aa0cb66d98a374e88263863eb29e48f7020f6833"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-29\\ipod-usb-native-i2c-journal\\build\\qemu-system-arm-native-bulk.exe",
+      "bytes": 97091590,
+      "sha256": "a6661a68cd10b3d0064dbb05aa0cb66d98a374e88263863eb29e48f7020f6833"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-29\\ipod-usb-native-instruction-clock\\build\\qemu-system-arm-native-bulk.exe",
+      "bytes": 97091590,
+      "sha256": "a6661a68cd10b3d0064dbb05aa0cb66d98a374e88263863eb29e48f7020f6833"
+    },
+    {
+      "state": "recycled",
+      "path": "K:\\CodexResources\\2026-10-29\\ipod-usb-native-scope-errors\\build\\qemu-system-arm-native-bulk.exe",
+      "bytes": 97091590,
+      "sha256": "a6661a68cd10b3d0064dbb05aa0cb66d98a374e88263863eb29e48f7020f6833"
+    }
+  ],
+  "kept_engine": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.exe",
+  "user_empty_recycle_bin": true,
+  "recycle_only": true,
+  "kept_engine_sha256": "A6661A68CD10B3D0064DBB05AA0CB66D98A374E88263863EB29E48F7020F6833",
+  "utc": "2026-10-29T10:37:39.7982404Z"
+}

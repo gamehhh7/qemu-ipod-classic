@@ -1,0 +1,39 @@
+﻿{
+    "size":  8554291200,
+    "file_IO_success":  true,
+    "file":  {
+                 "path":  "E:\\Codex-iPod-391137d3581c4ec88f2600098e605401.txt",
+                 "sha256":  "4f95a099425200bac488ff9bd25c66b777452c4076c02744930acc18c9afe3e4",
+                 "flushed":  true,
+                 "reconnected_persistence_verified":  true,
+                 "length":  3968
+             },
+    "partitions":  [
+                       {
+                           "offset":  0,
+                           "drive_letter":  "E",
+                           "volumes":  [
+                                           {
+                                               "DriveLetter":  "E",
+                                               "FileSystem":  "FAT32",
+                                               "FileSystemLabel":  "VIRTUALIPOD",
+                                               "HealthStatus":  "Healthy",
+                                               "Size":  8587706368,
+                                               "SizeRemaining":  8587542528
+                                           }
+                                       ],
+                           "size":  8589934592
+                       }
+                   ],
+    "bytes_per_sector":  4096,
+    "virtual_parent_chain":  [
+                                 "USBSTOR\\DISK\u0026VEN_APPLE\u0026PROD_IPOD\u0026REV_1.62\\0000000000000000\u00260",
+                                 "USB\\VID_05AC\u0026PID_1261\\0000000000000000",
+                                 "USB\\ROOT_HUB30\\1\u00262B53A856\u00260\u00260",
+                                 "ROOT\\USB\\0000",
+                                 "HTREE\\ROOT\\0"
+                             ],
+    "pnp":  "USBSTOR\\DISK\u0026VEN_APPLE\u0026PROD_IPOD\u0026REV_1.62\\0000000000000000\u00260",
+    "format_performed":  false,
+    "disk_number":  5
+}

@@ -1,0 +1,33 @@
+/* Emulated -kernel warm-boot handoff, not Apple ROM or a kernel patch.
+ * ARM code validates the guest-written hibernation descriptor, then branches
+ * to its supplied restore entry. No host continuation-PC/register edits. */
+static const uint32_t classic7_warm_boot[] = {
+    0xe59f0058,
+    0xe5901000,
+    0xe59f2054,
+    0xe1510002,
+    0x1a000010,
+    0xe5901004,
+    0xe3510001,
+    0x1a00000d,
+    0xe5901008,
+    0xe3510001,
+    0x1a00000a,
+    0xe5901010,
+    0xe3110003,
+    0x1a000007,
+    0xe1510000,
+    0x3a000005,
+    0xe59f2020,
+    0xe1510002,
+    0x2a000002,
+    0xe59fd018,
+    0xe3a00000,
+    0xe12fff11,
+    0xee070f90,
+    0xeafffffd,
+    0x08000000,
+    0x68696265,
+    0x0c000000,
+    0x22020000,
+};

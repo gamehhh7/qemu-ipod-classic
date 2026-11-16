@@ -1,0 +1,28 @@
+[New Thread 1280.0x8b9c (id 2)]
+[New Thread 1280.0x2b2c (id 3)]
+[New Thread 1280.0x6660 (id 4)]
+[New Thread 1280.0x3860 (id 5)]
+[New Thread 1280.0x3a54 (id 6)]
+[New Thread 1280.0xf2c (id 7)]
+[New Thread 1280.0x2d40 (id 8)]
+[New Thread 1280.0x7c0 (id 9)]
+[New Thread 1280.0x3500 (id 10)]
+[New Thread 1280.0x189c (id 11)]
+[New Thread 1280.0x6dec (id 12)]
+[New Thread 1280.0x7e28 (id 13)]
+[New Thread 1280.0x8994 (id 14)]
+[New Thread 1280.0x256c (id 15)]
+[New Thread 1280.0x7e04 (id 16)]
+[Switching to thread 1 (Thread 1280.0xd2c)]
+0x00007ffb209c28a4 in ntdll!ZwWaitForMultipleObjects () from C:/WINDOWS/SYSTEM32/ntdll.dll
+SYSINFO_BOOT_COPY
+0x445b1db0:	0x00000000	0x00000000	0x04000000	0x08000000
+0x445b1dc0:	0x00040000	0x00000000	0x00000000	0x00000000
+0x445b1dd0:	0x00000000	0x00000000	0x00000000	0x00000000
+SYSINFO_CACHE
+0x4456aaac:	0x000000ff	0x00000000	0x00130200	0xffffffff
+SYSINFO_HANDOFF
+0x102feb8:	0x00000000	0x00000000	0x04000000	0x08000000
+0x102fec8:	0x00040000	0x00000000	0x00000000	0x00000000
+0x102fed8:	0x00000000	0x00000000	0x00000000	0x00000000
+[Inferior 1 (process 1280) detached]

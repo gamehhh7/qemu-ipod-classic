@@ -1,0 +1,9 @@
+{
+  "pid": 24384,
+  "utc": "2026-11-16T12:41:28.685483+00:00",
+  "method": "read-only native current compressed framebuf; no suspension or guest write",
+  "header_hex": "fffb9264",
+  "mpeg_version_bits": 3,
+  "sample_rate_hz": 44100,
+  "scope": "current frame only; not all imported tracks"
+}

@@ -1,0 +1,19 @@
+[New Thread 1824.0x9048 (id 2)]
+[New Thread 1824.0x3628 (id 3)]
+[New Thread 1824.0x3404 (id 4)]
+[New Thread 1824.0x9288 (id 5)]
+[New Thread 1824.0x92a4 (id 6)]
+[New Thread 1824.0x93c4 (id 7)]
+[New Thread 1824.0x6100 (id 8)]
+[New Thread 1824.0x21c0 (id 9)]
+[New Thread 1824.0x6db8 (id 10)]
+[New Thread 1824.0x1c68 (id 11)]
+[New Thread 1824.0x553c (id 12)]
+[New Thread 1824.0x7650 (id 13)]
+[New Thread 1824.0x7010 (id 14)]
+[Switching to thread 1 (Thread 1824.0x4ecc)]
+0x00007ffb209c28a4 in ntdll!ZwWaitForMultipleObjects () from C:/WINDOWS/SYSTEM32/ntdll.dll
+$1 = 221684313443
+$2 = 18061312
+$3 = {cpu_ticks_prev = 0, cpu_ticks_offset = -531351784968875, vm_clock_seqlock = {sequence = 3667888}, vm_clock_lock = {value = 0}, cpu_ticks_enabled = 1, icount_time_shift = 3, last_delta = 0, qemu_icount_bias = 196965680800, vm_clock_warp_start = 297750506300, cpu_clock_offset = -177105274856400, qemu_icount = 3088780253, icount_rt_timer = 0x0, icount_vm_timer = 0x0, icount_warp_timer = 0x34d5040}
+[Inferior 1 (process 1824) detached]

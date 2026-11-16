@@ -1,0 +1,128 @@
+{
+  "method": "Existing actual decode-completion and guest-ack logs; successful frames1152stereo",
+  "periods": [
+    {
+      "frames": 500,
+      "virtual_s": 13.6956148,
+      "decode_pcm_Bps": 168229.03050690357
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7515068,
+      "decode_pcm_Bps": 167545.27583842666
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7882262,
+      "decode_pcm_Bps": 167099.08632047244
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7203216,
+      "decode_pcm_Bps": 167926.09292773428
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7298976,
+      "decode_pcm_Bps": 167808.9718600669
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7900651,
+      "decode_pcm_Bps": 167076.80372009266
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7213217,
+      "decode_pcm_Bps": 167913.85337172
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7489167,
+      "decode_pcm_Bps": 167576.83898106677
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7175247,
+      "decode_pcm_Bps": 167960.33179367994
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7884118,
+      "decode_pcm_Bps": 167096.83707009678
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7364108,
+      "decode_pcm_Bps": 167729.40424874306
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7786332,
+      "decode_pcm_Bps": 167215.4245313679
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7040685,
+      "decode_pcm_Bps": 168125.25419002393
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.6910589,
+      "decode_pcm_Bps": 168285.01117616257
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.6158873,
+      "decode_pcm_Bps": 169214.09154143042
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.6334513,
+      "decode_pcm_Bps": 168996.09272085052
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7059468,
+      "decode_pcm_Bps": 168102.21385070603
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7307966,
+      "decode_pcm_Bps": 167797.98485981504
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7229562,
+      "decode_pcm_Bps": 167893.85365814983
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7751849,
+      "decode_pcm_Bps": 167257.28305832035
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7018726,
+      "decode_pcm_Bps": 168152.1984082672
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.6684561,
+      "decode_pcm_Bps": 168563.29516250192
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7319603,
+      "decode_pcm_Bps": 167783.76500258307
+    },
+    {
+      "frames": 500,
+      "virtual_s": 13.7310737,
+      "decode_pcm_Bps": 167794.59861176042
+    }
+  ],
+  "median_decode_pcm_Bps": 167851.41275910835,
+  "i2s_nominal_Bps": 176468,
+  "interpretation": "Decode completion rate below I2S drain despite virtual/wall1.0; output-ring byte rate alone is insufficient."
+}

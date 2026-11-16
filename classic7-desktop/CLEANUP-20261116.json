@@ -1,0 +1,317 @@
+{
+  "completed_utc": "2026-11-16T13:46:42.2031753Z",
+  "status": "COMPLETE",
+  "removed_files": 43,
+  "removed_file_bytes": 1654788536,
+  "archive_bytes": 35791354,
+  "net_file_bytes_after_archive": 1618997182,
+  "note": "Logical file bytes, not a filesystem free-space measurement. No runtime/source/evidence/userdata/seed/build dependency removed.",
+  "rollback_archives": [
+    "backup/previous-release.zip",
+    "backup/checkpoint-r140-20261116.zip"
+  ],
+  "formal_runtime_preserved": true,
+  "files": [
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r123-k1-gap.exe",
+      "relative": "bin/iPodClassic7.r123-k1-gap.exe",
+      "bytes": 69120,
+      "sha256": "70e04f43476b066e41e2c7b6f1c3817c8c3a1065db5939cb933993e13efad054",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r123-sleep-off.exe",
+      "relative": "bin/iPodClassic7.r123-sleep-off.exe",
+      "bytes": 69632,
+      "sha256": "09648b22f673fed5c9ac40fdd8d0e3b1eb8ba1a043b04ac98a713e8f43989b7a",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r125-k2-warp-eff.exe",
+      "relative": "bin/iPodClassic7.r125-k2-warp-eff.exe",
+      "bytes": 69632,
+      "sha256": "3b44966fef9893ebe8f5c894674d545b1ea20f5721569ecd9b1cbdda2c1233b4",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r127-audio-ab.exe",
+      "relative": "bin/iPodClassic7.r127-audio-ab.exe",
+      "bytes": 69632,
+      "sha256": "3b83a541e63ad555b39bf50b4a7c1dc18ba6286dcb96d7def1107f5fbaaa1651",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r128-ab.exe",
+      "relative": "bin/iPodClassic7.r128-ab.exe",
+      "bytes": 73728,
+      "sha256": "1ad9e22c4eb47eecbe07b420feabfd033627645b19adb8bac7bfdd832dd3f3c6",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r129.exe",
+      "relative": "bin/iPodClassic7.r129.exe",
+      "bytes": 73728,
+      "sha256": "201def63e66e738c04548292fb3633d92a415b146f11b458e6fda594c1d4aea1",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r130.exe",
+      "relative": "bin/iPodClassic7.r130.exe",
+      "bytes": 73728,
+      "sha256": "6720edc1d147ef620464a24a28f5db897191793085c360ca03e36e3f790ca4d5",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r130b.exe",
+      "relative": "bin/iPodClassic7.r130b.exe",
+      "bytes": 73728,
+      "sha256": "8f5dacef36ce7ac1f58ece9fad663db9adb50c7659268dee35f1efd8201530c8",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r131.exe",
+      "relative": "bin/iPodClassic7.r131.exe",
+      "bytes": 73728,
+      "sha256": "e857ada8082d89e88cf0eab5c6bb871cc2c8515d68c081317593cbece4604b66",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r132.exe",
+      "relative": "bin/iPodClassic7.r132.exe",
+      "bytes": 73728,
+      "sha256": "00460d573260a8c8cdfe93272da372367c277908b653ed07c502f207c8dda040",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r133.exe",
+      "relative": "bin/iPodClassic7.r133.exe",
+      "bytes": 69120,
+      "sha256": "32563df35637aaddce16e3758812810206bf3b3b10f688f5d6c0d1651e83c623",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r133b.exe",
+      "relative": "bin/iPodClassic7.r133b.exe",
+      "bytes": 69120,
+      "sha256": "57245851f3d8d662640d86252c36fe44f052a13cda36cd3ab546a2da1763b182",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r134.exe",
+      "relative": "bin/iPodClassic7.r134.exe",
+      "bytes": 69120,
+      "sha256": "52734e485108360351f2bd26a4f2f4f8663e7adaf8f67490693e4007c8500320",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r135.exe",
+      "relative": "bin/iPodClassic7.r135.exe",
+      "bytes": 69120,
+      "sha256": "328221ec05bac730339852a9fa3d3249e67f398a94150e1d075a5cb8d625bdbc",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r136.exe",
+      "relative": "bin/iPodClassic7.r136.exe",
+      "bytes": 69120,
+      "sha256": "dc5e9a8161200805583ca2d275ca10c8d7229aa8cf0eddfff979a5daa8cdd60e",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r137.exe",
+      "relative": "bin/iPodClassic7.r137.exe",
+      "bytes": 69120,
+      "sha256": "d9a40a77d828ad8e0aeb2c74f8f92a87bf37bb3d8699c006c414c373f0c75b62",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r138.exe",
+      "relative": "bin/iPodClassic7.r138.exe",
+      "bytes": 69120,
+      "sha256": "0f313a690cc6d8d33f48aeffcd96aefc293aeb392a13467176be99cf04478760",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r139.exe",
+      "relative": "bin/iPodClassic7.r139.exe",
+      "bytes": 69120,
+      "sha256": "9aeea5cfcf2a884ff32f2a534c97f59f39bac5bda2d0774acb8f65e7523dbea4",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.r140.exe",
+      "relative": "bin/iPodClassic7.r140.exe",
+      "bytes": 69120,
+      "sha256": "e54b067210df8e0bf217160603dade670902dd9f13d1141e25a4901e09722b9c",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.realtime-test.exe",
+      "relative": "bin/iPodClassic7.realtime-test.exe",
+      "bytes": 69120,
+      "sha256": "de2a8e1d6d9473a19acc26d6070c7941f7ccb3e68563526b6f968f4aafd6eea6",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\development-builds\\iPodClassic7-preview.exe",
+      "relative": "development-builds/iPodClassic7-preview.exe",
+      "bytes": 43008,
+      "sha256": "e262f54125b2bd2e55465226e083d24a95feb60ee5e641d25f108a78891ba509",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\development-builds\\iPodClassic7-test3.exe",
+      "relative": "development-builds/iPodClassic7-test3.exe",
+      "bytes": 43520,
+      "sha256": "a29246d1b63a3fb02be46fbccddb2da579706680abf6c15d4eee9528c6e11839",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.audio.exe",
+      "relative": "engine/qemu-system-arm-classic7.audio.exe",
+      "bytes": 97222504,
+      "sha256": "efb2efe76b372ba9ffe90d7c27c837f5da42998f5b189d82438e07f0392c4784",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r127.pending.exe",
+      "relative": "engine/qemu-system-arm-classic7.r127.pending.exe",
+      "bytes": 97222504,
+      "sha256": "efb2efe76b372ba9ffe90d7c27c837f5da42998f5b189d82438e07f0392c4784",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r128.exe",
+      "relative": "engine/qemu-system-arm-classic7.r128.exe",
+      "bytes": 97223016,
+      "sha256": "2e59dd71ce970c9b6057c21d5ab564c24eac7894705751dcbcc05748e7110365",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r129.exe",
+      "relative": "engine/qemu-system-arm-classic7.r129.exe",
+      "bytes": 97229997,
+      "sha256": "49a57372987ef1c5e01fd180b8b544133ceda638f4d47f55607174bd70292cac",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r130.exe",
+      "relative": "engine/qemu-system-arm-classic7.r130.exe",
+      "bytes": 97232864,
+      "sha256": "47ce25e645439e8febbc142124c1523bcd85e34951c96fb9c5a0a37d0f301f1b",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r130b.exe",
+      "relative": "engine/qemu-system-arm-classic7.r130b.exe",
+      "bytes": 97233376,
+      "sha256": "4fd24a08d58cda1d49ef8b72830ce6ef6e2974307d1ebc041de793a6d803ed04",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r131.exe",
+      "relative": "engine/qemu-system-arm-classic7.r131.exe",
+      "bytes": 97234561,
+      "sha256": "d1de69b74dd36248cb39da6f8a1303d21968522238d0fb22fe7e77bc4de1ad2f",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r132.exe",
+      "relative": "engine/qemu-system-arm-classic7.r132.exe",
+      "bytes": 97237712,
+      "sha256": "0328a28ab3a1b2710591d28eb5599448dbdb6ef5d026d735d2636078482f5a4b",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r133.exe",
+      "relative": "engine/qemu-system-arm-classic7.r133.exe",
+      "bytes": 97224770,
+      "sha256": "105855e915c38f941e4ddc9b559a8a51c89be2c02ebaa1e09a1e3f50eddae5f5",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r133b.exe",
+      "relative": "engine/qemu-system-arm-classic7.r133b.exe",
+      "bytes": 97225315,
+      "sha256": "d898c8bb82857853296fbb6935b162ae2393778e8ea973c045286294655ca707",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r134.exe",
+      "relative": "engine/qemu-system-arm-classic7.r134.exe",
+      "bytes": 97225315,
+      "sha256": "bde16cf48d0d8101e170078655f4258c2957b86e42df7d2ee5d7f9b117c31d7d",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r135.exe",
+      "relative": "engine/qemu-system-arm-classic7.r135.exe",
+      "bytes": 97225419,
+      "sha256": "026d4b2cb74af8ba63afdc3c4f8f53e2f0d88cbf02040fd2a455cc655c276df0",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r136.exe",
+      "relative": "engine/qemu-system-arm-classic7.r136.exe",
+      "bytes": 97227115,
+      "sha256": "e85572510f5f9f441aba52994aaed9b22e5416b23f0958edcc096fb291cbc80d",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r137.exe",
+      "relative": "engine/qemu-system-arm-classic7.r137.exe",
+      "bytes": 97230363,
+      "sha256": "a8f3b5c8f5c57046695ddd52de74557c456b473f8b84d2af1b635fa46382290a",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r138.exe",
+      "relative": "engine/qemu-system-arm-classic7.r138.exe",
+      "bytes": 97231132,
+      "sha256": "36133116634231f54867da4eefa4ebc53dddb93b7892d0434c0442cd230dab87",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r139.exe",
+      "relative": "engine/qemu-system-arm-classic7.r139.exe",
+      "bytes": 97231132,
+      "sha256": "c212bafd7031c4efa6df49b3ef37704250db136c5b79d4ec1791c2686d018281",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.r140.exe",
+      "relative": "engine/qemu-system-arm-classic7.r140.exe",
+      "bytes": 97241446,
+      "sha256": "cdf3250efc3275876c637ada09b9ddd70e7e8eddc8dfdf45375cc9971de20f4f",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\host\\__pycache__\\windows_timing.cpython-311.pyc",
+      "relative": "host/__pycache__/windows_timing.cpython-311.pyc",
+      "bytes": 2303,
+      "sha256": "fa48b762fd365cdbae76ad099657dcbc289bf459dc9fcce40368438c4bcacf27",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\storage\\__pycache__\\persistent_store.cpython-311.pyc",
+      "relative": "storage/__pycache__/persistent_store.cpython-311.pyc",
+      "bytes": 9875,
+      "sha256": "7e317f5c6130ef1a77153d3368b6920253d20a7ae0d3152e54682e8f056b2c3c",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\tools\\cache\\everything-cli\\es.exe",
+      "relative": "tools/cache/everything-cli/es.exe",
+      "bytes": 262312,
+      "sha256": "f7378761cf6e01f51c4123a485e628d70e3fea147d341f473ce2820844e5cee5",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    },
+    {
+      "path": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\tools\\cache\\everything-cli\\es.zip",
+      "relative": "tools/cache/everything-cli/es.zip",
+      "bytes": 117393,
+      "sha256": "5e0c70cbf4f694080c34aa7c6c745e606c16fe76a4b5423b93ebf9dc34274c99",
+      "reason": "Superseded candidate or reproducible task cache; latest R140 archived before removal"
+    }
+  ]
+}

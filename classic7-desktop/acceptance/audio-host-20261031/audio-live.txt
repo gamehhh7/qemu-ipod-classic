@@ -1,0 +1,26 @@
+[New Thread 36944.0x86ac (id 2)]
+[New Thread 36944.0x7840 (id 3)]
+[New Thread 36944.0x7b60 (id 4)]
+[New Thread 36944.0x8138 (id 5)]
+[New Thread 36944.0x742c (id 6)]
+[New Thread 36944.0x311c (id 7)]
+[New Thread 36944.0x8f30 (id 8)]
+[New Thread 36944.0x79d8 (id 9)]
+[New Thread 36944.0x7b2c (id 10)]
+[New Thread 36944.0x2e50 (id 11)]
+[New Thread 36944.0x26e8 (id 12)]
+[New Thread 36944.0x92ac (id 13)]
+[New Thread 36944.0x6b40 (id 14)]
+[Switching to thread 1 (Thread 36944.0x7dd8)]
+0x00007ffb209c28a4 in ntdll!ZwWaitForMultipleObjects () from C:/WINDOWS/SYSTEM32/ntdll.dll
+$1 = 1
+$2 = false
+$3 = (SWVoiceOut *) 0x0
+$4 = false
+$5 = 0
+$6 = 0
+$7 = 0
+$8 = {name = 0x0, state = 0x0, entries = {le_next = 0x0, le_prev = 0x0}}
+K:/CodexResources/2026-10-28/ipod-classic7-desktop/acceptance/audio-host-20261031/audio-live.gdb:12: Error in sourced command file:
+Cannot access memory at address 0x0
+[Inferior 1 (process 36944) detached]

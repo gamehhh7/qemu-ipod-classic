@@ -1,0 +1,25 @@
+{
+  "native_run_authorized": true,
+  "bound_seconds": 330,
+  "utc": "2026-10-30T05:27:41.2943984Z",
+  "purpose": "Actual finished app CoverFlow regression after I2C byte-completion and STOP corrections",
+  "environment": {
+    "CLASSIC7_POWER_TRACE": "1"
+  },
+  "review": {
+    "no_reset_suppression": true,
+    "no_PMU_voltage_override": true,
+    "no_USB": true,
+    "no_guest_patch": true,
+    "no_fake_charger": true,
+    "seed_readonly": true,
+    "approved": true
+  },
+  "hashes": {
+    "src\\usb\\observed_pmu.c": "12F7FF614CA9B4D84D4CF90E6F2C4C59E378DC9310BD6861194D48BFD9F7A323",
+    "bin\\iPodClassic7.exe": "58AE3E24B55288A068BF0C0033548A5CFCA122DFC2334A1A1824035F83FB0E77",
+    "engine\\qemu-system-arm-classic7.exe": "8DA5A824F00DFBCCA0912555B3D5E76938C870459B79B58671EFD476865D165E",
+    "src\\usb\\observed_i2c.c": "AFAA0E86A885635A2A301A91C8A1DA7FA27893DD08C3626FD4D9E5E995CD70C3",
+    "storage\\persistent_store.py": "28C17A47B36F994F6BC6CB6BB40CF4E6D34E34AA8D7EB5C7FC3D94CF9B4915D6"
+  }
+}

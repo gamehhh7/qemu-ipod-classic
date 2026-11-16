@@ -1,0 +1,118 @@
+{
+  "utc": "2026-10-30T10:46:03.900880+00:00",
+  "status": "effective_sync_speed_fixes_implemented_sleep_not_fixed",
+  "baseline_1MiB": {
+    "virtual_pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+    "write_bytes_per_second": 96117.7609769,
+    "physical_devices_touched": false,
+    "sha256": "b704798b216099099b9f436025a2f3a21ade607dd984ddaf5148bd06cc5337d4",
+    "write_flush_seconds": 10.9092845,
+    "utc_end": "2026-10-30T09:52:12.7204246Z",
+    "success": true,
+    "bytes": 1048576,
+    "file": "E:\\Codex-transfer-f78093468de6481497e48a6c6b47542b.bin",
+    "utc_start": "2026-10-30T09:52:01.8001506Z"
+  },
+  "highres_1MiB": {
+    "sha256": "e390d5c2fc2a5fc2e605359ee0b09ef3cf78ccf7413e47144991d9d3fc6af22a",
+    "write_flush_seconds": 0.87122,
+    "file": "E:\\Codex-transfer-d47507b45f00469187ba0a13be68cc0a.bin",
+    "physical_devices_touched": false,
+    "utc_start": "2026-10-30T09:59:19.4272455Z",
+    "bytes": 1048576,
+    "utc_end": "2026-10-30T09:59:20.3108835Z",
+    "virtual_pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+    "success": true,
+    "write_bytes_per_second": 1203572.002479282
+  },
+  "batch_1MiB": {
+    "virtual_pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+    "bytes": 1048576,
+    "file": "E:\\Codex-transfer-f50d069bcfdc48d4b281704f955540d8.bin",
+    "write_flush_seconds": 0.5074573,
+    "success": true,
+    "sha256": "dffda5ccd06f27cf660a5eabd02fa8cc1efedc8d84ddc3e9b742a99109367f71",
+    "write_bytes_per_second": 2066333.4629337287,
+    "physical_devices_touched": false,
+    "utc_end": "2026-10-30T10:10:23.5892706Z",
+    "utc_start": "2026-10-30T10:10:23.0710949Z"
+  },
+  "batch_K_16MiB": {
+    "utc_end": "2026-10-30T10:12:36.6231025Z",
+    "virtual_pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+    "success": true,
+    "bytes": 16777216,
+    "write_bytes_per_second": 1750685.3327786976,
+    "physical_devices_touched": false,
+    "write_flush_seconds": 9.5832276,
+    "sha256": "a060511cfa5c254bf11b13d7a03f5cfc98b87e198795985506e3ca39744ce7a5",
+    "file": "E:\\Codex-transfer-589e33acd820460c994bc19f963e5358.bin",
+    "utc_start": "2026-10-30T10:12:27.0171304Z"
+  },
+  "SSD_G_16MiB": {
+    "utc_start": "2026-10-30T10:32:00.6258969Z",
+    "file": "E:\\Codex-transfer-e3bdee45922148d787a93354d1a40614.bin",
+    "success": true,
+    "write_flush_seconds": 5.9363711,
+    "physical_devices_touched": false,
+    "utc_end": "2026-10-30T10:32:06.5848198Z",
+    "virtual_pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+    "sha256": "903147704987181efb2507ad1d1553b379f9c0a678e412a9880079ddd032b352",
+    "write_bytes_per_second": 2826173.7208443726,
+    "bytes": 16777216
+  },
+  "temporary_SSD_return": {
+    "source": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\userdata\\windows-8g.sqlite3",
+    "user_choice": "non-C SSD, temporary test only",
+    "phase": "returned_to_K_original_overlay_config_restored",
+    "temporary_only": true,
+    "app_pid": 2584,
+    "destination": "G:\\CodexResources\\2026-10-30\\ipod-classic7-userdata-test\\windows-8g.sqlite3",
+    "restored": true
+  },
+  "target_bytes_per_second": 20000000,
+  "target_achieved": false,
+  "old_StopPair_root_cause": {
+    "old_StopPair_2ms_loop": {
+      "count": 20,
+      "median_s": 0.01600450000114506,
+      "min_s": 0.01381509999919217,
+      "max_s": 0.017542000001412816
+    },
+    "Event_2ms_direct": {
+      "count": 20,
+      "median_s": 0.002122199999575969,
+      "min_s": 0.002010399999562651,
+      "max_s": 0.002998600000864826
+    },
+    "new_125us_highres": {
+      "count": 20,
+      "median_s": 0.0005222000036155805,
+      "min_s": 0.0005154999962542206,
+      "max_s": 0.0006391000060830265
+    },
+    "monotonic_resolution_s": 0.015625,
+    "perf_counter_resolution_s": 1e-07,
+    "cause": "Old StopPair.wait repeats waits until coarse Windows monotonic/GetTickCount64 ticks advance. timeBeginPeriod cannot repair that clock quantization. New bounded short wait returns after the high-resolution timer and rechecks cancellation."
+  },
+  "implemented": [
+    "Precise bounded short waits, avoiding coarse monotonic loop",
+    "Capability-negotiated16KiB OUT RPC batching, individual512B real DMA tokens spaced10us virtual, real IRQ/rearm preserved;100ms wall bound and exact accepted-prefix/sequence replies",
+    "Existing configured COW must exist; never create a blank replacement if temporarily relocated/unavailable"
+  ],
+  "rejected_experiments": {
+    "timeBeginPeriod": "No speed improvement; implementation removed",
+    "wal_checkpoint_8192": "16MiB9.34s vs9.58s; no material benefit; source reverted to original default1000",
+    "13_token_burst": "Slower0.68MB/s with successful hash; source reverted to individual token timers, NOT YET relinked because current session retained for wake capture"
+  },
+  "durability": "SQLite WAL/FULL and per-ATA atomic commit unchanged",
+  "persistence_verified": [
+    "REOPEN-PERSISTENCE.json",
+    "SSD-RETURN-PERSISTENCE.json"
+  ],
+  "AppleDevices_full_sync_accepted": false,
+  "sleep_hold_fixed": false,
+  "current_owned_capture_app": 29760,
+  "capture_run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T104311Z-29760",
+  "next": "Capture real sleep/Hold fault or native panic. Current binary has rejected burst butUSB now ejected/off for sleep diagnosis; before next sync relink prepared reverted source. Do not claim long-idle wake fixed."
+}

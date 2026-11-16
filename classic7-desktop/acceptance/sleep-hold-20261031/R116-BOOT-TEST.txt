@@ -1,0 +1,2 @@
+PASS executed ARM shim base=00000000: real-header, bad-magic, bad-version, bad-state, unaligned-entry, below-ram, past-ram
+PASS executed ARM shim base=20000000: real-header, bad-magic, bad-version, bad-state, unaligned-entry, below-ram, past-ram

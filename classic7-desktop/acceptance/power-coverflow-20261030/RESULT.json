@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-30T05:42:11.894676+00:00",
+  "status": "coverflow_power_reboot_fixed_and_default_app_verified",
+  "canonical": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop",
+  "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T053952Z-13160",
+  "actual_mode": {
+    "tcg": "normal dynamic translation",
+    "clock": "instruction-count",
+    "diagnostics": false
+  },
+  "actual_argv": "-L \"K:\\CodexResources\\2026-09-30\\ipod-emulation\\qemu-fc1307\\src\\qemu-ipod-classic-1c33be87c7e97b56053142ae9d7f0686feaed504\\pc-bios\" -M iPod-Classic,serial-number=8K0090019ZS,model-number=MC293LL,firewire-guid=000A2700214DCAC1 -kernel \"K:\\CodexResources\\2026-10-08\\ipod-game-recovery\\candidate\\revb204-osos.recovered.payload.bin\" -accel tcg,thread=single -icount shift=3,align=off,sleep=on -display none -serial null -monitor none -qmp tcp:127.0.0.1:3781,server=on,wait=off -vnc 127.0.0.1:1 -global pcf50635.usb-connected=off -global s5l8702-usb-device-core.experimental-link-v0=on",
+  "diagnostic_power_trace_enabled": false,
+  "software_resets": 0,
+  "frozen_inputs_unchanged": true,
+  "visual_review": {
+    "agent": "GPT6 Luna low, /root/coverflow_visual",
+    "effective_CoverFlow_entries": 4,
+    "outcome": "Each actual entry showed CoverFlow/Afterglow artwork and green battery, no LowBattery/ConnecttoPower; returned through native menus between entries",
+    "reported_by_agent": true
+  },
+  "capture": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T053952Z-13160\\captures\\bounded-final-lcd.png",
+  "causal_evidence": {
+    "standard_clock_same_engine": {
+      "ADC_result_register_writes": 8,
+      "software_resets": 1
+    },
+    "instruction_count_clock": {
+      "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T053122Z-6668",
+      "trace_rows": 7110,
+      "cap": 32768,
+      "cap_reached": false,
+      "ADC_result_writes": 0,
+      "battery55_values": {
+        "d3": 42
+      },
+      "hold87_values": {
+        "02": 1
+      },
+      "reset_count": 0,
+      "GUI": "fresh visual agent made1center click at05:36:36, no menu transition before timeout; CoverFlow not verified in this run",
+      "terminal": "{\"utc\":\"2026-10-30T05:36:53.9284103Z\",\"kind\":\"owned_processes_stopped\",\"data\":{\"qemu\":8824,\"backend\":31436}}"
+    }
+  },
+  "fixes": [
+    "I2C new byte/address clears old completion state",
+    "I2C STOP delivers FINISH based on pre-writeBUSY; serial-off cancels pending byte state",
+    "Default main EXE uses existing -icount shift=3 so I2C deadlines track guest CPU progress instead of host rendering time"
+  ],
+  "preserved": [
+    "Guest firmware and real low-battery/reset handling",
+    "PMU battery/charger values",
+    "transactional sector-count performance fix",
+    "original seed rb and existing8GiB COW",
+    "single existing rollback backup/previous-release.zip"
+  ],
+  "main_exe_sha256": "18e48adc0bcc7915179107767f283be0161d71f1b1a5f8bb72d5ab108ac08e12",
+  "engine_sha256": "8da5a824f00dfbcca0912555b3d5e76938c870459b79b58671efd476865d165e",
+  "synchronization_client": "Apple Devices app",
+  "Apple_Devices_sync_verified": false,
+  "remaining_scope": "Apple Devices synchronization is a separate pending acceptance; this result covers reported CoverFlow power reboot."
+}

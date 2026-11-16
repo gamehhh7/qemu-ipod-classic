@@ -1,0 +1,1587 @@
+{
+  "method": "Diagnostic thread suspension RIP samples; not acceptance and not exact on-CPU weighted profile",
+  "all": [
+    [
+      "ntdll.dll",
+      17801
+    ],
+    [
+      "libglib-2.0-0.dll",
+      106
+    ],
+    [
+      "outside modules (possibly TCG JIT)",
+      72
+    ],
+    [
+      "WS2_32.dll",
+      45
+    ],
+    [
+      "qemu!tb_lookup",
+      27
+    ],
+    [
+      "msvcrt.dll",
+      23
+    ],
+    [
+      "mswsock.dll",
+      22
+    ],
+    [
+      "qemu!phys_page_find",
+      21
+    ],
+    [
+      "qemu!cpu_get_tb_cpu_state",
+      17
+    ],
+    [
+      "qemu!address_space_translate_internal",
+      14
+    ],
+    [
+      "qemu!tb_tc_cmp",
+      13
+    ],
+    [
+      "qemu!address_space_read_full",
+      12
+    ],
+    [
+      "qemu!qht_lookup_custom",
+      12
+    ],
+    [
+      "qemu!qemu_mutex_lock_impl",
+      10
+    ],
+    [
+      "KERNELBASE.dll",
+      10
+    ],
+    [
+      "qemu!helper_lookup_tb_ptr",
+      10
+    ],
+    [
+      "qemu!object_dynamic_cast_assert",
+      10
+    ],
+    [
+      "qemu!qemu_clock_deadline_ns_all",
+      9
+    ],
+    [
+      "qemu!disp_draw_layer",
+      9
+    ],
+    [
+      "ResampleDmo.DLL",
+      9
+    ],
+    [
+      "qemu!page_collection_lock",
+      8
+    ],
+    [
+      "qemu!flatview_do_translate.isra.0",
+      8
+    ],
+    [
+      "qemu!flatview_write_continue",
+      7
+    ],
+    [
+      "qemu!access_with_adjusted_size",
+      7
+    ],
+    [
+      "qemu!cpu_thread_is_idle",
+      7
+    ],
+    [
+      "qemu!aio_notify",
+      6
+    ],
+    [
+      "qemu!notifier_list_notify",
+      6
+    ],
+    [
+      "qemu!object_class_dynamic_cast_assert",
+      6
+    ],
+    [
+      "qemu!qio_channel_socket_source_check",
+      5
+    ],
+    [
+      "qemu!rebuild_hflags_a32",
+      5
+    ],
+    [
+      "qemu!qemu_lockcnt_inc",
+      5
+    ],
+    [
+      "qemu!probe_access_internal",
+      5
+    ],
+    [
+      "qemu!cpu_unwind_data_from_tb",
+      5
+    ],
+    [
+      "qemu!tlb_set_page_full",
+      5
+    ],
+    [
+      "qemu!tlb_flush_vtlb_page_mask_locked",
+      5
+    ],
+    [
+      "qemu!notdirty_write.isra.0",
+      4
+    ],
+    [
+      "qemu!cpu_exec_loop",
+      4
+    ],
+    [
+      "qemu!__divti3",
+      4
+    ],
+    [
+      "qemu!timerlistgroup_run_timers",
+      4
+    ],
+    [
+      "dsound.dll",
+      4
+    ],
+    [
+      "qemu!timerlistgroup_deadline_ns",
+      4
+    ],
+    [
+      "qemu!do_ld4_mmu",
+      4
+    ],
+    [
+      "qemu!qemu_clock_get_ns",
+      4
+    ],
+    [
+      "qemu!tb_htable_lookup",
+      4
+    ],
+    [
+      "qemu!get_level1_table_address",
+      4
+    ],
+    [
+      "qemu!iotlb_to_section",
+      4
+    ],
+    [
+      "qemu!arm_cpu_exec_interrupt",
+      4
+    ],
+    [
+      "qemu!main_loop_wait",
+      4
+    ],
+    [
+      "qemu!ipod_classic_i2s_write",
+      3
+    ],
+    [
+      "qemu!tb_invalidate_phys_page_range__locked.isra.0",
+      3
+    ],
+    [
+      "qemu!flatview_access_valid",
+      3
+    ],
+    [
+      "qemu!c7_weff_enabled",
+      3
+    ],
+    [
+      "qemu!ipod_classic_timer_read",
+      3
+    ],
+    [
+      "qemu!ipod_pcdump",
+      3
+    ],
+    [
+      "qemu!arm_rebuild_hflags",
+      3
+    ],
+    [
+      "qemu!address_space_write",
+      3
+    ],
+    [
+      "KERNEL32.DLL",
+      3
+    ],
+    [
+      "qemu!mingw_gettimeofday",
+      3
+    ],
+    [
+      "qemu!qemu_ram_block_from_host",
+      3
+    ],
+    [
+      "qemu!flatview_read_continue",
+      3
+    ],
+    [
+      "qemu!victim_tlb_hit",
+      3
+    ],
+    [
+      "qemu!cpu_physical_memory_get_dirty.constprop.0",
+      3
+    ],
+    [
+      "qemu!helper_ldul_mmu",
+      3
+    ],
+    [
+      "qemu!memory_region_dispatch_read",
+      3
+    ],
+    [
+      "qemu!qemu_main_loop",
+      2
+    ],
+    [
+      "qemu!pl080_run",
+      2
+    ],
+    [
+      "qemu!memory_region_dispatch_write",
+      2
+    ],
+    [
+      "qemu!timerlist_run_timers.part.0",
+      2
+    ],
+    [
+      "qemu!audio_timer",
+      2
+    ],
+    [
+      "qemu!tcp_chr_read_poll",
+      2
+    ],
+    [
+      "qemu!fp_exception_el",
+      2
+    ],
+    [
+      "qemu!aio_ctx_check",
+      2
+    ],
+    [
+      "qemu!mmu_watch_or_dirty",
+      2
+    ],
+    [
+      "qemu!mmu_lookup",
+      2
+    ],
+    [
+      "qemu!object_get_class",
+      2
+    ],
+    [
+      "qemu!replay_mutex_lock",
+      2
+    ],
+    [
+      "qemu!switch_mode",
+      2
+    ],
+    [
+      "qemu!icount_warp_rt",
+      2
+    ],
+    [
+      "qemu!c7_gap_sample.constprop.0",
+      2
+    ],
+    [
+      "qemu!arm_cpu_tlb_fill",
+      2
+    ],
+    [
+      "qemu!find_next_bit",
+      2
+    ],
+    [
+      "qemu!get_ptr_rcu_reader",
+      2
+    ],
+    [
+      "qemu!qemu_mutex_unlock_impl",
+      2
+    ],
+    [
+      "qemu!get_iothread_locked",
+      2
+    ],
+    [
+      "qemu!probe_access_full_mmu",
+      2
+    ],
+    [
+      "qemu!memory_region_access_valid",
+      2
+    ],
+    [
+      "qemu!memory_region_get_ram_ptr",
+      2
+    ],
+    [
+      "qemu!cpsr_write",
+      2
+    ],
+    [
+      "qemu!pl192_read",
+      2
+    ],
+    [
+      "qemu!mmu_lookup1",
+      2
+    ],
+    [
+      "qemu!page_trylock_add",
+      2
+    ],
+    [
+      "qemu!pl192_update",
+      2
+    ],
+    [
+      "qemu!qemu_ram_ptr_length.isra.0",
+      2
+    ],
+    [
+      "qemu!set_iothread_locked",
+      2
+    ],
+    [
+      "qemu!get_phys_addr_v6",
+      2
+    ],
+    [
+      "qemu!rr_kick_vcpu_thread",
+      2
+    ],
+    [
+      "qemu!flatview_write",
+      2
+    ],
+    [
+      "qemu!curr_cflags",
+      2
+    ],
+    [
+      "qemu!cpu_restore_state_from_tb",
+      2
+    ],
+    [
+      "qemu!st_rate_flow_mix",
+      2
+    ],
+    [
+      "qemu!rebuild_hflags_common_32",
+      2
+    ],
+    [
+      "qemu!os_host_main_loop_wait",
+      2
+    ],
+    [
+      "qemu!qemu_event_set",
+      2
+    ],
+    [
+      "qemu!aio_ctx_prepare",
+      2
+    ],
+    [
+      "qemu!icount_start_warp_timer",
+      2
+    ],
+    [
+      "qemu!object_class_dynamic_cast",
+      2
+    ],
+    [
+      "qemu!tcg_handle_interrupt",
+      1
+    ],
+    [
+      "qemu!aio_compute_timeout",
+      1
+    ],
+    [
+      "qemu!granule_protection_check",
+      1
+    ],
+    [
+      "qemu!arm_cpu_get_pc",
+      1
+    ],
+    [
+      "qemu!aio_pending",
+      1
+    ],
+    [
+      "qemu!get_phys_addr_nogpc",
+      1
+    ],
+    [
+      "qemu!icount_get",
+      1
+    ],
+    [
+      "qemu!arm_mmu_idx_el",
+      1
+    ],
+    [
+      "qemu!subpage_read",
+      1
+    ],
+    [
+      "qemu!aio_prepare",
+      1
+    ],
+    [
+      "qemu!cpu_tb_exec",
+      1
+    ],
+    [
+      "qemu!qemu_mutex_lock_iothread_impl",
+      1
+    ],
+    [
+      "qemu!qemu_clock_run_all_timers",
+      1
+    ],
+    [
+      "qemu!arm_ldl_ptw",
+      1
+    ],
+    [
+      "qemu!qemu_cpu_kick",
+      1
+    ],
+    [
+      "qemu!memory_region_section_get_iotlb",
+      1
+    ],
+    [
+      "qemu!cpsr_read",
+      1
+    ],
+    [
+      "qemu!arm_restore_state_to_opc",
+      1
+    ],
+    [
+      "qemu!helper_stl_mmu",
+      1
+    ],
+    [
+      "qemu!cpu_exec_longjmp_cleanup",
+      1
+    ],
+    [
+      "qemu!arm_phys_excp_target_el",
+      1
+    ],
+    [
+      "qemu!do_st4_mmu",
+      1
+    ],
+    [
+      "qemu!cpu_get_clock_locked",
+      1
+    ],
+    [
+      "qemu!tb_lookup_cmp",
+      1
+    ],
+    [
+      "qemu!int_st_mmio_leN",
+      1
+    ],
+    [
+      "qemu!do_ld_mmio_beN",
+      1
+    ],
+    [
+      "qemu!get_page_addr_code_hostp",
+      1
+    ],
+    [
+      "qemu!gui_update",
+      1
+    ],
+    [
+      "qemu!arm_hcr_el2_eff_secstate",
+      1
+    ],
+    [
+      "qemu!qemu_set_irq",
+      1
+    ],
+    [
+      "qemu!runstate_is_running",
+      1
+    ],
+    [
+      "qemu!memory_region_write_accessor",
+      1
+    ],
+    [
+      "qemu!all_cpu_threads_idle",
+      1
+    ],
+    [
+      "qemu!arm_security_space",
+      1
+    ],
+    [
+      "qemu!qemu_clock_notify",
+      1
+    ],
+    [
+      "qemu!cpu_get_clock",
+      1
+    ],
+    [
+      "qemu!aio_bh_poll",
+      1
+    ],
+    [
+      "qemu!memory_region_read_accessor",
+      1
+    ],
+    [
+      "AUDIOSES.DLL",
+      1
+    ],
+    [
+      "qemu!ptimer_reload",
+      1
+    ],
+    [
+      "qemu!cpu_exec",
+      1
+    ],
+    [
+      "qemu!qemu_timer_notify_cb",
+      1
+    ],
+    [
+      "qemu!timer_mod_ns",
+      1
+    ],
+    [
+      "ucrtbase.dll",
+      1
+    ],
+    [
+      "qemu!arm_cpu_do_interrupt",
+      1
+    ],
+    [
+      "qemu!cpu_physical_memory_rw",
+      1
+    ],
+    [
+      "qemu!qemu_clock_expired",
+      1
+    ],
+    [
+      "qemu!monitor_can_read",
+      1
+    ],
+    [
+      "qemu!memory_region_write_with_attrs_accessor",
+      1
+    ],
+    [
+      "qemu!qemu_chr_be_can_write",
+      1
+    ]
+  ],
+  "threads": {
+    "9784": {
+      "cycles": 4445349300,
+      "samples": [
+        [
+          "ntdll.dll",
+          2131
+        ],
+        [
+          "WS2_32.dll",
+          32
+        ],
+        [
+          "libglib-2.0-0.dll",
+          30
+        ],
+        [
+          "mswsock.dll",
+          20
+        ],
+        [
+          "qemu!disp_draw_layer",
+          9
+        ],
+        [
+          "qemu!qemu_clock_deadline_ns_all",
+          7
+        ],
+        [
+          "qemu!notifier_list_notify",
+          6
+        ],
+        [
+          "qemu!cpu_thread_is_idle",
+          6
+        ],
+        [
+          "msvcrt.dll",
+          5
+        ],
+        [
+          "KERNELBASE.dll",
+          4
+        ],
+        [
+          "qemu!__divti3",
+          4
+        ],
+        [
+          "qemu!main_loop_wait",
+          4
+        ],
+        [
+          "qemu!aio_notify",
+          4
+        ],
+        [
+          "qemu!qio_channel_socket_source_check",
+          3
+        ],
+        [
+          "dsound.dll",
+          3
+        ],
+        [
+          "qemu!mingw_gettimeofday",
+          3
+        ],
+        [
+          "qemu!object_class_dynamic_cast_assert",
+          3
+        ],
+        [
+          "qemu!qemu_clock_get_ns",
+          3
+        ],
+        [
+          "qemu!qemu_main_loop",
+          2
+        ],
+        [
+          "qemu!timerlist_run_timers.part.0",
+          2
+        ],
+        [
+          "qemu!audio_timer",
+          2
+        ],
+        [
+          "qemu!icount_warp_rt",
+          2
+        ],
+        [
+          "qemu!c7_gap_sample.constprop.0",
+          2
+        ],
+        [
+          "KERNEL32.DLL",
+          2
+        ],
+        [
+          "qemu!qemu_mutex_lock_impl",
+          2
+        ],
+        [
+          "qemu!rr_kick_vcpu_thread",
+          2
+        ],
+        [
+          "qemu!st_rate_flow_mix",
+          2
+        ],
+        [
+          "qemu!timerlistgroup_deadline_ns",
+          2
+        ],
+        [
+          "qemu!os_host_main_loop_wait",
+          2
+        ],
+        [
+          "qemu!qemu_event_set",
+          2
+        ],
+        [
+          "qemu!icount_start_warp_timer",
+          2
+        ],
+        [
+          "qemu!qemu_lockcnt_inc",
+          1
+        ],
+        [
+          "qemu!flatview_do_translate.isra.0",
+          1
+        ],
+        [
+          "qemu!qemu_mutex_unlock_impl",
+          1
+        ],
+        [
+          "qemu!qemu_clock_run_all_timers",
+          1
+        ],
+        [
+          "qemu!address_space_read_full",
+          1
+        ],
+        [
+          "qemu!qemu_cpu_kick",
+          1
+        ],
+        [
+          "qemu!qemu_ram_ptr_length.isra.0",
+          1
+        ],
+        [
+          "qemu!cpu_get_clock_locked",
+          1
+        ],
+        [
+          "qemu!object_dynamic_cast_assert",
+          1
+        ],
+        [
+          "qemu!object_get_class",
+          1
+        ],
+        [
+          "qemu!c7_weff_enabled",
+          1
+        ],
+        [
+          "qemu!gui_update",
+          1
+        ],
+        [
+          "qemu!runstate_is_running",
+          1
+        ],
+        [
+          "qemu!address_space_translate_internal",
+          1
+        ],
+        [
+          "qemu!qemu_clock_notify",
+          1
+        ],
+        [
+          "qemu!cpu_get_clock",
+          1
+        ],
+        [
+          "qemu!qemu_timer_notify_cb",
+          1
+        ],
+        [
+          "qemu!qemu_clock_expired",
+          1
+        ],
+        [
+          "qemu!aio_ctx_prepare",
+          1
+        ]
+      ]
+    },
+    "24112": {
+      "cycles": 41540700,
+      "samples": [
+        [
+          "ntdll.dll",
+          2322
+        ]
+      ]
+    },
+    "10364": {
+      "cycles": 1618445700,
+      "samples": [
+        [
+          "ntdll.dll",
+          2215
+        ],
+        [
+          "libglib-2.0-0.dll",
+          50
+        ],
+        [
+          "WS2_32.dll",
+          13
+        ],
+        [
+          "qemu!object_dynamic_cast_assert",
+          6
+        ],
+        [
+          "KERNELBASE.dll",
+          6
+        ],
+        [
+          "msvcrt.dll",
+          4
+        ],
+        [
+          "qemu!qemu_lockcnt_inc",
+          4
+        ],
+        [
+          "qemu!timerlistgroup_run_timers",
+          4
+        ],
+        [
+          "qemu!tcp_chr_read_poll",
+          2
+        ],
+        [
+          "qemu!aio_ctx_check",
+          2
+        ],
+        [
+          "qemu!timerlistgroup_deadline_ns",
+          2
+        ],
+        [
+          "qemu!qemu_mutex_lock_impl",
+          2
+        ],
+        [
+          "mswsock.dll",
+          2
+        ],
+        [
+          "qemu!qio_channel_socket_source_check",
+          2
+        ],
+        [
+          "qemu!aio_compute_timeout",
+          1
+        ],
+        [
+          "qemu!aio_pending",
+          1
+        ],
+        [
+          "qemu!aio_prepare",
+          1
+        ],
+        [
+          "KERNEL32.DLL",
+          1
+        ],
+        [
+          "qemu!aio_ctx_prepare",
+          1
+        ],
+        [
+          "qemu!aio_bh_poll",
+          1
+        ],
+        [
+          "qemu!monitor_can_read",
+          1
+        ],
+        [
+          "qemu!qemu_chr_be_can_write",
+          1
+        ]
+      ]
+    },
+    "5808": {
+      "cycles": 8625469500,
+      "samples": [
+        [
+          "ntdll.dll",
+          1857
+        ],
+        [
+          "outside modules (possibly TCG JIT)",
+          72
+        ],
+        [
+          "qemu!tb_lookup",
+          27
+        ],
+        [
+          "libglib-2.0-0.dll",
+          26
+        ],
+        [
+          "qemu!phys_page_find",
+          21
+        ],
+        [
+          "qemu!cpu_get_tb_cpu_state",
+          17
+        ],
+        [
+          "msvcrt.dll",
+          14
+        ],
+        [
+          "qemu!tb_tc_cmp",
+          13
+        ],
+        [
+          "qemu!address_space_translate_internal",
+          13
+        ],
+        [
+          "qemu!qht_lookup_custom",
+          12
+        ],
+        [
+          "qemu!address_space_read_full",
+          11
+        ],
+        [
+          "qemu!helper_lookup_tb_ptr",
+          10
+        ],
+        [
+          "qemu!page_collection_lock",
+          8
+        ],
+        [
+          "qemu!flatview_write_continue",
+          7
+        ],
+        [
+          "qemu!access_with_adjusted_size",
+          7
+        ],
+        [
+          "qemu!flatview_do_translate.isra.0",
+          7
+        ],
+        [
+          "qemu!qemu_mutex_lock_impl",
+          6
+        ],
+        [
+          "qemu!rebuild_hflags_a32",
+          5
+        ],
+        [
+          "qemu!probe_access_internal",
+          5
+        ],
+        [
+          "qemu!cpu_unwind_data_from_tb",
+          5
+        ],
+        [
+          "qemu!tlb_set_page_full",
+          5
+        ],
+        [
+          "qemu!tlb_flush_vtlb_page_mask_locked",
+          5
+        ],
+        [
+          "qemu!notdirty_write.isra.0",
+          4
+        ],
+        [
+          "qemu!cpu_exec_loop",
+          4
+        ],
+        [
+          "qemu!do_ld4_mmu",
+          4
+        ],
+        [
+          "qemu!tb_htable_lookup",
+          4
+        ],
+        [
+          "qemu!get_level1_table_address",
+          4
+        ],
+        [
+          "qemu!iotlb_to_section",
+          4
+        ],
+        [
+          "qemu!arm_cpu_exec_interrupt",
+          4
+        ],
+        [
+          "qemu!ipod_classic_i2s_write",
+          3
+        ],
+        [
+          "qemu!tb_invalidate_phys_page_range__locked.isra.0",
+          3
+        ],
+        [
+          "qemu!flatview_access_valid",
+          3
+        ],
+        [
+          "qemu!ipod_classic_timer_read",
+          3
+        ],
+        [
+          "qemu!ipod_pcdump",
+          3
+        ],
+        [
+          "qemu!arm_rebuild_hflags",
+          3
+        ],
+        [
+          "qemu!address_space_write",
+          3
+        ],
+        [
+          "qemu!object_class_dynamic_cast_assert",
+          3
+        ],
+        [
+          "qemu!object_dynamic_cast_assert",
+          3
+        ],
+        [
+          "qemu!qemu_ram_block_from_host",
+          3
+        ],
+        [
+          "qemu!flatview_read_continue",
+          3
+        ],
+        [
+          "qemu!victim_tlb_hit",
+          3
+        ],
+        [
+          "qemu!cpu_physical_memory_get_dirty.constprop.0",
+          3
+        ],
+        [
+          "qemu!helper_ldul_mmu",
+          3
+        ],
+        [
+          "qemu!memory_region_dispatch_read",
+          3
+        ],
+        [
+          "qemu!pl080_run",
+          2
+        ],
+        [
+          "qemu!memory_region_dispatch_write",
+          2
+        ],
+        [
+          "qemu!aio_notify",
+          2
+        ],
+        [
+          "qemu!fp_exception_el",
+          2
+        ],
+        [
+          "qemu!mmu_watch_or_dirty",
+          2
+        ],
+        [
+          "qemu!mmu_lookup",
+          2
+        ],
+        [
+          "qemu!replay_mutex_lock",
+          2
+        ],
+        [
+          "qemu!switch_mode",
+          2
+        ],
+        [
+          "qemu!c7_weff_enabled",
+          2
+        ],
+        [
+          "qemu!qemu_clock_deadline_ns_all",
+          2
+        ],
+        [
+          "qemu!arm_cpu_tlb_fill",
+          2
+        ],
+        [
+          "qemu!find_next_bit",
+          2
+        ],
+        [
+          "qemu!get_ptr_rcu_reader",
+          2
+        ],
+        [
+          "qemu!get_iothread_locked",
+          2
+        ],
+        [
+          "qemu!probe_access_full_mmu",
+          2
+        ],
+        [
+          "qemu!memory_region_access_valid",
+          2
+        ],
+        [
+          "qemu!memory_region_get_ram_ptr",
+          2
+        ],
+        [
+          "qemu!cpsr_write",
+          2
+        ],
+        [
+          "qemu!pl192_read",
+          2
+        ],
+        [
+          "qemu!mmu_lookup1",
+          2
+        ],
+        [
+          "qemu!page_trylock_add",
+          2
+        ],
+        [
+          "qemu!pl192_update",
+          2
+        ],
+        [
+          "qemu!set_iothread_locked",
+          2
+        ],
+        [
+          "qemu!get_phys_addr_v6",
+          2
+        ],
+        [
+          "qemu!flatview_write",
+          2
+        ],
+        [
+          "qemu!curr_cflags",
+          2
+        ],
+        [
+          "qemu!cpu_restore_state_from_tb",
+          2
+        ],
+        [
+          "qemu!rebuild_hflags_common_32",
+          2
+        ],
+        [
+          "qemu!object_class_dynamic_cast",
+          2
+        ],
+        [
+          "qemu!tcg_handle_interrupt",
+          1
+        ],
+        [
+          "qemu!granule_protection_check",
+          1
+        ],
+        [
+          "qemu!arm_cpu_get_pc",
+          1
+        ],
+        [
+          "qemu!object_get_class",
+          1
+        ],
+        [
+          "qemu!get_phys_addr_nogpc",
+          1
+        ],
+        [
+          "qemu!icount_get",
+          1
+        ],
+        [
+          "qemu!arm_mmu_idx_el",
+          1
+        ],
+        [
+          "qemu!subpage_read",
+          1
+        ],
+        [
+          "qemu!qemu_clock_get_ns",
+          1
+        ],
+        [
+          "qemu!cpu_tb_exec",
+          1
+        ],
+        [
+          "qemu!qemu_mutex_lock_iothread_impl",
+          1
+        ],
+        [
+          "qemu!arm_ldl_ptw",
+          1
+        ],
+        [
+          "qemu!memory_region_section_get_iotlb",
+          1
+        ],
+        [
+          "qemu!cpsr_read",
+          1
+        ],
+        [
+          "qemu!arm_restore_state_to_opc",
+          1
+        ],
+        [
+          "qemu!helper_stl_mmu",
+          1
+        ],
+        [
+          "qemu!cpu_exec_longjmp_cleanup",
+          1
+        ],
+        [
+          "qemu!arm_phys_excp_target_el",
+          1
+        ],
+        [
+          "qemu!do_st4_mmu",
+          1
+        ],
+        [
+          "qemu!tb_lookup_cmp",
+          1
+        ],
+        [
+          "qemu!int_st_mmio_leN",
+          1
+        ],
+        [
+          "qemu!qemu_mutex_unlock_impl",
+          1
+        ],
+        [
+          "qemu!do_ld_mmio_beN",
+          1
+        ],
+        [
+          "qemu!get_page_addr_code_hostp",
+          1
+        ],
+        [
+          "qemu!arm_hcr_el2_eff_secstate",
+          1
+        ],
+        [
+          "qemu!qemu_set_irq",
+          1
+        ],
+        [
+          "qemu!memory_region_write_accessor",
+          1
+        ],
+        [
+          "qemu!all_cpu_threads_idle",
+          1
+        ],
+        [
+          "qemu!arm_security_space",
+          1
+        ],
+        [
+          "qemu!memory_region_read_accessor",
+          1
+        ],
+        [
+          "qemu!ptimer_reload",
+          1
+        ],
+        [
+          "qemu!cpu_exec",
+          1
+        ],
+        [
+          "qemu!qemu_ram_ptr_length.isra.0",
+          1
+        ],
+        [
+          "qemu!timer_mod_ns",
+          1
+        ],
+        [
+          "qemu!arm_cpu_do_interrupt",
+          1
+        ],
+        [
+          "qemu!cpu_physical_memory_rw",
+          1
+        ],
+        [
+          "qemu!cpu_thread_is_idle",
+          1
+        ],
+        [
+          "qemu!memory_region_write_with_attrs_accessor",
+          1
+        ]
+      ]
+    },
+    "2016": {
+      "cycles": 36867900,
+      "samples": [
+        [
+          "ntdll.dll",
+          2322
+        ]
+      ]
+    },
+    "12832": {
+      "cycles": 46419300,
+      "samples": [
+        [
+          "ntdll.dll",
+          2322
+        ]
+      ]
+    },
+    "13648": {
+      "cycles": 51345900,
+      "samples": [
+        [
+          "ntdll.dll",
+          2322
+        ]
+      ]
+    },
+    "28760": {
+      "cycles": 299833500,
+      "samples": [
+        [
+          "ntdll.dll",
+          2310
+        ],
+        [
+          "ResampleDmo.DLL",
+          9
+        ],
+        [
+          "AUDIOSES.DLL",
+          1
+        ],
+        [
+          "ucrtbase.dll",
+          1
+        ],
+        [
+          "dsound.dll",
+          1
+        ]
+      ]
+    }
+  },
+  "suspend_total_ms": 238.57300000000055,
+  "suspend_max_ms": 0.1529,
+  "qemu_examples": {
+    "qemu!qio_channel_socket_source_check": "0x140569d11",
+    "qemu!qemu_main_loop": "0x1402e47e7",
+    "qemu!notdirty_write.isra.0": "0x14053e8b1",
+    "qemu!rebuild_hflags_a32": "0x140471b60",
+    "qemu!pl080_run": "0x1400e3491",
+    "qemu!flatview_write_continue": "0x1404ec846",
+    "qemu!memory_region_dispatch_write": "0x1404e4674",
+    "qemu!phys_page_find": "0x1404e9eda",
+    "qemu!timerlist_run_timers.part.0": "0x1406f3138",
+    "qemu!address_space_read_full": "0x1404ef641",
+    "qemu!tb_lookup": "0x14052e137",
+    "qemu!aio_notify": "0x1406ee557",
+    "qemu!tcg_handle_interrupt": "0x14054c681",
+    "qemu!qemu_clock_deadline_ns_all": "0x1406f2ff2",
+    "qemu!audio_timer": "0x1402c6818",
+    "qemu!notifier_list_notify": "0x1406e2bc1",
+    "qemu!tcp_chr_read_poll": "0x140631ff1",
+    "qemu!qemu_mutex_lock_impl": "0x1406dd7e1",
+    "qemu!aio_compute_timeout": "0x1406ee424",
+    "qemu!cpu_exec_loop": "0x14052fb44",
+    "qemu!page_collection_lock": "0x140531b19",
+    "qemu!qemu_lockcnt_inc": "0x1406ed804",
+    "qemu!fp_exception_el": "0x140406b81",
+    "qemu!helper_lookup_tb_ptr": "0x1405301b0",
+    "qemu!ipod_classic_i2s_write": "0x1403dab9f",
+    "qemu!aio_ctx_check": "0x1406edeba",
+    "qemu!granule_protection_check": "0x14034c4a7",
+    "qemu!tb_tc_cmp": "0x1407057f3",
+    "qemu!mmu_watch_or_dirty": "0x14053ee91",
+    "qemu!__divti3": "0x14075af00",
+    "qemu!access_with_adjusted_size": "0x1404e42f3",
+    "qemu!mmu_lookup": "0x14053ef69",
+    "qemu!arm_cpu_get_pc": "0x1403eccd0",
+    "qemu!object_dynamic_cast_assert": "0x14055a044",
+    "qemu!object_get_class": "0x14055a4d3",
+    "qemu!disp_draw_layer": "0x1403d8013",
+    "qemu!tb_invalidate_phys_page_range__locked.isra.0": "0x1405320e3",
+    "qemu!replay_mutex_lock": "0x140332f61",
+    "qemu!flatview_access_valid": "0x1404eaf8c",
+    "qemu!aio_pending": "0x1406db3ee",
+    "qemu!switch_mode": "0x1403f56e2",
+    "qemu!cpu_get_tb_cpu_state": "0x1403fcdb9",
+    "qemu!address_space_translate_internal": "0x1404ea701",
+    "qemu!c7_weff_enabled": "0x140336b9a",
+    "qemu!icount_warp_rt": "0x140338250",
+    "qemu!get_phys_addr_nogpc": "0x14034e892",
+    "qemu!ipod_classic_timer_read": "0x1403cd711",
+    "qemu!ipod_pcdump": "0x14052e291",
+    "qemu!c7_gap_sample.constprop.0": "0x1403381f4",
+    "qemu!arm_cpu_tlb_fill": "0x1404a0690",
+    "qemu!probe_access_internal": "0x14053ceb8",
+    "qemu!flatview_do_translate.isra.0": "0x1404eac4c",
+    "qemu!icount_get": "0x140338853",
+    "qemu!find_next_bit": "0x1406dfe2a",
+    "qemu!timerlistgroup_run_timers": "0x1406f32b8",
+    "qemu!arm_mmu_idx_el": "0x140405bb7",
+    "qemu!arm_rebuild_hflags": "0x1404721f5",
+    "qemu!get_ptr_rcu_reader": "0x1406e6e46",
+    "qemu!subpage_read": "0x1404ef4e8",
+    "qemu!timerlistgroup_deadline_ns": "0x1406f2f56",
+    "qemu!address_space_write": "0x1404ef731",
+    "qemu!do_ld4_mmu": "0x14053f4ba",
+    "qemu!qemu_clock_get_ns": "0x1406f2bb8",
+    "qemu!aio_prepare": "0x1406db267",
+    "qemu!mingw_gettimeofday": "0x14075c50a",
+    "qemu!object_class_dynamic_cast_assert": "0x14055a29c",
+    "qemu!cpu_tb_exec": "0x14052f0f3",
+    "qemu!cpu_unwind_data_from_tb": "0x140538284",
+    "qemu!qemu_mutex_unlock_impl": "0x1406ddb51",
+    "qemu!tb_htable_lookup": "0x14052e011",
+    "qemu!get_iothread_locked": "0x1402d8caa",
+    "qemu!qht_lookup_custom": "0x1406e9a5f",
+    "qemu!qemu_mutex_lock_iothread_impl": "0x1402d967b",
+    "qemu!get_level1_table_address": "0x14034cdd0",
+    "qemu!probe_access_full_mmu": "0x140541340",
+    "qemu!iotlb_to_section": "0x1404eed14",
+    "qemu!memory_region_access_valid": "0x1404e3a5b",
+    "qemu!cpu_thread_is_idle": "0x1402d8e52",
+    "qemu!tlb_set_page_full": "0x140540cfe",
+    "qemu!qemu_clock_run_all_timers": "0x1406f33f0",
+    "qemu!memory_region_get_ram_ptr": "0x1404e7e50",
+    "qemu!arm_cpu_exec_interrupt": "0x1403ec877",
+    "qemu!cpsr_write": "0x140409109",
+    "qemu!pl192_read": "0x140139b81",
+    "qemu!arm_ldl_ptw": "0x14034c261",
+    "qemu!tlb_flush_vtlb_page_mask_locked": "0x14053b983",
+    "qemu!qemu_ram_block_from_host": "0x1404eead3",
+    "qemu!qemu_cpu_kick": "0x1402d9532",
+    "qemu!mmu_lookup1": "0x14053d0c2",
+    "qemu!page_trylock_add": "0x1405318de",
+    "qemu!memory_region_section_get_iotlb": "0x1404ed684",
+    "qemu!cpsr_read": "0x1403fb546",
+    "qemu!main_loop_wait": "0x1406efd97",
+    "qemu!pl192_update": "0x1401397fa",
+    "qemu!qemu_ram_ptr_length.isra.0": "0x1404eadd5",
+    "qemu!arm_restore_state_to_opc": "0x1403ec360",
+    "qemu!set_iothread_locked": "0x1402d8cbf",
+    "qemu!helper_stl_mmu": "0x140541bf0",
+    "qemu!cpu_exec_longjmp_cleanup": "0x14052eeb7",
+    "qemu!get_phys_addr_v6": "0x140352a96",
+    "qemu!arm_phys_excp_target_el": "0x140403585",
+    "qemu!flatview_read_continue": "0x1404ef0da",
+    "qemu!do_st4_mmu": "0x140540048",
+    "qemu!cpu_get_clock_locked": "0x1402da934",
+    "qemu!victim_tlb_hit": "0x14053cd82",
+    "qemu!tb_lookup_cmp": "0x14052e21f",
+    "qemu!rr_kick_vcpu_thread": "0x14054d531",
+    "qemu!flatview_write": "0x1404ecacb",
+    "qemu!int_st_mmio_leN": "0x14053b940",
+    "qemu!curr_cflags": "0x14052f3b4",
+    "qemu!cpu_restore_state_from_tb": "0x1405383d9",
+    "qemu!do_ld_mmio_beN": "0x14053bb64",
+    "qemu!st_rate_flow_mix": "0x1402cb840",
+    "qemu!get_page_addr_code_hostp": "0x140541762",
+    "qemu!gui_update": "0x1400212f1",
+    "qemu!arm_hcr_el2_eff_secstate": "0x1403f6b34",
+    "qemu!qemu_set_irq": "0x1405569dc",
+    "qemu!cpu_physical_memory_get_dirty.constprop.0": "0x14053ccb7",
+    "qemu!runstate_is_running": "0x1402e3be7",
+    "qemu!helper_ldul_mmu": "0x1405419b4",
+    "qemu!memory_region_dispatch_read": "0x1404e44c4",
+    "qemu!rebuild_hflags_common_32": "0x140470f44",
+    "qemu!memory_region_write_accessor": "0x1404e4b42",
+    "qemu!os_host_main_loop_wait": "0x1406ef6e7",
+    "qemu!all_cpu_threads_idle": "0x1402d8ed7",
+    "qemu!qemu_event_set": "0x1406de5e0",
+    "qemu!aio_ctx_prepare": "0x1406ee48c",
+    "qemu!icount_start_warp_timer": "0x140338901",
+    "qemu!arm_security_space": "0x1403fde77",
+    "qemu!qemu_clock_notify": "0x1406f2473",
+    "qemu!cpu_get_clock": "0x1402da9f8",
+    "qemu!aio_bh_poll": "0x1406ee391",
+    "qemu!memory_region_read_accessor": "0x1404e3f70",
+    "qemu!ptimer_reload": "0x14008a4f3",
+    "qemu!cpu_exec": "0x1405311dc",
+    "qemu!object_class_dynamic_cast": "0x140559dd3",
+    "qemu!qemu_timer_notify_cb": "0x1402dad00",
+    "qemu!timer_mod_ns": "0x1406f2808",
+    "qemu!arm_cpu_do_interrupt": "0x140407401",
+    "qemu!cpu_physical_memory_rw": "0x1404efa93",
+    "qemu!qemu_clock_expired": "0x1406f2e77",
+    "qemu!monitor_can_read": "0x14063abb2",
+    "qemu!memory_region_write_with_attrs_accessor": "0x1404e482e",
+    "qemu!qemu_chr_be_can_write": "0x14063609d"
+  }
+}

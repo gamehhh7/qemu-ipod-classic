@@ -357,6 +357,12 @@ The wiki is in Spanish.
 
 ---
 
+## Windows Classic7 desktop overlay
+
+[`classic7-desktop/`](classic7-desktop/) is the Windows Classic7 desktop overlay for this fork at `1c33be87`. It is a source-and-docs tree (desktop shell, host USB/storage helpers, and device-model patches) kept in that subdirectory. No firmware is shipped. Audio is still unfinished — playback is slow and tears — and that work was paused. See [`classic7-desktop/UPLOAD-NOTES.md`](classic7-desktop/UPLOAD-NOTES.md) and [`classic7-desktop/CONTINUE-HERE.md`](classic7-desktop/CONTINUE-HERE.md).
+
+---
+
 ## This repository is a fork
 
 Forked from [devos50/qemu-ios](https://github.com/devos50/qemu-ios) (QEMU 8.2.0), branch

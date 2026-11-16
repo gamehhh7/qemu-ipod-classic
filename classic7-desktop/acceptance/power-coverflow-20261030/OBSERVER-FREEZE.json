@@ -1,0 +1,25 @@
+{
+  "environment": {
+    "CLASSIC7_POWER_TRACE": "1"
+  },
+  "review": {
+    "no_physical_device": true,
+    "pmu_behavior_unchanged": true,
+    "approved": true,
+    "trace_only": true,
+    "seed_readonly": true,
+    "no_USB_connection": true,
+    "no_guest_forcing": true
+  },
+  "native_run_authorized": true,
+  "utc": "2026-10-30T05:22:27.6337330Z",
+  "hashes": {
+    "src\\usb\\observed_pmu.c": "12F7FF614CA9B4D84D4CF90E6F2C4C59E378DC9310BD6861194D48BFD9F7A323",
+    "bin\\iPodClassic7.exe": "58AE3E24B55288A068BF0C0033548A5CFCA122DFC2334A1A1824035F83FB0E77",
+    "src\\usb\\observed_i2c.c": "C4325755496D23EA28E492C1BAC33A41610D0C2C3EB5F9BB4AE569BE1B9484CE",
+    "storage\\persistent_store.py": "28C17A47B36F994F6BC6CB6BB40CF4E6D34E34AA8D7EB5C7FC3D94CF9B4915D6",
+    "engine\\qemu-system-arm-classic7.exe": "68078011FC157618B62ED3850413660862084CA8C38EB4B49CAB005F94202933"
+  },
+  "purpose": "Actual finished app native CoverFlow power-reset reproduction with bounded passive PMU trace",
+  "bound_seconds": 330
+}

@@ -1,0 +1,40 @@
+[New Thread 30784.0x8600 (id 2)]
+[New Thread 30784.0x8290 (id 3)]
+[New Thread 30784.0x4d1c (id 4)]
+[New Thread 30784.0x3e10 (id 5)]
+[New Thread 30784.0x7fac (id 6)]
+[New Thread 30784.0x7058 (id 7)]
+[New Thread 30784.0x418 (id 8)]
+[New Thread 30784.0x4d4c (id 9)]
+[New Thread 30784.0x1a78 (id 10)]
+[New Thread 30784.0x7d40 (id 11)]
+[Switching to thread 1 (Thread 30784.0x841c)]
+0x00007ffb209c28a4 in ntdll!ZwWaitForMultipleObjects () from C:/WINDOWS/SYSTEM32/ntdll.dll
+GUEST_REGS
+$1 = {0x3c500000, 0x0, 0x39a00000, 0x3000, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1325, 0x8, 0x0, 0x404101, 0x2200ae4c, 0x0, 0x22002e74}
+$2 = 0x13
+$3 = 1
+WHEEL_STATE
+$4 = 0x300000
+$5 = 0x1
+$6 = 0x0
+$7 = true
+$8 = 16
+$9 = 0x0
+$10 = false
+$11 = true
+$12 = false
+$13 = -45
+$14 = 0x0
+$15 = 57
+$16 = 30
+$17 = 19
+$18 = 11
+CLOCK_REGS
+$19 = {0x80008000, 0x404101, 0x80008000, 0x80008000, 0x80008000, 0x8000, 0x0 <repeats 11 times>, 0x100, 0xffffffe3, 0xffffeff7, 0x0, 0x1, 0x0, 0x0, 0x0...}
+RAM_BLOCKS
+sdram host=0x43cc0000 size=67108864
+iram0 host=0xe60000 size=131072
+iram1 host=0xe80000 size=131072
+edgeic host=0xea0000 size=4096
+[Inferior 1 (process 30784) detached]

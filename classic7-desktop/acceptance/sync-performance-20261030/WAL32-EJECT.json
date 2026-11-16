@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T10:21:34.441821+00:00",
+  "instance": "USB\\VID_05AC&PID_1261\\000A2700214DCAC1",
+  "fresh_parent_chain": [
+    "USB\\VID_05AC&PID_1261\\000A2700214DCAC1",
+    "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+    "ROOT\\USB\\0000",
+    "HTREE\\ROOT\\0"
+  ],
+  "CONFIGRET": 0,
+  "veto_type": 0,
+  "veto_name": "",
+  "physical_device": false,
+  "reboot": false,
+  "acceptance": "Windows eject result only; persisted file must be read after a new backend"
+}

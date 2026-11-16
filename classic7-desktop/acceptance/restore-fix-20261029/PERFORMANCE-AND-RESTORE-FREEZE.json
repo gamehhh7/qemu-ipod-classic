@@ -1,0 +1,41 @@
+{
+  "utc": "2026-10-29T16:08:08.469711+00:00",
+  "files": {
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\Classic7.cs": "4a4307bbc0c630b5fb08fefe947e5f14cc005c952453c463d56528304400e846",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\bin\\iPodClassic7.exe": "92e9a358309e58ca079205dd952873cc82ce48da6ebe4cd1c4d80ddb6df2cde5",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.exe": "8a95967115ffa50711a0604e85b3e18b3766f7be1638108a1fbb4ad1591db800",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\host\\reset_producer.py": "be93832f1fc4e7811677640809498cab2caef139bfc8bbf69fec91bb535e2e82",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\host\\frontend\\native_backend.py": "b6b3a4acd4b284664208275202401ac5382522bd0d8e6e43449608deab66349c",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\host\\frontend\\usbip_codec.py": "ea90a5bc09eaa6d5bcdd044bc9b955ed145155050f609e0673d13295eb643d5a",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\host\\frontend\\usbip_server.py": "307358305b5d056bd90b3de33826b368c473f13dc42dc32dc34505f6dc46356a",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\host\\bounded_records.py": "b6a43f2d244c01e1f32cbdea96a90f182c0b6b99553da048a79d2b694c4200a6",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\host\\legacy_reset.py": "32cbaf8642818b6f84666fb2c576dcdc012b084033f057f5f7a3a66ebc3859a0",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\src\\usb\\native_bulk.inc": "8dbfa3594c8d956e5d51c9918fa0451f41f169be414865dfd821c709b5be121d",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\src\\usb\\ipod-host-server.c": "a61cf7b7557cdca9e815a850975b479c58e63e75e34252a588b62d63d8d6156a",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\storage\\persistent_store.py": "46f5e254c2041958af6255772b9556c58c8e4bde419217feda5afd4df1111cbd",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\userdata\\device-identity.json": "a06edcfe7a3c16a922b06937cfb7b6f3614b60bd0c2616aa418ea38ef69a547c",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\userdata\\windows-disk.json": "a91eb173d67cb98666188e323fe3ff9ea527eacda3b1d68732b665ac90675410"
+  },
+  "main_argv": [
+    "--connect-usb"
+  ],
+  "clock": "standard QEMU virtual clock, icount opt-in only CLASSIC7_DETERMINISTIC=1",
+  "diagnostics": "high-frequency trace opt-in only CLASSIC7_DIAGNOSTICS=1; semantic host errors retained",
+  "changes": [
+    "complete actual IN overflow packet gets nonce-qualified ACK, honest URB EOVERFLOW",
+    "deterministic request-local wait timeout no forced disconnect",
+    "recovery wait uses actual >=10ms virtual time, same single reset",
+    "natural endpoint backpressure replaces per-packet snapshot RPC",
+    "single SQL sector lookup, no weakened WAL FULL commit",
+    "actual database file migrated to current GUID without changing tracks"
+  ],
+  "review": {
+    "approved": true,
+    "normal_user_app_authorized": true,
+    "no_guest_forcing_or_fake_completion": true,
+    "no_new_USB_or_clock_register_defaults": true,
+    "new_failure_safety": "unknown RPC acceptance still terminal; only known host buffer overflow and known wait timeouts remain local"
+  },
+  "actual_performance_and_iTunes_acceptance": "pending finished app operation, no benchmark fixture",
+  "seed_and_formal_FCa0c9_untouched": true
+}

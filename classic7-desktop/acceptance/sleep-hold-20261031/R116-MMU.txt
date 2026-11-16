@@ -1,0 +1,15 @@
+[New Thread 32092.0x5094 (id 2)]
+[New Thread 32092.0x68fc (id 3)]
+[New Thread 32092.0xb0c (id 4)]
+[New Thread 32092.0x6370 (id 5)]
+[New Thread 32092.0x285c (id 6)]
+[New Thread 32092.0x8584 (id 7)]
+[New Thread 32092.0x6b58 (id 8)]
+[New Thread 32092.0x78f8 (id 9)]
+[New Thread 32092.0x52dc (id 10)]
+[Switching to thread 1 (Thread 32092.0x8c08)]
+0x00007ffb209c59c4 in ntdll!ZwWaitForAlertByThreadId () from C:/WINDOWS/SYSTEM32/ntdll.dll
+$1 = 0x89107d
+$2 = 0x2200c000
+$3 = 0x22003b50
+[Inferior 1 (process 32092) detached]

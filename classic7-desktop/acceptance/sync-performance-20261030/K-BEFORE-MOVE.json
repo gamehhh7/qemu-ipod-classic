@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-30T10:29:04.048490+00:00",
+  "database": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\userdata\\windows-8g.sqlite3",
+  "checkpoint": [
+    0,
+    0,
+    0
+  ],
+  "quick_check": "ok",
+  "base_identity": {
+    "format": 1,
+    "head_tail_sha256": "cb54a44520c581ba1c1d2dc98d21293e0c2d7a082671f6f1a6a387fb803f5fc9",
+    "path": "k:\\codexresources\\2026-10-01\\zcode-delegation\\quota-fallback\\acceptance\\media\\e-revb35-two-songs.img",
+    "sector": 512,
+    "size": 160743424,
+    "virtual_sectors_512": 16960096,
+    "zero_from_sector_512": 182880
+  },
+  "bytes": 296202240,
+  "sole_writer_lock_acquired": true
+}

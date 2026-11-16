@@ -1,0 +1,115 @@
+{
+  "source": "original virtual seed rb + original readonly SQLite COW snapshot",
+  "whole_image_copy": false,
+  "physical_device": false,
+  "files": [
+    {
+      "path": "iPod_Control/Music/F00/TIDL0001.MP3",
+      "attributes": 32,
+      "size": 9555564,
+      "sha256": "216611c8ffa10cbef37c0571c8488acbff5ca8f898b401dc5ee72949f8d50c3e"
+    },
+    {
+      "path": "iPod_Control/Music/F01/TRUL0002.MP3",
+      "attributes": 32,
+      "size": 1911956,
+      "sha256": "d7f23cc921eab1fc2aff6ee98c871619f76cfb1cdc927ff3f9c645ecddf2ff40"
+    },
+    {
+      "path": "iPod_Control/iTunes/iTunesDB",
+      "attributes": 32,
+      "size": 8036,
+      "sha256": "36282aca6a0390ca977de4ad3b1a2ddfaf3bd1989f764ccfb676f4d3c5a9a902"
+    },
+    {
+      "path": "iPod_Control/Device/SysInfo",
+      "attributes": 32,
+      "size": 81,
+      "sha256": "6162193058698024d9718a46207673fe821c2d6ee021d5b106dda3a66250557f"
+    },
+    {
+      "path": "iPod_Control/Device/clock",
+      "attributes": 32,
+      "size": 32,
+      "sha256": "9f7f63d81f3b92eb1049682777e479397da552ff2e5a39220cdca5162972ee0c"
+    },
+    {
+      "path": "iPod_Control/Device/Preferences",
+      "attributes": 32,
+      "size": 2956,
+      "sha256": "65ace918ac6816b948fb27e259c6e1326241f039a45165d46e3f2ecf98e1cf5f"
+    },
+    {
+      "path": "iPod_Control/Device/alarms",
+      "attributes": 32,
+      "size": 8,
+      "sha256": "351343cd10492539181a7c02cdd5c2dc74a254645b1d7749b19bc76ddbb69254"
+    },
+    {
+      "path": "iPod_Control/Tones/Beep.tone",
+      "attributes": 32,
+      "size": 69,
+      "sha256": "f8991403cb7d1a54799c872879f90358ce4f7a279e4b2ce9f40e5fdff93f7d4c"
+    },
+    {
+      "path": ".metadata_never_index",
+      "attributes": 0,
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Notes/Instructions",
+      "attributes": 32,
+      "size": 14,
+      "sha256": "4bd8f6eb9c382d05c0f5cca8a0a42bcebaf8a9d6a9b41c832e0d4995253a77d8"
+    }
+  ],
+  "directories": [
+    {
+      "path": "iPod_Control",
+      "attributes": 18
+    },
+    {
+      "path": "iPod_Control/Music",
+      "attributes": 16
+    },
+    {
+      "path": "iPod_Control/Music/F00",
+      "attributes": 16
+    },
+    {
+      "path": "iPod_Control/Music/F01",
+      "attributes": 16
+    },
+    {
+      "path": "iPod_Control/iTunes",
+      "attributes": 16
+    },
+    {
+      "path": "iPod_Control/Device",
+      "attributes": 16
+    },
+    {
+      "path": "iPod_Control/Tones",
+      "attributes": 16
+    },
+    {
+      "path": "Calendars",
+      "attributes": 16
+    },
+    {
+      "path": "Contacts",
+      "attributes": 16
+    },
+    {
+      "path": "Notes",
+      "attributes": 16
+    },
+    {
+      "path": "Recordings",
+      "attributes": 16
+    }
+  ],
+  "total_bytes": 11478716,
+  "source_sectors_read": 22617
+}

@@ -1,0 +1,84 @@
+{
+  "round": "R135",
+  "updated_utc": "2026-11-16T11:59:46.495904+00:00",
+  "status": "PARTIAL: decoded supply and short progress window improved; standard-clock candidate FAILED regression and normally closed",
+  "formal_files_unchanged": true,
+  "standard_candidate": {
+    "app": 14876,
+    "qemu": 21996,
+    "backend": 6296,
+    "run": "20261116T113847Z-14876",
+    "closed_normally": true,
+    "engine_sha": "026D4B2CB74AF8BA63AFDC3C4F8F53E2F0D88CBF02040FD2A455CC655C276DF0"
+  },
+  "actual_change": "Existing synchronous minimp3 decode had an additional 26.122449ms completion delay. Candidate removes that playback-duration delay, retains asynchronous timer, real completed decode, level IRQ and guest ACK.",
+  "supply_measurement": {
+    "pid": 21996,
+    "label": "r135-120s",
+    "method": "ReadProcessMemory only; no suspend or writes",
+    "wall_s": 120.0128747,
+    "virtual_s": 120.0128896,
+    "virtual_wall_ratio": 1.0000001241533463,
+    "pcm_Bps": 176450.40211673224,
+    "drain_Bps": 176449.06892643578,
+    "nominal": 176468,
+    "decode_Bps": 176505.86283306486,
+    "decode_fps": 38.3042237050922,
+    "ring_min": 55088,
+    "ring_max": 60348
+  },
+  "progress": {
+    "source": "progress-burst-r135/index.json",
+    "images": 162,
+    "elapsed_ms": 8025,
+    "approx_interval_ms": 49.8,
+    "all_elapsed_crops_inspected_by": "sleep_visual",
+    "sequence": [
+      "1:54",
+      "1:55",
+      "1:56",
+      "1:57",
+      "1:58",
+      "1:59",
+      "2:00",
+      "2:01"
+    ],
+    "backwards_seen": false,
+    "scope": "8-second window only"
+  },
+  "ui": {
+    "pause": "dashstar* 0:07 held across 3.105s",
+    "resume": "0:09 to0:12 across3.104s",
+    "next_track": "December0:00 to0:16 across17.027s",
+    "coverflow": "NOT PASSED: low battery warning during navigation at11:55:45.876Z"
+  },
+  "new_failure": {
+    "observed": "Low battery warning then actual software reset",
+    "swrcon": "0xaa5",
+    "pc": "0x0835d03c",
+    "lr": "0x0820b6f4",
+    "sp": "0x0bede270",
+    "virtual_ns": 1025633031900,
+    "source": "r135-fault-1956-qemu.log",
+    "interpretation": "Standard-clock regression failed; prior I2C duplicate-TX evidence supports timing race concern. Exact cause of this reset not yet proved from first-fault state."
+  },
+  "pmu_readback": "Exact post-warning read gave55=d3,56=00,57=80; cannot use a healthy later ADC snapshot to disprove transient I2C corruption. Earlier GDB compressed-array suspicion is not indexed proof.",
+  "loopback": "r135-output.json/wav:6s at48kHz, HECATE G2 speaker endpoint. Nonzero output confirmed; not a smoothness proof.",
+  "listening": "No response yet to newest R135 listening question; prior slightly-more-listenable feedback predatesR135",
+  "active": {
+    "app": 164,
+    "qemu": 4536,
+    "backend": 14784,
+    "run": "20261116T115743Z-164",
+    "clock": "icount shift=auto,align=off,sleep=on",
+    "state": "one bounded independent comparison, not adopted; reverify identities"
+  },
+  "sleep": "User deferred; no sleep/Hold testing",
+  "guards": [
+    "single K COW writer",
+    "formal bin/engine not overwritten",
+    "no firmware/guestPC/IRQ patch",
+    "no Cursor/DSH/technical agents",
+    "normal close and rollback after bounded candidate test"
+  ]
+}

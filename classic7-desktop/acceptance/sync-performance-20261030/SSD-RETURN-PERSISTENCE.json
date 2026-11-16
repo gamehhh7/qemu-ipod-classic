@@ -1,0 +1,279 @@
+{
+  "snapshot": "SQLite readonly transaction, original seed rb",
+  "reserved_marker_hex": "464154",
+  "bytes_per_sector": 4096,
+  "cluster_bytes": 32768,
+  "data_volume_bytes": 8589934592,
+  "total_clusters": 262076,
+  "free_clusters": 252806,
+  "free_bytes": 8283947008,
+  "files": [
+    {
+      "path": "System Volume Information/WPSettings.dat",
+      "size": 12,
+      "sha256": "f225bf20ff648595acb9582d392a89e1495bfad1f9d12437b91a637f890be808"
+    },
+    {
+      "path": "System Volume Information/IndexerVolumeGuid",
+      "size": 76,
+      "sha256": "3e609af0c26f70d536f491f0aec0b35d0fd5faaa7bf7d364313913994d0d390f"
+    },
+    {
+      "path": "Codex-iPod-391137d3581c4ec88f2600098e605401.txt",
+      "size": 3968,
+      "sha256": "4f95a099425200bac488ff9bd25c66b777452c4076c02744930acc18c9afe3e4"
+    },
+    {
+      "path": "iPod_Control/Music/F03/LYHZ.MP3",
+      "size": 3248946
+    },
+    {
+      "path": "iPod_Control/Music/F03/SLXH.M4A",
+      "size": 22522549
+    },
+    {
+      "path": "iPod_Control/Music/F04/LHPZ.MP3",
+      "size": 3466148
+    },
+    {
+      "path": "iPod_Control/Music/F05/PKVP.MP3",
+      "size": 11832174
+    },
+    {
+      "path": "iPod_Control/Music/F05/UKGQ.MP3",
+      "size": 4447001
+    },
+    {
+      "path": "iPod_Control/Music/F05/AENN.MP3",
+      "size": 3605768
+    },
+    {
+      "path": "iPod_Control/Music/F05/POQN.MP3",
+      "size": 3667614
+    },
+    {
+      "path": "iPod_Control/Music/F07/EFFH.MP3",
+      "size": 4039694
+    },
+    {
+      "path": "iPod_Control/Music/F07/KVQS.MP3",
+      "size": 3067003
+    },
+    {
+      "path": "iPod_Control/Music/F07/GSLH.M4A",
+      "size": 31181003
+    },
+    {
+      "path": "iPod_Control/Music/F08/WIEK.MP3",
+      "size": 3307615
+    },
+    {
+      "path": "iPod_Control/Music/F08/BVAJ.MP3",
+      "size": 7577422
+    },
+    {
+      "path": "iPod_Control/Music/F09/UCTK.MP3",
+      "size": 9695741
+    },
+    {
+      "path": "iPod_Control/Music/F09/VHJB.MP3",
+      "size": 3177445
+    },
+    {
+      "path": "iPod_Control/Music/F10/WERB.MP3",
+      "size": 7921193
+    },
+    {
+      "path": "iPod_Control/Music/F11/UWBY.MP3",
+      "size": 4028528
+    },
+    {
+      "path": "iPod_Control/Music/F11/IACS.MP3",
+      "size": 3053222
+    },
+    {
+      "path": "iPod_Control/Music/F12/WPDW.MP3",
+      "size": 4966863
+    },
+    {
+      "path": "iPod_Control/Music/F12/NVRN.MP3",
+      "size": 3620067
+    },
+    {
+      "path": "iPod_Control/Music/F12/STLG.M4A",
+      "size": 27039831
+    },
+    {
+      "path": "iPod_Control/Music/F13/GBFQ.MP3",
+      "size": 7923039
+    },
+    {
+      "path": "iPod_Control/Music/F13/EUQU.MP3",
+      "size": 4558939
+    },
+    {
+      "path": "iPod_Control/Music/F13/YLNO.MP3",
+      "size": 3914521
+    },
+    {
+      "path": "iPod_Control/Music/F13/OENG.MP3",
+      "size": 3215394
+    },
+    {
+      "path": "iPod_Control/iTunes/iTunesControl",
+      "size": 34603008
+    },
+    {
+      "path": "iPod_Control/iTunes/Extras.itdb",
+      "size": 172032,
+      "sha256": "f87bb60a53348acec20fc9d8de0e394088ccd40cd6d62616667dac74f426ddf4"
+    },
+    {
+      "path": "iPod_Control/iTunes/PhotosAppAlbumPrefs",
+      "size": 100,
+      "sha256": "9f519d05b4292a3c2b034cc43ea2dceac32438852e76dc1f2aa7f4aae2d62716"
+    },
+    {
+      "path": "iPod_Control/iTunes/PSAlbumAlbums",
+      "size": 100,
+      "sha256": "9f519d05b4292a3c2b034cc43ea2dceac32438852e76dc1f2aa7f4aae2d62716"
+    },
+    {
+      "path": "iPod_Control/iTunes/PhotosFolderAlbums",
+      "size": 5260,
+      "sha256": "c1391a8f37d1b9c533003cebb0081fc40487644dfdba73565f58041eb3b05a58"
+    },
+    {
+      "path": "iPod_Control/iTunes/PhotosFolderPrefs",
+      "size": 616,
+      "sha256": "1b63881944a064cc32ffec54d7d7209102c7f74d5fa677afe5b004db3c3780bf"
+    },
+    {
+      "path": "iPod_Control/iTunes/PhotosFolderName",
+      "size": 512,
+      "sha256": "f6d9c0cae0953cdb9bc7da7cb7944ff4ce75386e4bbaaa5a005c6234769df603"
+    },
+    {
+      "path": "iPod_Control/iTunes/iTunesLock",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "iPod_Control/iTunes/iTunesDB",
+      "size": 37230,
+      "sha256": "e2222213889615d2ebe78ddb7dc9e9a5b15c4ba50dfbc42db0a5051977551ed1",
+      "mhbd": "mhbd",
+      "database_track_count": 8
+    },
+    {
+      "path": "iPod_Control/iTunes/iTunesPrefs",
+      "size": 1232,
+      "sha256": "c9e812be1ca251666fb55e32d8b30e401953cc6e90de97a84062b032e5fcd64b"
+    },
+    {
+      "path": "iPod_Control/iTunes/iTunesPrefs.plist",
+      "size": 2767,
+      "sha256": "8ec20b31d8abc8d98e47ec9510b9890bf0e7baae992b82b76b7eeec6284324fa"
+    },
+    {
+      "path": "iPod_Control/iTunes/Rentals.plist",
+      "size": 245,
+      "sha256": "6829ac1161bc483ae28e6895ca8fe9e73a593ed31286d97ebf8e02d96cb081cd"
+    },
+    {
+      "path": "iPod_Control/iTunes/Extras.itdb-journal",
+      "size": 4616,
+      "sha256": "1efe512f0e13257c0c1921c54e1429cb2eee1591ca223a24c402bc37202ed722"
+    },
+    {
+      "path": "iPod_Control/Device/SysInfo",
+      "size": 84,
+      "sha256": "a05bd2d100121e266be9e76daa2430f25da54a873df6c70135ba7e12af6e2092"
+    },
+    {
+      "path": "iPod_Control/Device/CLOCK",
+      "size": 32,
+      "sha256": "9f7f63d81f3b92eb1049682777e479397da552ff2e5a39220cdca5162972ee0c"
+    },
+    {
+      "path": "iPod_Control/Device/Preferences",
+      "size": 2956,
+      "sha256": "d8c5b1fb4ffcea5d95800344ebd70f928ed7716d498143fcc327b61b6fc19954"
+    },
+    {
+      "path": "iPod_Control/Device/alarms",
+      "size": 8,
+      "sha256": "351343cd10492539181a7c02cdd5c2dc74a254645b1d7749b19bc76ddbb69254"
+    },
+    {
+      "path": "iPod_Control/Tones/Beep.tone",
+      "size": 69,
+      "sha256": "f8991403cb7d1a54799c872879f90358ce4f7a279e4b2ce9f40e5fdff93f7d4c"
+    },
+    {
+      "path": "iPod_Control/Artwork/F1055_1.ithmb",
+      "size": 5603328
+    },
+    {
+      "path": "iPod_Control/Artwork/F1060_1.ithmb",
+      "size": 11304960
+    },
+    {
+      "path": "iPod_Control/Artwork/F1061_1.ithmb",
+      "size": 10510400
+    },
+    {
+      "path": "iPod_Control/Artwork/ArtworkDB",
+      "size": 4124,
+      "sha256": "b855aed27c254139124927e9373802ab7bcccb11e9081180c4b9581cb53d75e7"
+    },
+    {
+      "path": "Notes/Instructions",
+      "size": 14,
+      "sha256": "4bd8f6eb9c382d05c0f5cca8a0a42bcebaf8a9d6a9b41c832e0d4995253a77d8"
+    },
+    {
+      "path": ".metadata_never_index",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Codex-transfer-f78093468de6481497e48a6c6b47542b.bin",
+      "size": 1048576,
+      "sha256": "b704798b216099099b9f436025a2f3a21ade607dd984ddaf5148bd06cc5337d4"
+    },
+    {
+      "path": "Codex-transfer-da05aa98f14742d4aac5ea53eec6abcf.bin",
+      "size": 1048576,
+      "sha256": "3a2f8bf369a28246d6250a41a1bc48bfed4cf0b8de2a0543ef260e5f53ecac79"
+    },
+    {
+      "path": "Codex-transfer-d47507b45f00469187ba0a13be68cc0a.bin",
+      "size": 1048576,
+      "sha256": "e390d5c2fc2a5fc2e605359ee0b09ef3cf78ccf7413e47144991d9d3fc6af22a"
+    },
+    {
+      "path": "Codex-transfer-f50d069bcfdc48d4b281704f955540d8.bin",
+      "size": 1048576,
+      "sha256": "dffda5ccd06f27cf660a5eabd02fa8cc1efedc8d84ddc3e9b742a99109367f71"
+    },
+    {
+      "path": "Codex-transfer-589e33acd820460c994bc19f963e5358.bin",
+      "size": 16777216
+    },
+    {
+      "path": "Codex-transfer-4b6056d3af0248cb9eac042174722c60.bin",
+      "size": 16777216,
+      "sha256": "d5cfe3e8b8b02a71b9556122ca481f869457d31f2cab79565455c8f63d0b5f49",
+      "transfer_verified": true
+    },
+    {
+      "path": "Codex-transfer-e3bdee45922148d787a93354d1a40614.bin",
+      "size": 16777216,
+      "sha256": "903147704987181efb2507ad1d1553b379f9c0a678e412a9880079ddd032b352",
+      "transfer_verified": true
+    }
+  ],
+  "physical_device": false,
+  "media_written": false
+}

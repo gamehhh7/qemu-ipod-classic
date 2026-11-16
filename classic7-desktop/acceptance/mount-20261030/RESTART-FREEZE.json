@@ -1,0 +1,13 @@
+{
+  "source_freeze_sha256": "922D9A6BFDDFBE8426125A6BFD17DB897AF115E8C9C2F5972AE13CBAE5BCAE4B",
+  "purpose": "Independent complete EXE/backend restart verifies persisted volume, library and native capacity; real UI navigation",
+  "utc": "2026-10-30T04:57:31.9597843Z",
+  "bound_seconds": 330,
+  "native_run_authorized": true,
+  "review": {
+    "seed_readonly": true,
+    "exact_prior_marker_freeze_unchanged": true,
+    "approved": true,
+    "no_forcing": true
+  }
+}

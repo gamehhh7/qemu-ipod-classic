@@ -1,0 +1,39 @@
+{
+  "phase": "R110_SLEEP_ACCEPTANCE_FAILED_NORMAL_KEY_WAKE_REMAINS",
+  "app_pid": 7544,
+  "qemu_pid": 1280,
+  "run": "20261030T171130Z-7544",
+  "before_read": "20261030T174332Z-accept-before.txt",
+  "enter_utc": "2026-10-30T17:43:49.2834198Z",
+  "after_enter": {
+    "cpu_pc": "22002e74",
+    "fifo": 8,
+    "IRQ23": "masked",
+    "frames": 107,
+    "ui": "mainmenu unchanged"
+  },
+  "hold_utc": [
+    "2026-10-30T17:44:29.1566684Z",
+    "2026-10-30T17:44:29.8986768Z"
+  ],
+  "after_hold": {
+    "cpu_pc": "22002e74",
+    "fifo": 0,
+    "frames": 107,
+    "panic": 0,
+    "software_resets": 0,
+    "iram_size_cache": "ffffffff"
+  },
+  "original_reboot_fix_complete_acceptance": false,
+  "whole_sleep_repair_complete": false,
+  "next": "Root continue with firmware power-policy predicates and actual low-power wake source/clock handling. Save helperchain0805d024->0807b270->veneer0802d050->IRAM220005a0. Nofirmwarepatch,forcewake,IRQmaskoverride,GPIOguess,sleep-disable,orreset-suppression.",
+  "updated_utc": "2026-10-30T18:00:16.839643+00:00",
+  "remaining_problem": "Actual Enter queues8packets and raisesIRQ23raw, but guest masksIRQ23 in deep WFI and UIdoesnotadvance. HoldPMUint isprocessed, drainsFIFO, and returnsWFI; noactualnormalnavigation accepted.",
+  "critical_save_path": "NOT ACCEPTED. SysInfo+e8fixruntimeverified40000, but firstHoldatvirtual1455s didnotreadcachedSRAMsize(cacheffffffff). Absenceofabortthereisnotsufficientregressionevidence.",
+  "later_readonly_clock": "17:54:46UTC nativevirtual1912405889624ns, SRAMsizecacheffffffff. AnotherHoldwaspreparedbutCANCELEDbeforeinput: priorHoldmayresetidlepolicy; matchingabsolutetimealonecannotjustifyrepeatingtest.",
+  "extra_Hold_since_initial_acceptance": 0,
+  "timer": "classic7 DELETED; noautomaticrepeatsremain",
+  "current_session": "app7544/qemu1280/backend30048 ordinarysinglewriter preserved; noforcedexit/restartafter01:11",
+  "source_changes_this_acceptance_turn": false,
+  "hardware_contract_gap": "No verifiedphysicalsourceforEIC6bit28/GPIO4. RockboxdefinesEICmappingandactualwheelserialGPIOE2/E3/E4/E5; surveyedfreemyipodmodeldoesnotestablishaGPIO4wheelwakewire. Do notconnectaguessedkeyboardeventtoIRQ/GPIO."
+}

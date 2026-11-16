@@ -1,0 +1,18 @@
+{
+  "reviewer": "gpt-6-luna",
+  "reasoning": "low",
+  "review_scope": "Final90s actual desktop run, refreshed PNG21:14HK",
+  "integrated_wheel": true,
+  "independent_center_button": true,
+  "hold_firmware_icon_on": true,
+  "hold_firmware_icon_off": true,
+  "drag_result": "07-wheel-lcd.png highlights Shuffle Songs, random-play icon and2Songs",
+  "language_to_main_menu": "Language English selected -> Music main menu",
+  "real_lcd_frame_paths": [
+    "01-before-input-lcd.png",
+    "02-select-lcd.png",
+    "03-hold-lcd.png",
+    "04-unlock-lcd.png",
+    "07-wheel-lcd.png"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "phase": "R111_ROOT_CONTINUING_SLEEP_REPAIR_NOT_COMPLETE",
+  "updated": "2026-10-30T23:25:17.654384+00:00",
+  "live_app": 13368,
+  "live_qemu": 14580,
+  "run": "20261030T231802Z-13368",
+  "engine_sha256": "543540d54cb105d4aa78741727a4a499627817af6af433bff738d71d1d622786",
+  "main_sha256": "507c38ad3ddeef525648e53e8c4a74c3bacda68424240a17c7e1baae518fd7b7",
+  "change_this_turn": "Optional loopback CLASSIC7_GDB_PORT arg in frontend for read-only guest breakpoint tracing; NOT a sleep fix. R109 BOOTINFO IRAM fix preserved.",
+  "old_session": "7544/1280/30048 normally closed with USB off/no writes after preservation; all terminal before fresh single writer launched.",
+  "native_calls": "gdbserver_start string malloc failed; direct g_malloc0 trapped in DLL; dummy frame unwound via frame3/return, original ntdll wait stack verified then detached. No more inferior function calls.",
+  "evidence": [
+    "Long Hold at07:00 did restore normal clocks and IRQ23, timers healthy, rotation packets decoded and accumulated but actual display unchanged. No reset, IRAM save cache stillffffffff.",
+    "R111-cold-input-trace.txt shows real key press/release passing hold gate r0=0, input enabled, state getter100, actual event0812156c; all guest hardware breakpoints removed, RSP DETACH OK.",
+    "Cold UI CoverFlow entered07:20; actual M returns Music menu07:22:04, no further input. W not a nativefrontend key; use M/Up."
+  ],
+  "current_wait": "Naturally idle since07:22:04HK; native conditional EIC6 nonzero write tracer waiting. No Hold this session.",
+  "pending_native_gdb_pty": 73501,
+  "native_script": "R112-EIC-ARM-CALLER.gdb; must CtrlC/detach/quit if stopping before auto hit/detach",
+  "next": "Capture actual sleep EIC arming caller/guest stack, then exact post-sleep input/gate trace. No GPIO4 wiring without proof. Entire sleep repair still incomplete."
+}

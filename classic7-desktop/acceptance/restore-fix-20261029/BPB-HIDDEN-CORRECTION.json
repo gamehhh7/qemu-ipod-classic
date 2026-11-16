@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-29T18:54:04.207843+00:00",
+  "changes": [
+    {
+      "ATA512_lba": 182880,
+      "offset": 28,
+      "old": 22860,
+      "new": 0
+    },
+    {
+      "ATA512_lba": 182928,
+      "offset": 28,
+      "old": 22860,
+      "new": 0
+    }
+  ],
+  "allocated_files_relocated": false,
+  "formatted": false,
+  "source_seed_modified": false,
+  "contract_basis": "old accepted data VBR hidden0; volume is exported data-region-relative, outer physical start not an inner hidden-sector offset",
+  "firmware_mount_acceptance": "pending actual finished EXE"
+}

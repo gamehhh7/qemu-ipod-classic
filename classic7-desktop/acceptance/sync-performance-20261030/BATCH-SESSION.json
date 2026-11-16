@@ -1,0 +1,5 @@
+{
+  "app_pid": 13700,
+  "utc": "2026-10-30T10:09:16.950384+00:00",
+  "change": "16KiB RPC batching, each real512B OUT token paced10us virtual,100ms wall cap, accepted prefix/sequence preserved"
+}

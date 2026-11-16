@@ -1,0 +1,39 @@
+{
+  "phase": "R116_REAL_DEEP_RESTORE_PASS_NORMAL_BUTTON_WAKE_FAIL_QUOTA_STOP",
+  "sleep_task_complete": false,
+  "app_pid": 14832,
+  "app_created_hk": "2026-10-31 12:14:47.542292",
+  "qemu_pid": 32092,
+  "qemu_created_hk": "2026-10-31 12:14:50.551688",
+  "backend_pid": 31996,
+  "run": "20261031T041447Z-14832",
+  "observed_window_handle": 986450,
+  "engine_sha256": "bd74a3589404ee2ed3c8184215309cb883d0c385e80ba801594a4cd10331ef99",
+  "main_sha256": "c59c1b5015327c8ef1809dd34342887d13ff5c8f006388f0b3a011d066437d2c",
+  "runtime": "Ordinary existing user session. Default icount shift3. USB off, single K COW writer. No debugger/test/autoexit flags. No process restart this acceptance.",
+  "natural_idle": "Last pre-sleep input M 12:17:21.562HK; actual RTC alarm04:50:25UTC, retained-standby entry080d24d0. Native before input PSCI_OFF and both board/PMU warm_standby=true, guest hibernation header68696265 flags1/1, IRAMsizecache40000.",
+  "enter_failure": "One Enter12:53:40.568HK; actual down/up logged .686/.838. After response wait UI unchanged and native PSCI_OFF/warm_standby stilltrue. Ordinary button direct deep wake remains FAIL.",
+  "hold_resume": "One real lock12:54:20.899HK -> unlock12:54:21.641HK, 742ms. Actual PMUPOWER retained-wake bootrom00000000 result0. Native PSCI_ON, board/PMU warm_standby=false, normal RTOS idlePC22003b50/VICenable21af010f; guest descriptor75736564 flag0 proves actual firmware restore consumed it. No host guest RAM/PC changes, no firmware patch, no reset suppression.",
+  "post_resume_ui": [
+    "Enter12:55:36.478HK opened Settings; ShuffleOff RepeatOff preserved.",
+    "Songs Enter12:56:18.520HK; actual screenshot12:56:20.989 confirms All Night / KILL SCRIPT. Browsed only, no playback.",
+    "CoverFlow Enter12:56:58.664HK; screenshot12:57:01.125 shows 燦々 / Afterglow.",
+    "Returned main menu Music highlighted; final screenshot12:57:11.769HK. No further input."
+  ],
+  "no_reset_evidence": "Final qemu.log302345bytes, below16MiBcap; no WAKEFAULT, CPU_exception_handler or SWRCON. Same app/qemu creation times and run. Genuine menu/song/settings/CoverFlow behavior after guest resume.",
+  "correction_to_R115": "Old R115 prose and automation said fixed BootROM20000000, incorrectly. Actual BOOTROM_MEM_BASE=00000000, size20000; log confirms bootrom00000000. SCTLR89107d/TTBR02200c000 and actual L1entry22000c12 map virtual0 to physicalIRAM22000000 during OS. No source/runtime change needed for this documentation correction. ARM shim test executes actualbase0 and relocated20000000 with valid actual header and bad guards: PASS.",
+  "evidence": [
+    "20261031T045309Z-R116-before.txt and associated timestamped snapshots",
+    "20261031T045410Z-R116-after-enter.txt and associated snapshots",
+    "20261031T045437Z-R116-after-hold.txt and associated snapshots",
+    "R116-MMU.txt",
+    "R116-BOOT-TEST.txt",
+    "R116-HASHES.json",
+    "Timestamped R116-final-qemu.log/events.jsonl/guest-ipc.jsonl copies"
+  ],
+  "visual_evidence": "Fresh @oai/sky observations by authorized sleep_visual Luna low; no persisted PNG paths reported, do not invent them. UI actions/observations reported in this chat.",
+  "residual_next_work": "Root must establish true asynchronous wheel/button wake hardware route from primary/source evidence before model change. Current serial wheel packets do not wake powered-off CPU. No proof establishes GPIO4/ONKEY board connection; do not guess-wire or force CPU wake/IRQ/PC to pass acceptance. Need actual ordinary button wake then real natural sleep/noreset/navigation/data/CoverFlow acceptance. Hold deep restore itself now actually PASS for one cycle.",
+  "quota_stop": "Fresh official quota fivehourused53percent/weekused96percent (remaining47/4). Weekly<=4percent stop threshold reached. All own experiments stopped, no attached debugger/tracer/pendinginput. Ordinary session preserved.",
+  "automation": "Consumed one-shot classic7 deleted successfully by automation_update. No repeat monitor or new scheduled resume created this turn.",
+  "constraints": "Root all technical/source/judgment; existing Luna low only GUI/images with fresh PID/handle. No native inferior function calls. No firmware/physicaldisk/GPIO4guess/IRQorPCspoof/resetblock/sleepdisableorshortening/batteryboost. Keep Kdisk/seed/one original rollback. Sync performance and SSD migration remain STOPPED. User app closed or pause means no restart. USB syncing means no Hold or closing."
+}

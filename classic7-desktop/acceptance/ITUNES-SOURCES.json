@@ -1,0 +1,33 @@
+﻿{
+    "device_changed":  false,
+    "version":  "12.13.4.4",
+    "utc":  "2026-10-29T10:44:26.9003730Z",
+    "library_changed":  false,
+    "status":  "actual_running_iTunes_sources_read",
+    "sources":  [
+                    {
+                        "source_id":  74,
+                        "playlist_count":  28,
+                        "name":  "资料库",
+                        "kind":  1
+                    },
+                    {
+                        "source_id":  9916,
+                        "playlist_count":  1,
+                        "name":  "互联网广播",
+                        "kind":  6
+                    },
+                    {
+                        "source_id":  9945,
+                        "playlist_count":  1,
+                        "name":  "iTunes Store",
+                        "kind":  0
+                    },
+                    {
+                        "source_id":  9978,
+                        "playlist_count":  1,
+                        "name":  "iPod",
+                        "kind":  0
+                    }
+                ]
+}

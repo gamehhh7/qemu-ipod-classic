@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "utc_end": "2026-10-30T09:56:11.3130318Z",
+  "utc_start": "2026-10-30T09:56:00.3283550Z",
+  "physical_devices_touched": false,
+  "write_flush_seconds": 10.9746023,
+  "virtual_pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+  "file": "E:\\Codex-transfer-da05aa98f14742d4aac5ea53eec6abcf.bin",
+  "bytes": 1048576,
+  "sha256": "3a2f8bf369a28246d6250a41a1bc48bfed4cf0b8de2a0543ef260e5f53ecac79",
+  "write_bytes_per_second": 95545.69462621893
+}

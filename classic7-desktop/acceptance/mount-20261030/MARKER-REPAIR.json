@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-30T04:35:52.591327+00:00",
+  "purpose": "repair native volume classification using existing seed convention",
+  "format": false,
+  "files_relocated": false,
+  "firmware_changed": false,
+  "seed_written": false,
+  "physical_device": false,
+  "changes": [
+    {
+      "ATA512_lba": 182880,
+      "offset": 52,
+      "before_hex": "000000",
+      "after_hex": "464154",
+      "before_sector_sha256": "c0764e2d729d6b32001d851aee4430818dfd55c5006b35f902a2a762d16c0b92",
+      "after_sector_sha256": "c7c8b90f83655b5ca4b946b8afdd0896ad027a9c1f29a0ffa75b0e46c18fd40e"
+    },
+    {
+      "ATA512_lba": 182928,
+      "offset": 52,
+      "before_hex": "000000",
+      "after_hex": "464154",
+      "before_sector_sha256": "f5da1956557f7cb94dfe5988efa8e7b03626a4e8bf8078ee8a80911d8ef76aba",
+      "after_sector_sha256": "7f90d21cba07af3d020e687bc09e28f4782cea5906cb24d37ddd12fda5c7675c"
+    }
+  ],
+  "status": "reserved_marker_repaired",
+  "firmware_mount_acceptance": "pending real finished app"
+}

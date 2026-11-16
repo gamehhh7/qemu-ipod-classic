@@ -1,0 +1,35 @@
+[New Thread 30784.0x8600 (id 2)]
+[New Thread 30784.0x8290 (id 3)]
+[New Thread 30784.0x4d1c (id 4)]
+[New Thread 30784.0x3e10 (id 5)]
+[New Thread 30784.0x7fac (id 6)]
+[New Thread 30784.0x7058 (id 7)]
+[New Thread 30784.0x418 (id 8)]
+[New Thread 30784.0x4d4c (id 9)]
+[New Thread 30784.0x1a78 (id 10)]
+[New Thread 30784.0x7f7c (id 11)]
+[Switching to thread 1 (Thread 30784.0x841c)]
+0x00007ffb209c28a4 in ntdll!ZwWaitForMultipleObjects () from C:/WINDOWS/SYSTEM32/ntdll.dll
+CPU_INTERRUPT
+$1 = 0x0
+$2 = 0x2c0
+VIC0
+$3 = 0x0
+$4 = 0x810000
+$5 = 0x80009
+$6 = 0x0
+$7 = 0x10
+$8 = 0x21
+$9 = 0xffff
+$10 = 0
+VIC1
+$11 = 0x0
+$12 = 0x0
+$13 = 0x0
+$14 = 0x10
+$15 = 0
+FIFO
+$16 = {0x8000001a, 0x8000011a, 0x8000001a, 0x8000011a, 0x8000001a, 0x8000011a, 0x8000001a, 0x8000011a, 0x8000001a, 0x8000001a, 0x8000011a, 0x8000011a, 0x8000011a, 0x8000001a, 0x8000001a, 0x8000001a}
+$17 = 9
+IRAM_DUMP
+[Inferior 1 (process 30784) detached]

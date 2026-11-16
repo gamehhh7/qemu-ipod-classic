@@ -1,0 +1,28 @@
+{
+  "user_task": "Native Windows EXE, Classic7 thin silver appearance, integrated click wheel directions, actual LCD, physical USB cable and actual firmware HOLD",
+  "source_sha256": "36dffb47456d6be19e8e336e9bd5bc17750ac0f9764d130dbe5bae78273ff69f",
+  "application_sha256": "b5a8a65d893132cfe3ee1652f95feeabfe0617df968b544170ce71cc70dd6fe2",
+  "engine": {
+    "exe": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.exe",
+    "sha256": "940781794a2cf62009e6d5976e9374fc3464a51334ef0aa77061123d8aa22a3e",
+    "source_sha256": "322df70b3b4fa1c5480d43afef1bd87f61f284091ab3c8c251a50fe60050b2f5",
+    "protected_unchanged": {
+      "K:\\CodexResources\\2026-10-28\\ipod-usb-native-control\\build\\qemu-system-arm-native-control.exe": "b036cf594374b3428f7cd62f2bdc78662e432763a6d5261e92ef1ac13abbc36d",
+      "K:\\CodexResources\\2026-09-30\\ipod-emulation\\qemu-fc1307\\bin\\qemu-system-arm.fc1307.exe": "a0c9c94373580f88439a5fb1c20459d25f259f5dd5b0f7e065947ae1afcaea83"
+    },
+    "firmware_modified": false,
+    "physical_inputs": [
+      "hold GPIO",
+      "0..95 touch angle",
+      "5-bit wheel button packet"
+    ]
+  },
+  "reviewer": "root self-review",
+  "runtime_bound_seconds": 90,
+  "native_usb_listener": false,
+  "guest_ram_or_pc_writes": false,
+  "hold_path": "QOM physical-hold -> existing wheel hold_out GPIO -> PMU hold input -> guest GPIOSTAT/INT6",
+  "seed_policy": "existing read-only seed and backend RAM COW only, no media hash/copy",
+  "test": "one90s actual firmware app self-test, common event handlers for center/Hold/USB; no OS UI automation",
+  "created_utc": "2026-10-28T13:13:25.2435470Z"
+}

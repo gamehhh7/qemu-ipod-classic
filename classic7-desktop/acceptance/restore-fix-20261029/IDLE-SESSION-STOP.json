@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-29T18:53:12.399419+00:00",
+  "GUI15544": "idle verified canonical; normal close ignored, terminated for authorized repair",
+  "QEMU12896": "quit requested via its actual QMP after frontend stopped; connection reset while waiting for final reply",
+  "backend19420_shutdown": "ConnectionRefusedError(10061, '\u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002', None, 10061, None)",
+  "no_USB_session": true,
+  "single_rollback": "backup/previous-release.zip"
+}

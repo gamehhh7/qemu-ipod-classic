@@ -1,0 +1,17 @@
+# Source checkpoint only. Keep private runtime data and generated output local.
+bin/
+backup/
+userdata/
+runs/
+logs/
+**/__pycache__/
+*.pyc
+*.exe
+*.obj
+*.dll
+*.sqlite3*
+*.img
+*.wav
+*.mp3
+*.bin
+*.zip

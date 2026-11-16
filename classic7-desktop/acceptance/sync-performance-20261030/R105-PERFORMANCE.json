@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-30T10:07:05.425357+00:00",
+  "baseline": {
+    "virtual_pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+    "write_bytes_per_second": 96117.7609769,
+    "physical_devices_touched": false,
+    "sha256": "b704798b216099099b9f436025a2f3a21ade607dd984ddaf5148bd06cc5337d4",
+    "write_flush_seconds": 10.9092845,
+    "utc_end": "2026-10-30T09:52:12.7204246Z",
+    "success": true,
+    "bytes": 1048576,
+    "file": "E:\\Codex-transfer-f78093468de6481497e48a6c6b47542b.bin",
+    "utc_start": "2026-10-30T09:52:01.8001506Z"
+  },
+  "high_resolution_microframe_polling": {
+    "sha256": "e390d5c2fc2a5fc2e605359ee0b09ef3cf78ccf7413e47144991d9d3fc6af22a",
+    "write_flush_seconds": 0.87122,
+    "file": "E:\\Codex-transfer-d47507b45f00469187ba0a13be68cc0a.bin",
+    "physical_devices_touched": false,
+    "utc_start": "2026-10-30T09:59:19.4272455Z",
+    "bytes": 1048576,
+    "utc_end": "2026-10-30T09:59:20.3108835Z",
+    "virtual_pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\4&3312027E&0&000A2700214DCAC1&0",
+    "success": true,
+    "write_bytes_per_second": 1203572.002479282
+  },
+  "speed_ratio": 12.521848098069375,
+  "measured_old_wait_mean_median_s": 0.014893766666535243,
+  "ineffective_timeBeginPeriod_variant": "PRECISION-TRANSFER.json; no throughput improvement, removed implementation",
+  "unchanged": "Native per-packet DMA, ACK nonce, OUT sequence, guest I2C/icount and FULL durability",
+  "next": "Native timer-paced OUT batching, prepared source not loaded; real idle/Hold fault diagnosis ongoing",
+  "target_bytes_per_second": 20000000,
+  "target_achieved": false
+}

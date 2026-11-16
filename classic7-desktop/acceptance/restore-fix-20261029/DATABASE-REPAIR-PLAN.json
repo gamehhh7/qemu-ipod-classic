@@ -1,0 +1,15 @@
+{
+  "operation": "normal database file integrity update for configured native GUID, no firmware/hash-check bypass",
+  "guid": "000A2700214DCAC1",
+  "file": "iPod_Control/iTunes/iTunesDB",
+  "old_sha256": "36282aca6a0390ca977de4ad3b1a2ddfaf3bd1989f764ccfb676f4d3c5a9a902",
+  "new_sha256": "ffe7d0730c33b19c798ff3b0b16c2057dabe34217e640e68bce6007ad1f319ba",
+  "only_changed_bytes": {
+    "offset": 88,
+    "length": 20
+  },
+  "tracks_and_song_paths_unchanged": true,
+  "written_to_virtual_volume": false,
+  "next": "Only apply after transport fix and fresh exact virtual volume proof, if current DB still equals imported original. Do not overwrite if user restore changed database.",
+  "utc": "2026-10-29T15:41:58.035633+00:00"
+}

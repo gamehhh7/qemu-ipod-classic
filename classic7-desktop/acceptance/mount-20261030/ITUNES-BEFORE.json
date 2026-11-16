@@ -1,0 +1,10 @@
+﻿{
+    "device_changed":  false,
+    "utc":  "2026-10-30T05:01:55.0739818Z",
+    "error":  "Retrieving the COM class factory for component with CLSID {DC0C2640-1415-4644-875C-6F4D769839BA} failed due to the following error: 80080005 Server execution failed (Exception from HRESULT: 0x80080005 (CO_E_SERVER_EXEC_FAILURE)).",
+    "library_changed":  false,
+    "status":  "COM_not_available",
+    "sources":  [
+
+                ]
+}

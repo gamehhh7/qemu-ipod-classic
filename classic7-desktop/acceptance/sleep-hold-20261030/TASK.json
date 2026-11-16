@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-30T06:58:12.020720+00:00",
+  "issue": "长期闲置进入休眠后，切换Hold不能正常唤醒，反而重启",
+  "status": "scheduled_for_diagnosis_and_repair_not_fixed",
+  "automation_id": "ipod-hold",
+  "target_thread": "01a18b10-a0cb-7e80-832c-d69e112fec02",
+  "scheduled_hong_kong": "2026-10-30T17:29:10+08:00",
+  "schedule_basis": "live official five-hour reset1793352490 plus60seconds",
+  "recurrence": "once",
+  "user_session_at_schedule": {
+    "app_pid": 31352,
+    "app_creation_hk": "2026-10-30T13:43:41.944151+08:00",
+    "qemu_pid": 1732,
+    "run": "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\runs\\20261030T054342Z-31352",
+    "must_recheck_liveness": true,
+    "no_user_process_stopped": true
+  },
+  "captured_reset_or_hold_log": [
+    "FRONTEND-HOLD locked=1 vns=3113358330348",
+    "FRONTEND-HOLD locked=0 vns=3113395345844",
+    "K:\\CodexResources\\2026-10-28\\ipod-classic7-desktop\\engine\\qemu-system-arm-classic7.exe: warning: S5L8702: guest asked for a software reset (SWRCON = 0xaa5), next image \"--------\" pc~0x0835d03c lr=0x0802dd50 sp=0x08a1155c"
+  ],
+  "recent_control_events": [
+    {
+      "utc": "2026-10-30T06:53:16.3477810Z",
+      "kind": "hold_readback",
+      "data": true
+    },
+    {
+      "utc": "2026-10-30T06:53:16.4746009Z",
+      "kind": "hold_readback",
+      "data": false
+    },
+    {
+      "utc": "2026-10-30T06:55:20.8364965Z",
+      "kind": "usb_readback",
+      "data": true
+    }
+  ],
+  "implementation_owner": "root only; image review GPT6 Luna low",
+  "sync_client": "Apple Devices app",
+  "coverflow_repair_preserve": "acceptance/power-coverflow-20261030/RESULT.json",
+  "next": "Read current state and existing user idle-run evidence; diagnose real sleep/wake/Hold interrupt and reboot path, repair canonical app then actual idle/wake regression; do not disable sleep or suppress reset."
+}

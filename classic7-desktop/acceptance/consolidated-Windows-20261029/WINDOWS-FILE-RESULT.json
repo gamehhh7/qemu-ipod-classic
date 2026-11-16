@@ -1,0 +1,32 @@
+{
+  "pnp": "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\0000000000000000&0",
+  "format_performed": false,
+  "size": 65802240,
+  "bytes_per_sector": 4096,
+  "file_IO_success": false,
+  "partitions": [
+    {
+      "drive_letter": "E",
+      "volumes": [
+        {
+          "DriveLetter": "E",
+          "FileSystem": "",
+          "FileSystemLabel": "",
+          "HealthStatus": "Healthy",
+          "Size": 0,
+          "SizeRemaining": 0
+        }
+      ],
+      "size": 67108864,
+      "offset": 0
+    }
+  ],
+  "virtual_parent_chain": [
+    "USBSTOR\\DISK&VEN_APPLE&PROD_IPOD&REV_1.62\\0000000000000000&0",
+    "USB\\VID_05AC&PID_1261\\0000000000000000",
+    "USB\\ROOT_HUB30\\1&2B53A856&0&0",
+    "ROOT\\USB\\0000",
+    "HTREE\\ROOT\\0"
+  ],
+  "disk_number": 5
+}

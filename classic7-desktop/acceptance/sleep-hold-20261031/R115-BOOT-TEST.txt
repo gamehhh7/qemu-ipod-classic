@@ -1,0 +1,1 @@
+PASS executed ARM warm-boot shim: real-header, bad-magic, bad-version, bad-state, unaligned-entry, entry-below-ram, entry-past-ram

@@ -1,0 +1,5 @@
+{
+  "app_pid": 22004,
+  "utc": "2026-10-30T09:58:30.402602+00:00",
+  "change": "High-resolution per-worker timer and real NAK microframe polling; packet acceptance and guest clocks unchanged"
+}

@@ -1,0 +1,5 @@
+Breakpoint 1 at 0x7ff65b5660c0: file K:/CodexResources/2026-10-28/ipod-classic7-desktop/src/wheel_frontend.c, line 674.
+[Thread 1280.0x7db0 (id 10) exited]
+BUTTON value=1 virtual_ns=15889542691784
+BUTTON value=0 virtual_ns=15889664479684
+[Inferior 1 (process 1280) detached]
